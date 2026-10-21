@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-21T09:00:11.556693+00:00",
-  "windowStart": "2026-10-14T09:00:11.556693+00:00",
-  "windowEnd": "2026-10-21T09:00:11.556693+00:00",
-  "issueTitle": "가전 전장 기술 TOP 15",
-  "searchedCandidates": 25,
+  "updated": "2026-10-21T09:06:09.274218+00:00",
+  "windowStart": "2026-10-14T09:06:09.274218+00:00",
+  "windowEnd": "2026-10-21T09:06:09.274218+00:00",
+  "issueTitle": "가전 전장 기술 TOP 20",
+  "searchedCandidates": 36,
   "languageBalance": {
-    "KR": 10,
-    "GLOBAL": 5
+    "KR": 12,
+    "GLOBAL": 8
   },
   "items": [
     {
@@ -67,6 +67,24 @@
       "published": "2026-10-15T01:49:44+00:00"
     },
     {
+      "category": "AI",
+      "title": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+      "originalTitle": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+      "source": "Johnson Controls",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Keeping your systems running with predictive maintenance, remote diagnostics, and condition-based strategies to maximize uptime and reduce risks. Funding more than $6B in customer projects worldwide, we partner with you to determine the best way to make your project happen. Maximize uptime, strengthen security and deploy faster Data Centers designed to address your challenges with advanced thermal management, controls, security and fire protection systems. Smarter, safer, and more resilient AI data center solutions The most comprehensive integrated data center solutions available today. We engineer and design chillers to meet the harshest environments, providing your chiller with maximum uptime.",
+      "keywords": [
+        "sensor",
+        "machine learning",
+        "predictive maintenance",
+        "fault detection"
+      ],
+      "rating": 3,
+      "url": "https://www.johnsoncontrols.com/building-insights/thought-leadership/predictive-maintenance-analytics",
+      "published": "2026-10-20T12:05:47+00:00"
+    },
+    {
       "category": "CIRCUIT",
       "title": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
       "originalTitle": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
@@ -87,6 +105,23 @@
       "published": "2026-10-20T02:40:00+00:00"
     },
     {
+      "category": "AI",
+      "title": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+      "originalTitle": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+      "source": "비즈월드",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "[비즈월드] 1969년 국내 최초로 탄생한 ‘백조세탁기(WP-181)’와 1965년 국내 첫 독자 모델 냉장고인 ‘눈표냉장고(GR-120)’에서 시작된 한국 가전의 역사가 AI(인공지능)와 로봇 기술이 결합된 ‘피지컬 AI’ 시대의 주역으로 거듭나고 있다. LG전자는 1958년 창립 이래 축적해 온 가전 혁신의 여정과 미래 비전을 담은 브랜드 헤리티지 영상 ‘삶이 묻는 질문, LG가 답하다(Life Asks, LG Answers)’를 미국 뉴욕 타임스스퀘어 옥외 전광판에 공개했다고 19일 밝혔다. 이번 캠페인은 가사 노동의 부담을 덜어 고객이 집에서 더 가치 있는 일에 집중할 수 있도록 돕는 LG전자의 가전 지향점인 ‘제로 레이버 홈(Zero Labor Home)’을 글로벌 고객에게 각인시키기 위해 기획됐다고 한다. 총 160초 분량의 이번 영상은 고객의 일상 속 작고 소소한 불편을 기술 혁신으로 해결해 온 LG 가전의 헤리티지를 집중 조명한다. 세탁 가전 분야에서는 1969년 국내 최초 세탁기 출시 이후, 분리 세탁 니즈를 반영해 드럼세탁기 하단에 소형 통돌이를 결합한 ‘LG 트윈워시(2015년)’, 세탁기와 건조기를 일체형 타워 구조로 완성한 ‘LG 워시타워(2020년)’로 이어지는 진화 과정을 보여준다.",
+      "keywords": [
+        "모터",
+        "가전",
+        "인공지능"
+      ],
+      "rating": 3,
+      "url": "https://www.bizwnews.com/news/articleView.html?idxno=149309",
+      "published": "2026-10-19T07:58:00+00:00"
+    },
+    {
       "category": "COMPONENTS",
       "title": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
       "originalTitle": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
@@ -103,6 +138,23 @@
       "rating": 3,
       "url": "https://www.e4ds.com/sub_view.asp?idx=23905",
       "published": "2026-10-19T03:38:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
+      "originalTitle": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
+      "source": "Reliable Plant",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "today announced the launch of a continuous motor current monitoring solution that helps industrial maintenance teams see emerging risks in AC motor-driven assets before they escalate into downtime. Unlike many mechanical faults, which vibration sensors are well suited to detect, electrical and load-related issues can develop with little or no early vibration signature, leaving maintenance teams with an incomplete picture of motor health. AssetWatch Electrical Monitoring addresses this gap directly. The solution continuously monitors RMS current across all three phases of AC motors, helping identify overload conditions, power transmission issues such as slipping belts or failing couplings, and current unbalance that shorten motor life. Where periodic spot checks see a motor only during a technician's visit, continuous monitoring never looks away, catching problems as they",
+      "keywords": [
+        "motor",
+        "sensor",
+        "predictive maintenance"
+      ],
+      "rating": 3,
+      "url": "https://www.reliableplant.com/Read/33171/assetwatch-adds-electrical-monitoring-to-catch-hidden-motor-faults-before-y-cause-downtime",
+      "published": "2026-10-18T04:00:59+00:00"
     },
     {
       "category": "SMPS",
@@ -141,6 +193,23 @@
       "published": "2026-10-16T08:11:30+00:00"
     },
     {
+      "category": "AI",
+      "title": "The Role of AI in Predictive Maintenance: How Factories Are Reducing Downtime",
+      "originalTitle": "The Role of AI in Predictive Maintenance: How Factories Are Reducing Downtime",
+      "source": "Analytics Insight",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "AI detects early signs of machine faults through sensor data and helps prevent unexpected breakdowns. Predictive maintenance helps factories reduce downtime, control repair costs, and protect production schedules. AI delivers better results when teams combine accurate data, skilled technicians, and timely maintenance actions. When a machine malfunctions, it can disrupt the whole line. This can further lead to missed deadlines and increased repair bills.",
+      "keywords": [
+        "sensor",
+        "artificial intelligence",
+        "predictive maintenance"
+      ],
+      "rating": 3,
+      "url": "https://www.analyticsinsight.net/artificial-intelligence/the-role-of-ai-in-predictive-maintenance-how-factories-are-reducing-downtime",
+      "published": "2026-10-16T04:00:00+00:00"
+    },
+    {
       "category": "SMPS",
       "title": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
       "originalTitle": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
@@ -159,6 +228,26 @@
       "rating": 3,
       "url": "https://note.com/qy_research/n/n6a96ab26302e?hl=ko",
       "published": "2026-10-16T03:44:36+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
+      "originalTitle": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
+      "source": "SR타임스",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "MCU·모터 드라이버·센서 공급 강화, 통합 반도체 솔루션 개발 추진 [SRT(에스알 타임스) 최진욱 기자] 중국 반도체 기업 노보센스가 휴머노이드 로봇 시장 성장에 발맞춰 센서와 모터 드라이버, 전력관리 반도체 등 관련 제품 공급 확대에 나서고 있다. 노보센스는 15일 서울 코엑스에서 진행 중인 ‘한국 전자전(KES) 2026’에 참가해 휴머노이드 로봇 산업의 성장 가능성과 자사의 제품 경쟁력, 향후 사업 확대 방향 등을 공유했다. 발표를 진행한 노보센스의 야치 자오(YaQi Zhao) 담당은 “휴머노이드 로봇 산업은 여전히 초기 단계지만, 향후 성장 잠재력은 상당하다”며 “올해 회사의 휴머노이드 로봇 관련 매출은 전년비 3배 수준으로 증가할 것으로 전망된다”고 밝혔다. 이어 “중국 로봇 기업들이 기본적인 하드웨어 제어 능력을 확보했지만, 복잡한 생산 현장과 일상 환경에서 활용하기에는 여전히 기술적 한계가 남아 있다”며 “특히 실제 환경에서 수집한 데이터가 부족해 인공지능(AI) 역량이 충분한 수준에 도달하지 못했고, 정밀한 작업과 높은 신뢰성이 요구되는 분야에서도 기술적 개선이 필요하다”고 진단했다. 이에 노보센스는 자동차용 반도체 분야에서 축적한 기술력을 로봇 시장으로 확대한다는 전략을 제시했다.",
+      "keywords": [
+        "모터",
+        "mcu",
+        "반도체",
+        "가전",
+        "인공지능",
+        "센서"
+      ],
+      "rating": 3,
+      "url": "https://www.srtimes.kr/news/articleView.html?idxno=214908",
+      "published": "2026-10-15T08:53:27+00:00"
     },
     {
       "category": "MOTOR",
