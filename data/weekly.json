@@ -1,16 +1,37 @@
 {
-  "updated": "2026-10-21T08:14:03.723009+00:00",
-  "windowStart": "2026-10-14T08:14:03.723009+00:00",
-  "windowEnd": "2026-10-21T08:14:03.723009+00:00",
-  "issueTitle": "가전 전장 기술 TOP 1",
-  "searchedCandidates": 2,
+  "updated": "2026-10-21T08:32:19.452641+00:00",
+  "windowStart": "2026-10-14T08:32:19.452641+00:00",
+  "windowEnd": "2026-10-21T08:32:19.452641+00:00",
+  "issueTitle": "가전 전장 기술 TOP 19",
+  "searchedCandidates": 21,
+  "languageBalance": {
+    "KR": 10,
+    "GLOBAL": 9
+  },
   "items": [
+    {
+      "category": "MOTOR",
+      "title": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+      "originalTitle": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+      "source": "에이빙",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" | 에이빙",
+      "keywords": [
+        "bldc",
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE04UWRlVW41bkM3T2VURTdxWVF3ejdheFZ0OVpBeVB6NUY5VEc2VFhoWF93VXVERTdJdnVNVmRpRnY1dHZNOG4tbEVfckxaSXZFUHRRUl9FTnMxVnhXSlZKVkRzQTV2bHdKcGtR?oc=5",
+      "published": "2026-10-18T06:55:50+00:00"
+    },
     {
       "category": "MOTOR",
       "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
       "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
       "source": "livesnews.com",
       "sourceType": "검색/전문매체",
+      "languageGroup": "KR",
       "summary": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여 livesnews.com",
       "keywords": [
         "bldc",
@@ -19,6 +40,262 @@
       "rating": 3,
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3eGhDVWZtRktVYS1ZTXZmMkJ0cTdfTkhaLW11X1VGdlJ0OXZnN2ZyWTJiUkdWNlY3V2UtdjVtUENDbU5EemQ2T2pBb1NPVTBEdTI1bWluR0RFNGho?oc=5",
       "published": "2026-10-15T01:49:44+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+      "originalTitle": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여 전자신문",
+      "keywords": [
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1GNl9fVURYN05CYm1ob0lnZ0tYRzMyRnExWGJzT0RPQlpwVTBBTjY0V2RfY0FCZXN5a0c1WTRtMHRHWlNVYTktSVpWbzBzQQ?oc=5",
+      "published": "2026-10-16T08:11:30+00:00"
+    },
+    {
+      "category": "SMPS",
+      "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+      "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략 전자신문",
+      "keywords": [
+        "전원"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAycjNIY1E1Wl9YcTh5Sng1cy1memlfQjZrdW1SLVBybnljcDVCTVNPRHUwbzlwdjNUVHpPVEcycHRKSDVnR1RHSnd1Wk1uQQ?oc=5",
+      "published": "2026-10-16T00:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "LTspice, 설치만 해두고 못 쓰고 있다면, 지금 이 90분으로 바뀝니다",
+      "originalTitle": "LTspice, 설치만 해두고 못 쓰고 있다면, 지금 이 90분으로 바뀝니다",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "LTspice, 설치만 해두고 못 쓰고 있다면, 지금 이 90분으로 바뀝니다 e4ds news",
+      "keywords": [
+        "spi"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5fQktHMXlNX0xNcVZyQU9maXNJLVBOZVNPaXlZVkJxLTJzOThwSjkzeS1qQmYybzZNTW5fZWwyZDdNell1X18xalpEaWRmXzVzYkpaSTNzMW1icEgt?oc=5",
+      "published": "2026-10-15T07:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
+      "originalTitle": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "마우저, NXP 반도체 Ara240 DNPU 공급 개시 e4ds news",
+      "keywords": [
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9zQjdEUU1zUmlvbURjeHdLYXlaUWxmZzVoMUJXeVhsLTVZYy1Ld1dJQm1KYktCTEpncVhZVW81bmN1bHhUelk5alptdzVQLW03ZUlHS1FB?oc=5",
+      "published": "2026-10-20T02:40:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
+      "originalTitle": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정” e4ds news",
+      "keywords": [
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CYTZoX0NoQ2VlQlF1VnNzOENRMkxpR3Bqb1k3MEZYa2xXMHZoSVpXR0VDR2xBS0JRVGZoY2dhWkJvV21BNnRoTnNZUngycmdPLVA5UE1R?oc=5",
+      "published": "2026-10-16T01:31:35+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+      "originalTitle": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의 e4ds news",
+      "keywords": [
+        "펌웨어"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHZGxWTUJVM2JmWWZ1emRidktwcnVaaTkycF8zMFdmVzBBQW1SZll5MGpOOHVpcUl3cEVYc2NPMjVGZEdlVEdPUjZzYzhYelgzQ0taRHpDM2dBUTV1?oc=5",
+      "published": "2026-10-19T01:04:02+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "[오프라인 실습] LTspice를 설계 검증 무기로 실전에서 바로 쓰는 법",
+      "originalTitle": "[오프라인 실습] LTspice를 설계 검증 무기로 실전에서 바로 쓰는 법",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "[오프라인 실습] LTspice를 설계 검증 무기로 실전에서 바로 쓰는 법 e4ds news",
+      "keywords": [
+        "spi"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1kNEZKZjE4ZjFnY2hEQlNINHB5cnNBOEU0WnBtWG11bGxHYUlFcUt1OXoyZXc5UnhVSEo3S1JkQmZrZXFXT0pJVE5yVk9pUVNKdWpzVDAwTVlKRlJi?oc=5",
+      "published": "2026-10-19T01:04:02+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+      "originalTitle": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+      "source": "이넷뉴스",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영 이넷뉴스",
+      "keywords": [
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81N0FVcTA5M3BZdUszdW1CZ0U1a3BBTWFEYllyNGxuVVpib2FsRmg1Y0M0T1ZvNVRESFU4SnRZSnZzQ1FubGlQbDVZVEdPOVZzSmVRYkpfcDJJOS11NjRNcE5DT0lYWnUyQ1lPOA?oc=5",
+      "published": "2026-10-21T04:47:10+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "모터 슬롯이란 업데이트 공지의 기능 변경 항목",
+      "originalTitle": "모터 슬롯이란 업데이트 공지의 기능 변경 항목",
+      "source": "Calgary Roughnecks",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "모터 슬롯이란 업데이트 공지의 기능 변경 항목 Calgary Roughnecks",
+      "keywords": [
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOGJjMmNqOTNrSkxMVzdCRTVrZ2h3enQzcnYwbmVfZEswZ0pibFZrME5Rd2ZnRUNlaTVTQlhldHNzaE9xaUx1MFpnUFVMTndrXzFUR0puY09KRnNweE5uNXdaYVRwU0MxcjNCaWxCenczREg3WS15aWpQZXVTUDNvVnRYR2RGQ3BCcHJsYTBWSXprZGNjbkloRTdzZHhJdzlJbExRd1M5dUxIcUo3Rko4WHhEenpsVHBKRDF4MFVMY0VOekdZNnZFMGNyaW9BUlhxRGh2TVJ2MnpGS3REQ2E1VmRtVQ?oc=5",
+      "published": "2026-10-18T19:16:40+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "기본 구조가 간결한지 살펴보는 모터 슬롯 이란",
+      "originalTitle": "기본 구조가 간결한지 살펴보는 모터 슬롯 이란",
+      "source": "Calgary Roughnecks",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "기본 구조가 간결한지 살펴보는 모터 슬롯 이란 Calgary Roughnecks",
+      "keywords": [
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQZC0xYlBQTmRfZ3Z2VFQxTGZwd2RjaVl3bGdEUXFxczhJTGsza0ROWmVzNVIxX1FWdFRjdVVRQmx4NXlYSWlpbEpwaXpBM2llbS1uV05CTmMzUFBJV0I0TWMzZDNJZkFmaTlNNURaUXBIbTEwd1Z1NnVMQ0VIMkFNYmxhNXp4VkRnY3NvX3N3SEVjb2xzQVlOaFk5UXpjUjRGbl9uY1BoeUNWX3NxVFpLY0lyYTdqdUhyWjRqMDFwNnd5NnBNRlJwemRLd2NaNUlBclBsd2dzNDhWMmg5N1lKLWFCTkVXbFZITktVWTBmMS1WcDBMLVA2ZFk2em9ZLVpRRGlIQTNLZF8wcTl0b3Zz?oc=5",
+      "published": "2026-10-18T02:36:23+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "작동하지 않는 버튼인지 구별하는 모터 슬롯 극수 상태 표시",
+      "originalTitle": "작동하지 않는 버튼인지 구별하는 모터 슬롯 극수 상태 표시",
+      "source": "Calgary Roughnecks",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "작동하지 않는 버튼인지 구별하는 모터 슬롯 극수 상태 표시 Calgary Roughnecks",
+      "keywords": [
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE43WEtHWXdUeWdKSEtIakFGN0ZKdzR2anhqVE5CMVQ4SnhkLWItb2RzdzdMTnJ1RzY0U0lnc2V4aDdGWkJ1N0dUd1cwZW1XS1dMOVM4dHJ6aGRYNEVRLTlTMGp1ZlVSeUZ3Qk1LSnZ0SHU2eEk3cUJMbEN3?oc=5",
+      "published": "2026-10-17T08:45:01+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
+      "originalTitle": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
+      "source": "https://www.newsphere.kr/",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급 https://www.newsphere.kr/",
+      "keywords": [
+        "회로"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Lb21ON3VkQlVwVXJINjNWMWRtSm9jeUpPMG1VUnMzel9NV0JJSFo0RWNaVnI4bXlZaEZMeWZzYWQyZ2dTdzloeEhjcFlYMnllaXpKS1Vxc21NVDlQbDloR0M5S1NSSXdT?oc=5",
+      "published": "2026-10-16T13:52:34+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
+      "originalTitle": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
+      "source": "note",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch note",
+      "keywords": [
+        "emi"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE91cms3SUZKZFVaYVA4NloxX0d2YndyRk9HZHdxaDBqXzl6Vndxc29FVnBaM2REcjNfdlVGbE1VRFVjbFVUc2hHbEdBSWs4SWkyYVhIWkRMY28weU80YW53?oc=5",
+      "published": "2026-10-16T03:44:36+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
+      "originalTitle": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
+      "source": "EEJournal",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications EEJournal",
+      "keywords": [
+        "motor"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPWnVXMUctZFdhUG5QdGtDR1Q0Q21lYWItR181WnZHVThLczhTZmpGUVBVNjRjeW5IakxCRlBTenB3aE1oVDB4RTFaYUtQMi1qODhSTWFzVHZjRkMwWDJ1UG5qRTY5QXFybkU4YnRQQ19nV0RqLXJldzEzMGRQLUpFekdwQzFoWGR1QnhEb1NJUUpnOE5BMGdHSWdIaFgyVno4a243SE1QRkphd0xNcWhNVjdORWNBT1NNeGMyenlLZ0M0dzRMTUwtY1FhMVlSVzNWNjdMUG9JQk14d2xMRUNHYUY5Smo?oc=5",
+      "published": "2026-10-14T13:56:30+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+      "originalTitle": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+      "source": "Passionate In Marketing",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India Passionate In Marketing",
+      "keywords": [
+        "blender"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUUpTb2ZlTEZkcGFmUXNfRGJ4T3doX0cwTmlleVYwbFF5RmR3by1HOFFtdlJScEE2TUF0ajdFRDh4OXREc3phZ2k4ZVFVU0FSbnJncTN2RmY3UWhtOVkzeHZqai1iVjdjT2tCTDhESEtRRWNEbWxabmxnMUxERnNGcC1vY0t5SFFhVFNNZmxYYnk0Q1QwVHN0Z0dFWDNHV0tTdkxIZ21YbWE2cWRLZWpVaA?oc=5",
+      "published": "2026-10-16T06:01:24+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification",
+      "originalTitle": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification",
+      "source": "IndyStar",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification IndyStar",
+      "keywords": [
+        "emc"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPWWxEcDcwY2JLRXpsN1ktSWo3RW43eTE5RmdOalY4dl9TSkhQcEc3QnBFZ21YcUdqNVltcXZzUmNWejNobGY0S1gyUEV3Nm4wdS02akNMRWZlUTVpSEZEZW10MHVlY2g1MTh6d2VOemVyVjBhd0RmZnhCSmR1S25rVTAwNXUwYnZibTJuU0kwOVI1UXliYjl6NUQwYktkcVU4WWRJTFhvcUFReHVGeU5rcVIxZFN4eFdvUG5yTjhoWWFsTVd0b1lSdl82bUpTZkdvNHFRbGRYWm1adFFBczNtbjNCYUluZ2hLNmZUWEFCbVQ?oc=5",
+      "published": "2026-10-14T08:49:15+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+      "originalTitle": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+      "source": "Hackaday",
+      "sourceType": "기술 블로그",
+      "languageGroup": "GLOBAL",
+      "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard t",
+      "keywords": [
+        "grounding",
+        "emi"
+      ],
+      "rating": 3,
+      "url": "https://hackaday.com/2026/10/20/nasas-lunar-grounding-challenge-is-a-real-buzz/",
+      "published": "2026-10-20T18:30:27+00:00"
     }
   ]
 }
