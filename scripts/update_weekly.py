@@ -293,32 +293,69 @@ def old(a):
   for x in json.load(open(OUT,encoding='utf-8')).get('items',[]):add(a,x.get('originalTitle') or x.get('title'),x.get('summary'),x.get('url'),x.get('published',''),x.get('source',''),x.get('sourceType',''))
  except:pass
 
-def select_candidates(items):
- ordered=sorted((x for x in items if within_last_week(x.get('published',''))),key=lambda x:x.get('score',0),reverse=True)
+def select_candidates(items,max_items=MAX_ITEMS):
+ ordered=sorted((x for x in items if within_last_week(x.get('published','')) and x.get('score',0)>=2),key=lambda x:x.get('score',0),reverse=True)
  chosen=[];titles=[];publishers={};groups={'KR':0,'GLOBAL':0}
- def take(x,limit_group=None):
+ def take(x,preferred_group=None,enforce_quota=False):
   group=x.get('languageGroup') or language_group(x.get('title',''),x.get('source',''),x.get('url',''))
   source=x.get('source') or urllib.parse.urlparse(x.get('url','')).netloc
-  if limit_group and group!=limit_group:return
-  if limit_group and groups[group]>=MAX_ITEMS//2:return
+  if preferred_group and group!=preferred_group:return
+  if enforce_quota and groups[group]>=MAX_ITEMS//2:return
   if publishers.get(source,0)>=5 or duplicate_title(x.get('title',''),titles):return
   chosen.append(x);titles.append(x.get('title',''));publishers[source]=publishers.get(source,0)+1;groups[group]=groups.get(group,0)+1
  for group in ('KR','GLOBAL'):
   for x in ordered:
-   if len(chosen)>=MAX_ITEMS:break
-   take(x,group)
+   if groups[group]>=MAX_ITEMS//2:break
+   take(x,group,True)
  for x in ordered:
-  if len(chosen)>=MAX_ITEMS:break
+  if len(chosen)>=max_items:break
   take(x)
  return chosen
 
+def relevance_rating(title,snippet,article_text=''):
+ title_terms={term for term in TERMS if term in (title or '').lower()}
+ all_terms={term for term in TERMS if term in (title+' '+snippet+' '+article_text).lower()}
+ direct=len(title_terms);total=len(all_terms)
+ if direct>=3 and total>=5:return 5
+ if direct>=2 and total>=4:return 4
+ if direct>=1 and total>=3:return 3
+ if total>=2:return 2
+ return 1
+
 def main():
- a=[];gnews(a);naver(a);public_rss(a);cse(a);old(a);out=[];selected=select_candidates(a)
- selected=resolve_selected_links(selected)
- for x in selected:
-  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source']);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
+ a=[];gnews(a);naver(a);public_rss(a);cse(a);old(a);out=[]
+ # Keep a small reserve so a card with a headline-only or irrelevant snippet
+ # can be skipped and replaced without widening the search itself.
+ selected=select_candidates(a,MAX_ITEMS*2)
+ used=set()
+ def curate(x):
+  resolved=resolve_selected_links([x])
+  if not resolved:return None
+  x=resolved[0]
+  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source'])
+  if len(normalize_summary(s,x['title'],x['source']))<70:return None
+  return {'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':relevance_rating(x['title'],x['snippet'],article_text),'url':x['url'],'published':x['published']}
+ # First fill up to 15 usable cards in each language. Invalid articles do not
+ # consume a slot, so the next candidate in that language gets a chance.
+ for group in ('KR','GLOBAL'):
+  for x in selected:
+   if sum(1 for item in out if item['languageGroup']==group)>=MAX_ITEMS//2:break
+   candidate_group=x.get('languageGroup') or language_group(x.get('title',''),x.get('source',''),x.get('url',''))
+   if candidate_group!=group or id(x) in used:continue
+   used.add(id(x));item=curate(x)
+   if item:out.append(item)
+ # If either language has fewer than 15 usable items, fill the remaining slots
+ # from whichever language still has relevant, sufficiently detailed content.
+ if len(out)<MAX_ITEMS:
+  for x in selected:
+   if len(out)>=MAX_ITEMS:break
+   if id(x) in used:continue
+   used.add(id(x));item=curate(x)
+   if item:out.append(item)
  # Last mandatory check immediately before writing. Never carry stale cards forward.
  out=[x for x in out if within_last_week(x.get('published',''))]
+ out.sort(key=lambda x:x.get('published',''),reverse=True)
+ out.sort(key=lambda x:x.get('rating',1),reverse=True)
  for x in out:
   x['published']=parse_publish_date(x['published']).isoformat()
  os.makedirs(os.path.dirname(OUT),exist_ok=True)
