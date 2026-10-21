@@ -1,4 +1,5 @@
 import os,re,json,html,urllib.parse,urllib.request,xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from datetime import datetime,timezone,timedelta
 from email.utils import parsedate_to_datetime
 OUT='data/weekly.json';MAX_ITEMS=30;UA='Mozilla/5.0 HUROM-Weekly-V8'
@@ -10,21 +11,28 @@ def fetch(u,h=None,d=None):
  r=urllib.request.Request(u,data=d,headers=h or {'User-Agent':UA});return urllib.request.urlopen(r,timeout=45).read()
 def clean(s):return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',html.unescape(s or ''))).strip()
 
-def within_last_week(date_text):
- if not date_text: return False
- now=datetime.now(timezone.utc); cutoff=now-timedelta(days=7)
+def parse_publish_date(date_text):
+ if not date_text:return None
+ t=str(date_text).strip()
  try:
-  d=parsedate_to_datetime(date_text)
+  d=parsedate_to_datetime(t)
   if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
-  return cutoff <= d.astimezone(timezone.utc) <= now
- except Exception:
-  try:
-   t=str(date_text).strip()
-   if re.fullmatch(r'\d{8}',t): d=datetime.strptime(t,'%Y%m%d').replace(tzinfo=timezone.utc)
-   else: d=datetime.fromisoformat(t.replace('Z','+00:00'))
-   if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
-   return cutoff <= d.astimezone(timezone.utc) <= now
-  except Exception:return False
+  return d.astimezone(timezone.utc)
+ except Exception:pass
+ for fmt in ('%Y%m%d','%Y-%m-%d','%Y/%m/%d'):
+  try:return datetime.strptime(t[:10] if fmt!='%Y%m%d' else t[:8],fmt).replace(tzinfo=timezone.utc)
+  except Exception:pass
+ try:
+  d=datetime.fromisoformat(t.replace('Z','+00:00'))
+  if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
+  return d.astimezone(timezone.utc)
+ except Exception:return None
+
+def within_last_week(date_text):
+ d=parse_publish_date(date_text)
+ if d is None:return False
+ now=datetime.now(timezone.utc);cutoff=now-timedelta(days=7)
+ return cutoff <= d <= now
 
 def rel(t):
  h=t.lower()
@@ -40,7 +48,9 @@ def cat(t):
  return 'CIRCUIT'
 def add(a,title,snip,url,date='',src='',typ='뉴스/웹'):
  title=clean(title);snip=clean(snip);score=rel(title+' '+snip)
- if title and url and score and within_last_week(date):a.append({'title':title,'snippet':snip,'url':url,'published':date,'source':src or urllib.parse.urlparse(url).netloc,'sourceType':typ,'score':score})
+ if title and url and score and within_last_week(date):
+  pd=parse_publish_date(date)
+  a.append({'title':title,'snippet':snip,'url':url,'published':pd.isoformat() if pd else '','source':src or urllib.parse.urlparse(url).netloc,'sourceType':typ,'score':score})
 def gnews(a):
  for q in S+Q:
   try:
@@ -68,11 +78,43 @@ def cse(a):
     u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':start,'num':10,'dateRestrict':'d7'});d=json.loads(fetch(u))
     for x in d.get('items',[]):add(a,x.get('title'),x.get('snippet'),x.get('link'))
    except Exception as e:print('cse',repr(e));break
-def analyze(title,snip,c):
- fallback=snip[:360] or '기사 검색요약에 확인 가능한 기술 내용입니다.';ks=[x for x in TERMS if x in (title+' '+snip).lower()][:6] or [c]
+
+class ArticleParser(HTMLParser):
+ def __init__(self):
+  super().__init__();self.in_p=False;self.parts=[];self.meta=[]
+ def handle_starttag(self,tag,attrs):
+  a=dict(attrs)
+  if tag=='p':self.in_p=True
+  if tag=='meta':
+   key=(a.get('property') or a.get('name') or '').lower();val=a.get('content','')
+   if key in ['description','og:description','twitter:description'] and val:self.meta.append(val)
+ def handle_endtag(self,tag):
+  if tag=='p':self.in_p=False
+ def handle_data(self,data):
+  if self.in_p and data.strip():self.parts.append(data.strip())
+
+def get_article_text(url):
+ # Search aggregator pages are not treated as article bodies.
+ if not url or 'news.google.com/' in url:return ''
+ try:
+  raw=fetch(url).decode('utf-8','ignore')[:1500000]
+  p=ArticleParser();p.feed(raw)
+  paras=[]
+  for x in p.parts:
+   x=clean(x)
+   if len(x)>=35 and x not in paras:paras.append(x)
+  text=' '.join(paras)
+  if len(text)<180 and p.meta:text=clean(' '.join(p.meta))
+  return text[:4500]
+ except Exception as e:
+  print('article fetch',url[:80],repr(e));return ''
+
+def analyze(title,snip,c,article_text=""):
+ fallback=(article_text[:900] if article_text else snip[:360]) or '기사 검색요약에 확인 가능한 기술 내용입니다.';ks=[x for x in TERMS if x in (title+' '+snip).lower()][:6] or [c]
  ep=os.getenv('AZURE_OPENAI_ENDPOINT','').rstrip('/');key=os.getenv('AZURE_OPENAI_API_KEY');dep=os.getenv('AZURE_OPENAI_DEPLOYMENT')
  if not(ep and key and dep):return title,fallback,ks
- prompt='검색 메타정보만 근거로 한국어로 정리. 없는 사실은 만들지 말 것. JSON만 출력 {"titleKo":"","articleSummaryKo":"","keywords":[]}. summary는 실제 핵심 2~3문장 260자 이하, keywords는 실제 확인되는 기술어 3~6개. 제목:'+title+' 요약:'+snip
+ source_text=(article_text[:4000] if article_text else snip)
+ prompt='제공된 기사 본문 또는 검색요약에 있는 사실만 사용해 한국어로 정리. 없는 사실은 만들지 말 것. JSON만 출력 {\"titleKo\":\"\",\"articleSummaryKo\":\"\",\"keywords\":[]}. articleSummaryKo는 해당 자료의 구체적 핵심내용 2~3문장 260자 이하. keywords는 실제 확인되는 기술어 3~6개. 제목:'+title+' 본문/요약:'+source_text
  body=json.dumps({'messages':[{'role':'system','content':'가전 전장 기술 편집자'},{'role':'user','content':prompt}],'temperature':0,'response_format':{'type':'json_object'}}).encode()
  try:
   u=f'{ep}/openai/deployments/{dep}/chat/completions?api-version=2024-10-21';d=json.loads(fetch(u,{'Content-Type':'application/json','api-key':key,'User-Agent':UA},body));o=json.loads(d['choices'][0]['message']['content']);return clean(o.get('titleKo')) or title,clean(o.get('articleSummaryKo')) or fallback,[clean(str(x)) for x in o.get('keywords',[])][:6] or ks
@@ -84,9 +126,10 @@ def old(a):
 def main():
  a=[];gnews(a);naver(a);cse(a);old(a);a.sort(key=lambda x:x['score'],reverse=True);out=[];seen=set();srcn={}
  for x in a:
+  if not within_last_week(x.get('published','')):continue
   k=''.join(re.findall(r'[a-z0-9가-힣]+',x['title'].lower()))[:100]
   if not k or k in seen or srcn.get(x['source'],0)>=6:continue
-  seen.add(k);srcn[x['source']]=srcn.get(x['source'],0)+1;c=cat(x['title']+' '+x['snippet']);t,s,kw=analyze(x['title'],x['snippet'],c);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
+  seen.add(k);srcn[x['source']]=srcn.get(x['source'],0)+1;c=cat(x['title']+' '+x['snippet']);article_text=get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
   if len(out)>=MAX_ITEMS:break
  if out:json.dump({'updated':datetime.now(timezone.utc).isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'items':out},open(OUT,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
  print('candidates',len(a),'selected',len(out))
