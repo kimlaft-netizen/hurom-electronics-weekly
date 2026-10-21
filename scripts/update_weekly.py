@@ -1,5 +1,5 @@
 import os,re,json,html,urllib.parse,urllib.request,xml.etree.ElementTree as ET
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from email.utils import parsedate_to_datetime
 OUT='data/weekly.json';MAX_ITEMS=30;UA='Mozilla/5.0 HUROM-Weekly-V8'
 Q=['BLDC PMSM sensorless FOC motor control','motor driver gate driver current sensing MOSFET','Altium PCB artwork routing stackup grounding creepage clearance','SMPS flyback buck LLC transformer snubber compensation','EMI EMC conducted radiated emissions common mode choke','microcontroller firmware embedded C RTOS watchdog bootloader UART PWM ADC','STM32 Renesas Nuvoton Microchip Infineon firmware motor','juicer blender food processor motor electronics']
@@ -9,6 +9,23 @@ TERMS=['bldc','pmsm','sensorless','foc','bemf','motor','모터','driver','curren
 def fetch(u,h=None,d=None):
  r=urllib.request.Request(u,data=d,headers=h or {'User-Agent':UA});return urllib.request.urlopen(r,timeout=45).read()
 def clean(s):return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',html.unescape(s or ''))).strip()
+
+def within_last_week(date_text):
+ if not date_text: return False
+ now=datetime.now(timezone.utc); cutoff=now-timedelta(days=7)
+ try:
+  d=parsedate_to_datetime(date_text)
+  if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
+  return cutoff <= d.astimezone(timezone.utc) <= now
+ except Exception:
+  try:
+   t=str(date_text).strip()
+   if re.fullmatch(r'\d{8}',t): d=datetime.strptime(t,'%Y%m%d').replace(tzinfo=timezone.utc)
+   else: d=datetime.fromisoformat(t.replace('Z','+00:00'))
+   if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
+   return cutoff <= d.astimezone(timezone.utc) <= now
+  except Exception:return False
+
 def rel(t):
  h=t.lower()
  if any(x in h for x in BLOCK):return 0
@@ -23,11 +40,11 @@ def cat(t):
  return 'CIRCUIT'
 def add(a,title,snip,url,date='',src='',typ='뉴스/웹'):
  title=clean(title);snip=clean(snip);score=rel(title+' '+snip)
- if title and url and score:a.append({'title':title,'snippet':snip,'url':url,'published':date,'source':src or urllib.parse.urlparse(url).netloc,'sourceType':typ,'score':score})
+ if title and url and score and within_last_week(date):a.append({'title':title,'snippet':snip,'url':url,'published':date,'source':src or urllib.parse.urlparse(url).netloc,'sourceType':typ,'score':score})
 def gnews(a):
  for q in S+Q:
   try:
-   u='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q,'hl':'ko','gl':'KR','ceid':'KR:ko'});root=ET.fromstring(fetch(u))
+   u='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q+' when:7d','hl':'ko','gl':'KR','ceid':'KR:ko'});root=ET.fromstring(fetch(u))
    for n in root.findall('.//item')[:100]:
     raw=clean(n.findtext('title'));src=raw.rsplit(' - ',1)[1] if ' - ' in raw else '';title=raw.rsplit(' - ',1)[0];add(a,title,n.findtext('description'),clean(n.findtext('link')),clean(n.findtext('pubDate')),src,'검색/전문매체')
   except Exception as e:print('gnews',repr(e))
@@ -48,7 +65,7 @@ def cse(a):
  for q in S+Q:
   for start in [1,11,21,31,41]:
    try:
-    u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':start,'num':10});d=json.loads(fetch(u))
+    u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':start,'num':10,'dateRestrict':'d7'});d=json.loads(fetch(u))
     for x in d.get('items',[]):add(a,x.get('title'),x.get('snippet'),x.get('link'))
    except Exception as e:print('cse',repr(e));break
 def analyze(title,snip,c):
