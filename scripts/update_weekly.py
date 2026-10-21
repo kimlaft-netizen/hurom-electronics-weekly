@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 
-OUT='data/weekly.json'; DAYS=14; MAX_ITEMS=20
+OUT='data/weekly.json'; DAYS=60; MAX_ITEMS=20; MIN_ITEMS=20
 UA={'User-Agent':'Mozilla/5.0 HUROM-Electronics-Weekly/4.0'}
 
 # 여러 출처를 각각 검색한다. Google News는 통합 색인으로 사용하고,
@@ -22,6 +22,13 @@ SOURCE_QUERIES=[
  ('Microchip','site:microchip.com (motor control OR embedded C OR MCU OR SMPS)'),
  ('Altium','site:resources.altium.com (PCB layout OR stackup OR routing OR EMC)'),
  ('ALL','(BLDC OR PMSM OR sensorless OR SMPS OR PCB layout OR embedded C OR EMI EMC) appliance'),
+ ('PCB2','(PCB design OR PCB routing OR grounding OR creepage clearance OR thermal design) electronics'),
+ ('POWER','(power electronics OR AC DC OR DC DC OR flyback OR buck OR LLC) design'),
+ ('EMI2','(EMI filter OR EMC design OR conducted emissions OR radiated emissions) electronics'),
+ ('FW2','(embedded firmware OR embedded C OR RTOS OR watchdog OR bootloader) microcontroller'),
+ ('MCU2','(STM32 OR Renesas OR Nuvoton OR Microchip OR Infineon MCU) motor power control'),
+ ('MOTOR2','(FOC OR six step OR field oriented control OR BEMF OR stall detection) BLDC PMSM'),
+ ('COMP','(current sensor OR MOSFET OR gate driver OR motor driver OR power IC) electronics'),
 ]
 NAVER_QUERIES=['BLDC 모터 제어','PMSM 센서리스','PCB 아트웍 알티움','SMPS 설계','EMI EMC 대책','마이컴 펌웨어 코딩','전력반도체 게이트 드라이버','전류센싱 회로']
 BLOCK=['market size','market forecast','market share','growth trends','stock','investment','revenue forecast','2035','2036','job vacancy','course promotion','3.3kv','6.5kv','railway','ev traction']
@@ -77,7 +84,7 @@ def add_google(candidates):
    for n in root.findall('.//item')[:25]:
     raw=clean(n.findtext('title')); desc=clean(n.findtext('description')); url=clean(n.findtext('link')); dt=parse_date(clean(n.findtext('pubDate')))
     sc=score(raw+' '+desc)
-    if not raw or not url or sc<8 or (dt and dt<cutoff):continue
+    if not raw or not url or sc<4 or (dt and dt<cutoff):continue
     title=raw.rsplit(' - ',1)[0]; publisher=raw.rsplit(' - ',1)[1] if ' - ' in raw else source
     candidates.append({'title':title,'snippet':desc,'url':url,'published':dt.isoformat() if dt else '','source':publisher or source,'sourceType':'Google News index','score':sc})
   except Exception as e:print('Google source error',source,repr(e))
@@ -90,7 +97,7 @@ def add_naver(candidates):
    data=json.loads(fetch(url,{'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':secret,'User-Agent':UA['User-Agent']}))
    for n in data.get('items',[]):
     title=clean(n.get('title')); desc=clean(n.get('description')); sc=score(title+' '+desc)
-    if sc<8:continue
+    if sc<4:continue
     dt=parse_date(n.get('pubDate',''))
     candidates.append({'title':title,'snippet':desc,'url':n.get('originallink') or n.get('link'),'published':dt.isoformat() if dt else '','source':'네이버 뉴스 검색','sourceType':'Naver API','score':sc})
   except Exception as e:print('Naver source error',q,repr(e))
@@ -99,9 +106,10 @@ def main():
  chosen=[];seen=set();source_count={}
  for x in c:
   key=''.join(re.findall(r'[a-z0-9가-힣]+',x['title'].lower()))[:90]
-  if key in seen or source_count.get(x['source'],0)>=3:continue
+  if key in seen or source_count.get(x['source'],0)>=5:continue
   seen.add(key);source_count[x['source']]=source_count.get(x['source'],0)+1
   cat=category(x['title']+' '+x['snippet']); ko_title,ko_summary=translate_with_azure(x['title'],x['snippet'],cat)
+  if not os.getenv('AZURE_OPENAI_API_KEY') and not re.search(r'[가-힣]', ko_title): ko_title=f'[{cat}] {ko_title}'
   chosen.append({'category':cat,'title':ko_title,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':ko_summary,'checkPoints':checks(cat),'rating':5 if x['score']>=30 else 4 if x['score']>=18 else 3,'url':x['url'],'published':x['published']})
   if len(chosen)>=MAX_ITEMS:break
  if not chosen:print('No qualified items; existing file preserved');return
