@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-21T09:06:09.274218+00:00",
-  "windowStart": "2026-10-14T09:06:09.274218+00:00",
-  "windowEnd": "2026-10-21T09:06:09.274218+00:00",
+  "updated": "2026-10-21T09:14:18.508415+00:00",
+  "windowStart": "2026-10-14T09:14:18.508415+00:00",
+  "windowEnd": "2026-10-21T09:14:18.508415+00:00",
   "issueTitle": "가전 전장 기술 TOP 20",
-  "searchedCandidates": 36,
+  "searchedCandidates": 40,
   "languageBalance": {
     "KR": 12,
     "GLOBAL": 8
@@ -140,7 +140,7 @@
       "published": "2026-10-19T03:38:00+00:00"
     },
     {
-      "category": "MOTOR",
+      "category": "COMPONENTS",
       "title": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
       "originalTitle": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
       "source": "Reliable Plant",
@@ -210,7 +210,7 @@
       "published": "2026-10-16T04:00:00+00:00"
     },
     {
-      "category": "SMPS",
+      "category": "EMI",
       "title": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
       "originalTitle": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
       "source": "note",
@@ -230,7 +230,7 @@
       "published": "2026-10-16T03:44:36+00:00"
     },
     {
-      "category": "CIRCUIT",
+      "category": "AI",
       "title": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
       "originalTitle": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
       "source": "SR타임스",
