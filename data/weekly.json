@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21T06:24:55.181430+00:00",
-  "issueTitle": "이번 주 가전 전장 기술 TOP 2",
+  "updated": "2026-10-21T06:33:45.634623+00:00",
+  "issueTitle": "이번 주 가전 전장 기술 TOP 7",
   "translationMode": "기본 한국어 요약",
   "items": [
     {
@@ -34,6 +34,86 @@
       "rating": 3,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FMzY2d2RkVlZTR3JGbTI3Ui16VUNWY1JfNDZrcFdNRDlrN1VUaldIOXFWZEpEVmt0cUNocExRRnEySElUMFUzNzNMZEp3cWs1WnZrMjlR?oc=5",
       "published": "2026-10-12T04:43:58+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "[EMI] Software Defines What a Vehicle Can Do. Semiconductors Define What Software Can Become",
+      "originalTitle": "Software Defines What a Vehicle Can Do. Semiconductors Define What Software Can Become",
+      "source": "autoelectronics.co.kr",
+      "sourceType": "Google News index",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 기술자료입니다.",
+      "checkPoints": [
+        "전도/복사 Noise Source·Path",
+        "CM Choke·X/Y Cap·접지·Shield",
+        "PCB Loop·Switching Edge·Pre-scan"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1TU2RCbEpva3Vmb2k3RnBvYUJVaUlNNVRnTGFzNGxZMHMtU25RUmV6VFJaVkFDSHd4b1cxZmFfUWdKaFgwWGt2aVplTWVycWVvU0RKeVZFVXhsdjhTcS10OWxrUzFObkRfa0lvbHQwbXV5X3FY?oc=5",
+      "published": "2026-10-01T07:00:00+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "차량용 전장 통합 제어와 Edge AI를 위한 차세대 MCU Stellar P3E",
+      "originalTitle": "차량용 전장 통합 제어와 Edge AI를 위한 차세대 MCU Stellar P3E",
+      "source": "e4ds news",
+      "sourceType": "Google News index",
+      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 기술자료입니다.",
+      "checkPoints": [
+        "Embedded C·상태 머신·ISR",
+        "Driver/HAL·통신·Bootloader",
+        "Watchdog·정적분석·Unit Test"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9uOGVnNGRaMEJLMUNiNUs4ZnRsR0tjb0lNQm16eGtfcHJrUkdvam1MME9hRnAzWVZzajVlRWNmZFlOQXU0Y2RZWk00NWhVaktJbjVoYXM4M0lHR2RS?oc=5",
+      "published": "2026-10-15T08:57:23+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
+      "originalTitle": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
+      "source": "e4ds news",
+      "sourceType": "Google News index",
+      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 기술자료입니다.",
+      "checkPoints": [
+        "Embedded C·상태 머신·ISR",
+        "Driver/HAL·통신·Bootloader",
+        "Watchdog·정적분석·Unit Test"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uWHh6d1QzWGY1WDRBdG1FcUE2WmJPRGwzSjQzRWZTX3Q4cFM0SEhEaUNscTFzbmpwQUh2X2Y1WUdXLVlnUEJ1LUpEcGRZZDhIUGRRZlFyRi1SUGNGYWJkSi14R25oUQ?oc=5",
+      "published": "2026-10-11T19:51:02+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "Arduino UNO Q 기술 백서: 클라우드 없는 엣지 AI를 위한 MPU·MCU 하이브리드 보드",
+      "originalTitle": "Arduino UNO Q 기술 백서: 클라우드 없는 엣지 AI를 위한 MPU·MCU 하이브리드 보드",
+      "source": "e4ds news",
+      "sourceType": "Google News index",
+      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 기술자료입니다.",
+      "checkPoints": [
+        "Embedded C·상태 머신·ISR",
+        "Driver/HAL·통신·Bootloader",
+        "Watchdog·정적분석·Unit Test"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBUV8zMEpsbzE1UkgwRldIQUJoNEtjdm1jQU1wdmk3cDkxUWNwTExQTUNsenZxNGpncFZtV2RmTjVhaXU3b2g1ZTV4VHR3RGhuVWxZN1pB?oc=5",
+      "published": "2026-10-09T14:31:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "[CIRCUIT] Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment",
+      "originalTitle": "Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment",
+      "source": "뉴스와이어",
+      "sourceType": "Google News index",
+      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 기술자료입니다.",
+      "checkPoints": [
+        "정격·Derating·발열",
+        "Protection·Reliability",
+        "BOM·검증·양산성"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9odmlnbWJveFFhWEljcHhwWFlkbTFOWUhSOTFDMkMxSEpqM2doZC1TcXZJT0JtTmVRNVV6QTN5Wm9obnF0V3lxc3BMUTVZWngxZUdQY1FHa0lQbWZ1bW5r?oc=5",
+      "published": "2026-09-27T07:00:00+00:00"
     }
   ]
 }
