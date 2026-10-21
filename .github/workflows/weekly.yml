@@ -12,9 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Deep multi-source search and Korean curation
+        with: {python-version: '3.12'}
+      - name: Deep search and article curation
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
@@ -24,10 +23,10 @@ jobs:
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
         run: python scripts/update_weekly.py
-      - name: Commit weekly data
+      - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/weekly.json
-          git diff --cached --quiet || git commit -m "chore: deep weekly electronics update"
+          git diff --cached --quiet || git commit -m "chore: weekly electronics update"
           git push
