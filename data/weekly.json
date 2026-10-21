@@ -1,90 +1,39 @@
 {
-  "updated": "2026-10-21T06:11:29.995404+00:00",
-  "issueTitle": "이번 주 가전 전장 기술 TOP 6",
+  "updated": "2026-10-21T06:24:55.181430+00:00",
+  "issueTitle": "이번 주 가전 전장 기술 TOP 2",
+  "translationMode": "기본 한국어 요약",
   "items": [
     {
-      "category": "MOTOR",
-      "title": "HPMicro HPM5100 RISC-V MCU integrates four 16-bit ADCs, four op-amps for analog sensing and motor control",
-      "source": "CNX Software",
-      "summary": "BLDC/PMSM 모터 제어 관련 기술입니다. PWM 구성, 전류 피드백, 속도 안정성 및 보호 로직을 가전 모터 제어 관점에서 확인할 수 있습니다.",
+      "category": "PCB",
+      "title": "PCB 트레이스 폭을 올바르게 정의하는 방법",
+      "originalTitle": "PCB 트레이스 폭을 올바르게 정의하는 방법",
+      "source": "Altium",
+      "sourceType": "Google News index",
+      "summary": "PCB 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 기술자료입니다.",
       "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
-      ],
-      "rating": 4,
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTmhTdHZMdzNkbll0WlJWUTVFQU5GQjdHb0tCaW10ZmhrdkFsTEpvd2xwQXZoeDNHNlpyZ0VuejB6SUYycTVHTXc4a3FkMXViTmJXeWwtVkZiWFFXV05IZzBsdWFPMnRzUEJOaVVKaFh6Mmwwa0l1ZlM0czNZNVFIQk9WLXVCXzVBUWlHMFY1cFBfSHFOd1dvNmQ2RTVxN1lzNWtUZWN2RWhhUmZySzZXM09qcTF6RGZGRG9WNkRTMEw1cGxtNVdiYmhjNEg3YkpFb2tjaW5Rcmw4Zk9MX1HSAeYBQVVfeXFMTXF0bjlxRjJnZWVKWXQ2eXI1NHIyMDRQNlNHNGE3Q0ptMkZ3ZWZQVlh4eU1ReWFqbkwydGxkX2NFWkx0ZEs0bllxSm43OW1OQXd2c1hnUjVXdVdNSTRqX0E5UzVQMkgyeHYzOGhWX3k2d3QwaDl1MlZSUmtmRUhVTHdJRWFBZWlETkgzTktpSEl0dU5Zb242c2xvVVFiMmxhUlZQSjJRQ294MldRMVl6UWZzamFVYWgxQm4zcE9tcGstWGplVnZiR21HMGlEUGRtUENMU1BxSlZMSFFGQTl1WHl0cGxWM3c?oc=5",
-      "published": "2026-10-15T07:00:44+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "Circuit: PWM Motor Control",
-      "source": "Elektor Magazine",
-      "summary": "BLDC/PMSM 모터 제어 관련 기술입니다. PWM 구성, 전류 피드백, 속도 안정성 및 보호 로직을 가전 모터 제어 관점에서 확인할 수 있습니다.",
-      "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
       ],
       "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1sRUZ6SEdzdE5OeVE2WC1IQnpRRUpUWW5yYV8wQ0o1eXpFYldJVEhtMnhMZ1VlNkliM1NxS3VjR0NYeV9TWDU3MFJmRUNuZ1RnTTVjTHpiX2NSU2ZjenBSTjRsREdoUGRmSnYyQlg1NnNHMld3aGx3Q1FIbGZ4QQ?oc=5",
-      "published": "2026-10-09T17:40:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9Qd21TdC01S1lKN2JfVVVwYnd3U3IyTlNQWnNySW5yV2lhX1kxSW0zTjRLQlhzeEpDUXdYcTlxbkR4bTluS3NjRDB1cGVzalBOUDBZMi1YX1IzLUFRMVlvcF9TSHk3ZUdiSjRCWUR0Ml90WkE0?oc=5",
+      "published": "2026-10-13T04:07:37+00:00"
     },
     {
-      "category": "CIRCUIT",
-      "title": "EPC GaN FETs enable 4 kW buck-boost reference design",
-      "source": "Compound Semiconductor",
-      "summary": "가전 전원회로 관련 기술입니다. 토폴로지, 효율, 절연·보호 요구사항, BOM 및 EMI/EMC 영향을 비교 검토할 수 있습니다.",
+      "category": "EMI",
+      "title": "노이즈와의 전쟁: 주파수 영역으로 꿰뚫어 보는 SI/PI/EMI",
+      "originalTitle": "노이즈와의 전쟁: 주파수 영역으로 꿰뚫어 보는 SI/PI/EMI",
+      "source": "e4ds news",
+      "sourceType": "Google News index",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 기술자료입니다.",
       "checkPoints": [
-        "정격 전압·전류·발열",
-        "효율·스위칭 손실·BOM",
-        "보호회로·EMI/EMC"
+        "전도/복사 Noise Source·Path",
+        "CM Choke·X/Y Cap·접지·Shield",
+        "PCB Loop·Switching Edge·Pre-scan"
       ],
       "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX1hEU21QeWJPN0pDY3U5NVVjUmxDNWtwakxya0dheThVMjdyTW9rWWh6U1hNeFo1Zi1tWlVmd3hkZ29jX0dyUnlKaXZtc0JjU2llQ3h2ZmNlNHZvS0VuSmtPNmhhUzlubk5sM1M2eWJDOWgtRXctMjlBekw0cTlCMTBKQ0NPQk4zNTJ4eEtTSlBlY21WT3JkSVlDVnpFNU9IbU5J?oc=5",
-      "published": "2026-10-20T10:18:15+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "Infineon expands PSOC™ Control C3 family with PSC3M/P6 featuring advanced security for multi-motor control and power conversion systems",
-      "source": "EE Journal",
-      "summary": "BLDC/PMSM 모터 제어 관련 기술입니다. PWM 구성, 전류 피드백, 속도 안정성 및 보호 로직을 가전 모터 제어 관점에서 확인할 수 있습니다.",
-      "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNGxnVnFKY2QxWDdxTmw4Y3J0aFV4OWVRNWlIa1ppREZXNU9fYzZSWFdDYmZmeDA2ZlRRMjFqbkhzU0FUR2lrclFzMjNoUzBQdWtEbXNpVGF1djA1SzhCSjVQRWN0X0M0ZmhVZmV6bjU0cktEV1JnZ2F2RlphcnJCUXp5MU5fVmJWWGdtby02Q0staDFsYXVvTUJzNktaN1A2TUNMemVKUnM4ek9aV3I3WWVWa3pDeDFnNUxrTUVxb2RXaDFvWDh2N0tvSmpNZHdWQUppT0ItaW5SLTFzb3RYQmIxMFZyUU9DNnl1bVNEN3F2NnM1UU5WdklZS2xKRWo5UmJ1VmFn?oc=5",
-      "published": "2026-10-20T13:46:05+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification",
-      "source": "Cincinnati Enquirer",
-      "summary": "가전 전장 설계와 관련된 공개 기술자료입니다. 회로, 모터 제어, Firmware 및 제품 적용 관점에서 핵심 사양을 확인할 수 있습니다.",
-      "checkPoints": [
-        "정격 전압·전류·발열",
-        "효율·스위칭 손실·BOM",
-        "보호회로·EMI/EMC"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPbDB0OG5pN1FlYWhaTXlXaW52OURPbS13SHMxQ0EtT3o5dUI5d3NOR1VqclNYM2ktR3NPRzg3dWUyUDJqblg4U2dVMUJQZHJvWFM2UU9KUWdjMm5Ua05RT3YwMGZwLVF4cmN3NDA4aWZGVC1UMUc2UUd5cjVUYjQ1SnIzZy1NenpsekNjbE5QNHdKNEMzUTBMOEdJblhVakVmaEs3dWZJa0VnRjZReTM5amdVOHR3QlRqemg4MWVnNVdGV0lhV1lBS3FhWXBlWGgySjAzUzlfTDF1WHIyZXlWRkxaMXJXVWxZYmlMRjhGWEVNd1E?oc=5",
-      "published": "2026-10-14T08:20:04+00:00"
-    },
-    {
-      "category": "APPLIANCE",
-      "title": "8 Best Food Processors and Choppers of 2026, Lab-Tested and Reviewed",
-      "source": "Consumer Reports",
-      "summary": "가전제품의 모터·전장 적용 동향입니다. 실제 사용 부하, 소비전력, 소음·진동 및 제어 기능 관점에서 참고할 수 있습니다.",
-      "checkPoints": [
-        "주방가전 적용 가능성",
-        "부하·소음·소비전력",
-        "기구·회로·FW 연계 영향"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmFDbmttVjB0cnR0aWdaWW5WNzVJVFBrSy1hNnIyd0xjMG1uWEJlU1ZqNVd6RUdsSENDZjhsdS1qRXNmTnNySUFDVnV2Njl3VGxQLUdraUQzYkRIS09hcF9KNUJjb2JKWGwzRHhuWVl4TjdrclBxX0EtcVdaczh0am5vWi1BM1Q2Smp4QnV3blBab2s3M3diZzgxVllxUFBFTUNyblVpZHdVVUl4QzQ1V2Jpbw?oc=5",
-      "published": "2026-10-10T07:00:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FMzY2d2RkVlZTR3JGbTI3Ui16VUNWY1JfNDZrcFdNRDlrN1VUaldIOXFWZEpEVmt0cUNocExRRnEySElUMFUzNzNMZEp3cWs1WnZrMjlR?oc=5",
+      "published": "2026-10-12T04:43:58+00:00"
     }
   ]
 }
