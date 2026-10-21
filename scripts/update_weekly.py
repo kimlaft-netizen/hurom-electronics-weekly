@@ -4,20 +4,28 @@ from datetime import datetime,timezone,timedelta
 from email.utils import parsedate_to_datetime
 OUT='data/weekly.json';MAX_ITEMS=30;UA='Mozilla/5.0 HUROM-Weekly-V8'
 RUN_END=datetime.now(timezone.utc);RUN_START=RUN_END-timedelta(days=7)
-Q=['BLDC PMSM sensorless FOC motor control','motor driver gate driver current sensing MOSFET','Altium PCB artwork routing stackup grounding creepage clearance','SMPS flyback buck LLC transformer snubber compensation','EMI EMC conducted radiated emissions common mode choke','microcontroller firmware embedded C RTOS watchdog bootloader UART PWM ADC','STM32 Renesas Nuvoton Microchip Infineon firmware motor','juicer blender food processor motor electronics','가전 모터 BLDC','가전 전장 모터 회로','주방가전 모터 전자회로','BLDC vacuum cleaner motor','home appliance motor control electronics','kitchen appliance motor BLDC','smart motor gate drive TDRIVE','secured MCU legacy board firmware design']
-S=['site:etnews.com 반도체 회로 모터 전원 펌웨어 PCB EMI','site:e4ds.com BLDC MCU SMPS PCB EMI 전력반도체','site:rohm.co.kr 모터드라이버 MOSFET 전원IC MCU','site:st.com BLDC PMSM motor control STM32','site:ti.com motor control gate driver current sensing','site:infineon.com motor control MOSFET PSoC','site:renesas.com motor control MCU inverter firmware','site:nxp.com motor control MCU','site:onsemi.com motor driver MOSFET','site:microchip.com motor control embedded C','site:resources.altium.com PCB layout stackup EMC','site:blog.naver.com BLDC PCB SMPS EMI 펌웨어','site:tistory.com BLDC Altium PCB SMPS EMI firmware','site:eevblog.com PCB SMPS EMI motor control','site:electronics.stackexchange.com BLDC PCB SMPS EMI microcontroller']
+Q_KR=[
+ 'BLDC 모터제어','PMSM 센서리스 FOC','모터 전류센싱 MOSFET 드라이버','가전 모터 청소기 믹서기 착즙기','회로 보호회로 게이트드라이버','Altium PCB 아트웍 EMC','SMPS 플라이백 벅 컨버터','EMI EMC 모터 노이즈 필터','MCU 펌웨어 PWM ADC RTOS','STM32 Renesas 모터 펌웨어','가전 전장 열설계 신뢰성','공개 블로그 카페 모터제어 회로'
+]
+Q_GLOBAL=[
+ 'BLDC PMSM motor control','sensorless FOC startup BEMF','motor driver current sensing MOSFET','appliance juicer blender motor electronics','PCB layout power electronics EMI','SMPS flyback buck converter design','EMI EMC conducted emissions filter','MCU firmware embedded C RTOS PWM','STM32 Renesas motor control firmware','appliance electronics thermal reliability','motor control engineering blog','site:hackaday.com motor driver PCB','site:eevblog.com SMPS EMI PCB','site:electronics.stackexchange.com motor driver PCB'
+]
+Q=Q_KR+Q_GLOBAL
+S=['site:etnews.com 가전 모터 전원','site:e4ds.com 모터제어 전력반도체','site:blog.naver.com BLDC 모터 PCB','site:cafe.naver.com 모터제어 회로 PCB','site:ti.com motor gate driver current sensing','site:st.com motor control firmware STM32','site:resources.altium.com PCB EMI design','site:hackaday.com motor control PCB']
 BLOCK=['english as a second language','second language','제2언어','영어 교육','language education','automotive','electric vehicle','3300v','3.3kv','6.5kv','market size','market forecast','market share','stock','investment','2035','2036','job vacancy']
-TERMS=['bldc','pmsm','sensorless','foc','bemf','motor','모터','driver','current sensing','mosfet','mcu','firmware','펌웨어','embedded c','watchdog','rtos','pwm','adc','uart','altium','pcb','artwork','routing','stackup','creepage','clearance','grounding','smps','flyback','buck','llc','snubber','emi','emc','노이즈','회로','전원','반도체']
-def fetch(u,h=None,d=None):
+AUTO=['automotive','electric vehicle','ev traction','차량용','전기차']
+APPLIANCE_CONTEXT=['appliance','가전','juicer','blender','food processor','vacuum cleaner','청소기','믹서기','착즙기']
+TERMS=['bldc','pmsm','sensorless','foc','bemf','motor','모터','모터제어','driver','gate drive','current control','current sensing','mosfet','gate driver','mcu','microcontroller','firmware','펌웨어','embedded c','watchdog','rtos','pwm','adc','uart','spi','i2c','isr','bootloader','stm32','renesas','nuvoton','microchip','infineon','altium','pcb','artwork','routing','stackup','creepage','clearance','gnd','grounding','high current','gate loop','dfm','smps','ac/dc','dc/dc','flyback','buck','llc','transformer','snubber','compensation','emi','emc','conducted emission','radiated emission','common mode choke','노이즈','회로','전원','반도체','가전','juicer','blender','food processor']
+def fetch(u,h=None,d=None,timeout=8):
  r=urllib.request.Request(u,data=d,headers=h or {'User-Agent':UA})
- for attempt in range(3):
-  try:return urllib.request.urlopen(r,timeout=45).read()
+ for attempt in range(2):
+  try:return urllib.request.urlopen(r,timeout=timeout).read()
   except urllib.error.HTTPError as e:
-   if e.code not in (429,500,502,503,504) or attempt==2:raise
-   time.sleep(1+attempt*2)
+   if e.code not in (429,500,502,503,504) or attempt==1:raise
+   time.sleep(1)
   except (urllib.error.URLError,TimeoutError):
-   if attempt==2:raise
-   time.sleep(1+attempt*2)
+   if attempt==1:raise
+   time.sleep(1)
 def clean(s):return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',html.unescape(s or ''))).strip()
 
 def parse_publish_date(date_text):
@@ -47,8 +55,16 @@ def within_last_week(date_text):
 
 def rel(t):
  h=t.lower()
- if any(x in h for x in BLOCK):return 0
+ if any(x in h for x in BLOCK if x not in AUTO):return 0
+ if any(x in h for x in AUTO) and not any(x in h for x in APPLIANCE_CONTEXT):return 0
  return sum(x in h for x in TERMS)
+
+def language_group(title, source, url=''):
+ s=(source or '').lower();host=urllib.parse.urlparse(url or '').netloc.lower()
+ if any(x in s or x in host for x in ['etnews','e4ds','rohm.co.kr','naver','tistory','chosun','korea','livesnews','hinews','전자신문','뉴스','조선','한국']):return 'KR'
+ if any(x in s or x in host for x in ['ti.com','st.com','infineon','renesas','nxp.com','onsemi','microchip','altium','hackaday','eevblog','electronics.stackexchange','medium.com']):return 'GLOBAL'
+ if re.search(r'[가-힣]',source or ''):return 'KR'
+ return 'KR' if re.search(r'[가-힣]',title or '') and not re.search(r'[A-Za-z]{3,}',source or '') else 'GLOBAL'
 
 def title_tokens(title):
  stop={'with','from','this','that','design','using','for','and','the','how','new','guide','기술','출시','선봬','적용'}
@@ -63,7 +79,7 @@ def duplicate_title(title, seen_titles):
   prior_tokens=title_tokens(prior)
   if not prior_tokens:continue
   shared=tokens & prior_tokens
-  if len(shared)/min(len(tokens),len(prior_tokens)) >= 0.68:return True
+  if shared and len(shared)/len(tokens | prior_tokens) >= 0.78:return True
   prior_models=set(re.findall(r'\b[a-z]+\d+[a-z0-9]*\b',prior.lower()))
   if model_ids & prior_models and shared & tech_terms:return True
  return False
@@ -75,43 +91,73 @@ def cat(t):
  if any(x in h for x in ['bldc','pmsm','sensorless','foc','bemf','motor','모터']):return 'MOTOR'
  if any(x in h for x in ['firmware','펌웨어','embedded c','mcu','microcontroller','watchdog','rtos','uart','pwm','adc']):return 'FIRMWARE'
  return 'CIRCUIT'
-def add(a,title,snip,url,date='',src='',typ='뉴스/웹'):
+def add(a,title,snip,url,date='',src='',typ='뉴스/웹',group=None):
  title=clean(title);snip=clean(snip);score=rel(title+' '+snip)
  if title and url and score and within_last_week(date):
   pd=parse_publish_date(date)
-  a.append({'title':title,'snippet':snip,'url':url,'published':pd.isoformat() if pd else '','source':src or urllib.parse.urlparse(url).netloc,'sourceType':typ,'score':score})
+  source=src or urllib.parse.urlparse(url).netloc
+  a.append({'title':title,'snippet':snip,'url':url,'published':pd.isoformat() if pd else '','source':source,'sourceType':typ,'languageGroup':group or language_group(title,source,url),'score':score})
 def gnews(a):
- for q in S+Q:
+ searches=[(q,'ko','KR','KR:ko',None) for q in S+Q_KR]+[(q,'ko','US','US:en','GLOBAL') for q in Q_GLOBAL]
+ for q,hl,gl,ceid,group in searches:
   try:
-   u='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q+' when:7d','hl':'ko','gl':'KR','ceid':'KR:ko'});root=ET.fromstring(fetch(u))
+   u='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q+' when:7d','hl':hl,'gl':gl,'ceid':ceid});root=ET.fromstring(fetch(u))
    for n in root.findall('.//item')[:100]:
-    raw=clean(n.findtext('title'));src=raw.rsplit(' - ',1)[1] if ' - ' in raw else '';title=raw.rsplit(' - ',1)[0];add(a,title,n.findtext('description'),clean(n.findtext('link')),clean(n.findtext('pubDate')),src,'검색/전문매체')
+    raw=clean(n.findtext('title'));src=raw.rsplit(' - ',1)[1] if ' - ' in raw else '';title=raw.rsplit(' - ',1)[0];add(a,title,n.findtext('description'),clean(n.findtext('link')),clean(n.findtext('pubDate')),src,'뉴스/검색',group)
   except Exception as e:print('gnews query failed',q,repr(e))
   time.sleep(0.35)
 def naver(a):
  cid=os.getenv('NAVER_CLIENT_ID');sec=os.getenv('NAVER_CLIENT_SECRET')
- if not(cid and sec):return
+ if not(cid and sec):
+  print('Naver news/blog/public-cafe search skipped: NAVER_CLIENT_ID/SECRET not configured')
+  return
  h={'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':sec,'User-Agent':UA}
- for ep,typ in [('blog','기술블로그'),('news','뉴스/포털')]:
-  for q in Q:
-   for start in [1,101,201]:
-    try:
-     u='https://openapi.naver.com/v1/search/'+ep+'.json?'+urllib.parse.urlencode({'query':q,'display':100,'start':start,'sort':'date' if ep=='news' else 'sim'});d=json.loads(fetch(u,h))
-     for x in d.get('items',[]):add(a,x.get('title'),x.get('description'),x.get('originallink') or x.get('link'),x.get('postdate') or x.get('pubDate',''),'네이버',typ)
-    except Exception as e:print('naver',repr(e));break
+ for ep,typ in [('news','전문매체'),('blog','기술 블로그'),('cafearticle','공개 카페 글')]:
+  for q in Q_KR:
+   try:
+    u='https://openapi.naver.com/v1/search/'+ep+'.json?'+urllib.parse.urlencode({'query':q,'display':100,'start':1,'sort':'date'});d=json.loads(fetch(u,h))
+    for x in d.get('items',[]):
+     url=x.get('originallink') or x.get('link') or ''
+     source=x.get('bloggername') or x.get('cafename') or urllib.parse.urlparse(url).netloc or '네이버 검색'
+     date=x.get('postdate') or x.get('pubDate') or x.get('date') or ''
+     add(a,x.get('title'),x.get('description'),url,date,source,typ,'KR')
+    time.sleep(0.2)
+   except Exception as e:print('naver',ep,q,repr(e))
+
+def public_rss(a):
+ feeds=[
+  ('https://hackaday.com/blog/feed/','Hackaday','기술 블로그','GLOBAL'),
+  ('https://electronics.stackexchange.com/feeds/tag/motor-control?sort=creation','Electrical Engineering Stack Exchange','공개 커뮤니티','GLOBAL'),
+  ('https://electronics.stackexchange.com/feeds/tag/pcb?sort=creation','Electrical Engineering Stack Exchange','공개 커뮤니티','GLOBAL'),
+  ('https://electronics.stackexchange.com/feeds/tag/power-electronics?sort=creation','Electrical Engineering Stack Exchange','공개 커뮤니티','GLOBAL'),
+  ('https://electronics.stackexchange.com/feeds/tag/embedded?sort=creation','Electrical Engineering Stack Exchange','공개 커뮤니티','GLOBAL')]
+ for url,source,typ,group in feeds:
+  try:
+   root=ET.fromstring(fetch(url));nodes=root.findall('.//item')+root.findall('.//{*}entry')
+   for node in nodes[:100]:
+    vals={child.tag.rsplit('}',1)[-1]:child for child in node}
+    title=vals.get('title').text if vals.get('title') is not None else ''
+    desc=vals.get('description') or vals.get('summary') or vals.get('content')
+    link=vals.get('link');link=(link.attrib.get('href','') if link is not None and link.attrib.get('href') else (link.text if link is not None else ''))
+    date=next((vals[k].text for k in ('pubDate','published','updated') if vals.get(k) is not None and vals[k].text),'')
+    add(a,title,desc.text if desc is not None else '',link,date,source,typ,group)
+  except Exception as e:print('public RSS failed',source,url,repr(e))
+
 def cse(a):
  key=os.getenv('GOOGLE_CSE_API_KEY');cx=os.getenv('GOOGLE_CSE_ID')
- if not(key and cx):return
+ if not(key and cx):
+  print('Google Custom Search skipped: GOOGLE_CSE_API_KEY/ID not configured')
+  return
  for q in S+Q:
-  for start in [1,11,21,31,41]:
-   try:
-    u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':start,'num':10,'dateRestrict':'d7'});d=json.loads(fetch(u))
-    for x in d.get('items',[]):
-     meta=(x.get('pagemap') or {}).get('metatags') or [{}]
-     m=meta[0] if meta else {}
-     date=next((m.get(k) for k in ('article:published_time','datepublished','date','pubdate','og:updated_time') if m.get(k)), '')
-     add(a,x.get('title'),x.get('snippet'),x.get('link'),date,'Google 검색','검색/웹')
-   except Exception as e:print('cse',repr(e));break
+  try:
+   u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':1,'num':10,'dateRestrict':'d7'});d=json.loads(fetch(u))
+   for x in d.get('items',[]):
+    meta=(x.get('pagemap') or {}).get('metatags') or [{}]
+    m=meta[0] if meta else {}
+    date=next((m.get(k) for k in ('article:published_time','datepublished','pubdate','date') if m.get(k)), '')
+    add(a,x.get('title'),x.get('snippet'),x.get('link'),date,'Google 검색','검색/웹')
+  except Exception as e:print('cse',q,repr(e))
+  time.sleep(0.2)
 
 class ArticleParser(HTMLParser):
  def __init__(self):
@@ -136,6 +182,7 @@ def get_article_text(url):
   paras=[]
   for x in p.parts:
    x=clean(x)
+   if any(noise in x.lower() for noise in ['google 검색에서 더 쉽게','관심 있는 itchosun 기사','subscribe to our newsletter','sign up for our newsletter','advertisement']):continue
    if len(x)>=35 and x not in paras:paras.append(x)
   text=' '.join(paras)
   if len(text)<180 and p.meta:text=clean(' '.join(p.meta))
@@ -143,8 +190,15 @@ def get_article_text(url):
  except Exception as e:
   print('article fetch',url[:80],repr(e));return ''
 
+def fallback_summary(text,limit=420):
+ text=clean(text)
+ if not text:return '검색 결과에 확인 가능한 기사 본문 요약이 없습니다.'
+ sentences=[x.strip() for x in re.split(r'(?<=[.!?。])\s+',text) if len(x.strip())>24]
+ result=' '.join(sentences[:2]) if len(sentences)>1 else text
+ return result[:limit].rstrip()
+
 def analyze(title,snip,c,article_text=""):
- fallback=(article_text[:900] if article_text else snip[:360]) or '기사 검색요약에 확인 가능한 기술 내용입니다.';ks=[x for x in TERMS if x in (title+' '+snip).lower()][:6] or [c]
+ fallback=fallback_summary(article_text or snip);ks=[x for x in TERMS if x in (title+' '+snip+' '+article_text).lower()][:6] or [c]
  ep=os.getenv('AZURE_OPENAI_ENDPOINT','').rstrip('/');key=os.getenv('AZURE_OPENAI_API_KEY');dep=os.getenv('AZURE_OPENAI_DEPLOYMENT')
  if not(ep and key and dep):return title,fallback,ks
  source_text=(article_text[:4000] if article_text else snip)
@@ -157,21 +211,36 @@ def old(a):
  try:
   for x in json.load(open(OUT,encoding='utf-8')).get('items',[]):add(a,x.get('originalTitle') or x.get('title'),x.get('summary'),x.get('url'),x.get('published',''),x.get('source',''),x.get('sourceType',''))
  except:pass
+
+def select_candidates(items):
+ ordered=sorted((x for x in items if within_last_week(x.get('published',''))),key=lambda x:x.get('score',0),reverse=True)
+ chosen=[];titles=[];publishers={};groups={'KR':0,'GLOBAL':0}
+ def take(x,limit_group=None):
+  group=x.get('languageGroup') or language_group(x.get('title',''),x.get('source',''),x.get('url',''))
+  source=x.get('source') or urllib.parse.urlparse(x.get('url','')).netloc
+  if limit_group and group!=limit_group:return
+  if limit_group and groups[group]>=MAX_ITEMS//2:return
+  if publishers.get(source,0)>=5 or duplicate_title(x.get('title',''),titles):return
+  chosen.append(x);titles.append(x.get('title',''));publishers[source]=publishers.get(source,0)+1;groups[group]=groups.get(group,0)+1
+ for group in ('KR','GLOBAL'):
+  for x in ordered:
+   if len(chosen)>=MAX_ITEMS:break
+   take(x,group)
+ for x in ordered:
+  if len(chosen)>=MAX_ITEMS:break
+  take(x)
+ return chosen
+
 def main():
- a=[];gnews(a);naver(a);cse(a);old(a);a.sort(key=lambda x:x['score'],reverse=True);out=[];seen=set();seen_titles=[];srcn={}
- for x in a:
-  if not within_last_week(x.get('published','')):continue
-  k=''.join(re.findall(r'[a-z0-9가-힣]+',x['title'].lower()))[:100]
-  tokens=title_tokens(x['title'])
-  if not k or k in seen or duplicate_title(x['title'],seen_titles) or srcn.get(x['source'],0)>=6:continue
-  seen.add(k);seen_titles.append(x['title']);srcn[x['source']]=srcn.get(x['source'],0)+1;c=cat(x['title']+' '+x['snippet']);article_text=get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
-  if len(out)>=MAX_ITEMS:break
+ a=[];gnews(a);naver(a);public_rss(a);cse(a);old(a);out=[];selected=select_candidates(a)
+ for x in selected:
+  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
  # Last mandatory check immediately before writing. Never carry stale cards forward.
  out=[x for x in out if within_last_week(x.get('published',''))]
  for x in out:
   x['published']=parse_publish_date(x['published']).isoformat()
  os.makedirs(os.path.dirname(OUT),exist_ok=True)
- payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'items':out}
+ payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'languageBalance':{'KR':sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL':sum(1 for x in out if x.get('languageGroup')=='GLOBAL')},'items':out}
  with open(OUT,'w',encoding='utf-8') as f:json.dump(payload,f,ensure_ascii=False,indent=2)
- print('candidates',len(a),'selected',len(out))
+ print('candidates',len(a),'KR',sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL',sum(1 for x in out if x.get('languageGroup')=='GLOBAL'),'selected',len(out))
 if __name__=='__main__':main()
