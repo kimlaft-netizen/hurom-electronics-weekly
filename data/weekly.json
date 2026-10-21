@@ -1,8 +1,7 @@
 {
-  "updated": "2026-10-21T06:46:47.185954+00:00",
-  "issueTitle": "가전 전장 기술 TOP 17",
-  "searchedCandidates": 30,
-  "translationMode": "기본 한국어 요약",
+  "updated": "2026-10-21T06:55:46.044322+00:00",
+  "issueTitle": "가전 전장 기술 TOP 27",
+  "searchedCandidates": 66,
   "items": [
     {
       "category": "PCB",
@@ -11,30 +10,16 @@
       "source": "Altium",
       "sourceType": "뉴스/웹",
       "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
+      "keywords": [
+        "pcb",
+        "artwork",
+        "emi",
+        "emc",
+        "전원"
       ],
       "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9hS1BocFJEUTUtMVVTYVRoYUJzdF92d2F5eE4wN29aeVNRZ0FsR3MxdzFOZkQtSXVYTVEtbEptcmwtaXVaVHcxbmU3VHNXNnhpQW13OU5kNUR3Sm9scEQxRWlvZGxNdDJPaHJub21ZY0hpN1psYzlyNUE4ejVLNms?oc=5",
       "published": "2024-09-19T15:51:42+00:00"
-    },
-    {
-      "category": "FIRMWARE",
-      "title": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
-      "originalTitle": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
-      "source": "e4ds news",
-      "sourceType": "전문매체",
-      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 자료입니다.",
-      "checkPoints": [
-        "Embedded C·상태 머신·ISR",
-        "Driver/HAL·통신·Bootloader",
-        "Watchdog·정적분석·Unit Test"
-      ],
-      "rating": 4,
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uWHh6d1QzWGY1WDRBdG1FcUE2WmJPRGwzSjQzRWZTX3Q4cFM0SEhEaUNscTFzbmpwQUh2X2Y1WUdXLVlnUEJ1LUpEcGRZZDhIUGRRZlFyRi1SUGNGYWJkSi14R25oUQ?oc=5",
-      "published": "2026-10-11T19:51:02+00:00"
     },
     {
       "category": "PCB",
@@ -43,14 +28,52 @@
       "source": "Altium",
       "sourceType": "뉴스/웹",
       "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
+      "keywords": [
+        "pcb",
+        "artwork",
+        "emi",
+        "emc",
+        "전원"
       ],
       "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5yQkRiaHM5cUl2R1g0OE1hYnUtUXF1QVhybTVCclF0NlZYeEMtcnFUNjdVbFdXUnNhWXhXNldiZnJCN2ZPUnh6WWZHc193UVdOOEFhNUlVVjV5Q2pZbUw3WV9YclV3TGMxUkRUanlSdjJjYmdTUk51bzdn?oc=5",
       "published": "2025-03-11T12:21:11+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "EMI / EMC",
+      "originalTitle": "EMI / EMC",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "keywords": [
+        "pcb",
+        "artwork",
+        "emi",
+        "emc",
+        "전원"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1GcF85elJiR0p4X1JqaTJ1a1gxZHNVckhuaEdFU182RHFuZW5JREhlWGt3MU4yYVlkMk52alliNFZrX3ZyejZoNGNwUFIxMDUxTEtVakhDRWFhY2x5RjFNMzRJbEpOUEJt?oc=5",
+      "published": "2024-10-10T23:20:12+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
+      "originalTitle": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
+      "source": "ROHM",
+      "sourceType": "뉴스/웹",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
+      "keywords": [
+        "pcb",
+        "emc",
+        "노이즈",
+        "회로",
+        "반도체"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WQXJuSnMySE1ZLTRsRmpIVGVXUG1Wd0FKTGJqUWF0YlAzd0tOcWROY3pRMnZ6eEg4QVlfOEtaQWp1bjdjbTN0dURKZ0lJVGRSOWxaUUFzbUY?oc=5",
+      "published": "2021-10-27T07:00:00+00:00"
     },
     {
       "category": "PCB",
@@ -59,10 +82,11 @@
       "source": "Altium",
       "sourceType": "뉴스/웹",
       "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
+      "keywords": [
+        "pcb",
+        "artwork",
+        "emi",
+        "전원"
       ],
       "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pS2FHdEhNalhjR0g1M2tSaW5YZnRpQWVJd3ppMFIxTlhWT1F0Q3dVbjRrY1kxS250Y3ZuWnppTm9fM05PZXVLc25haWZFT2RHa1FUREgzcUFlRldsVWdZQjhidUZrcEp0WHEzMUxfWTI?oc=5",
@@ -75,10 +99,11 @@
       "source": "Altium",
       "sourceType": "뉴스/웹",
       "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
+      "keywords": [
+        "pcb",
+        "artwork",
+        "emc",
+        "전원"
       ],
       "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9TT1dwaUt2Z2UzT0hoVG5JWkdraUNQeVVrT3JBNnp4bEI2aE5OcTRReEUwS3FDd0gwMElYOVdtYkhqVFQtOXAyak9ScWhQTjU3Ml90YWNhb3JRTXVOdXdNQ1M3N3NzNGtlU00wd1BldEVlc2Fhb3VfRV9DbXQ?oc=5",
@@ -86,67 +111,51 @@
     },
     {
       "category": "PCB",
-      "title": "EMI / EMC",
-      "originalTitle": "EMI / EMC",
-      "source": "Altium",
-      "sourceType": "뉴스/웹",
-      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
-      ],
-      "rating": 4,
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1GcF85elJiR0p4X1JqaTJ1a1gxZHNVckhuaEdFU182RHFuZW5JREhlWGt3MU4yYVlkMk52alliNFZrX3ZyejZoNGNwUFIxMDUxTEtVakhDRWFhY2x5RjFNMzRJbEpOUEJt?oc=5",
-      "published": "2024-10-10T23:20:12+00:00"
-    },
-    {
-      "category": "PCB",
       "title": "PCB 전원 무결성에 대한 완벽한 가이드: 기판부터 패키지까지",
       "originalTitle": "PCB 전원 무결성에 대한 완벽한 가이드: 기판부터 패키지까지",
       "source": "Altium",
-      "sourceType": "뉴스/웹",
-      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
-      "checkPoints": [
-        "Altium DRC·Stackup·Net Class",
-        "전원/GND·고전류·Gate Loop",
-        "Creepage·Clearance·발열·DFM"
+      "sourceType": "검색/전문매체",
+      "summary": "PCB 전원 무결성에 대한 완벽한 가이드: 기판부터 패키지까지 Altium",
+      "keywords": [
+        "altium",
+        "pcb",
+        "전원"
       ],
       "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAtbHJKR3ZIRDlrR0NxYUoybXlmLW9SSEY5cGZsQ1R4YTU4WEVCUTQtaXdjcXFsc05IS2VnODlKNU9Tb1RobTZQYzFBNVNZTTdWNHNrV00xQTY2OGZCeGRjLWtaMA?oc=5",
-      "published": "2023-02-10T08:00:00+00:00"
+      "published": "Fri, 10 Feb 2023 08:00:00 GMT"
     },
     {
-      "category": "EMI",
-      "title": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
-      "originalTitle": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
-      "source": "ROHM",
-      "sourceType": "뉴스/웹",
-      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
-      "checkPoints": [
-        "전도/복사 Noise Source·Path",
-        "CM Choke·X/Y Cap·접지·Shield",
-        "PCB Loop·Switching Edge·Pre-scan"
+      "category": "MOTOR",
+      "title": "[HARFKO 2024] 테크레인, BLDC/PMSM 모터 컨트롤 소프트웨어 선봬",
+      "originalTitle": "[HARFKO 2024] 테크레인, BLDC/PMSM 모터 컨트롤 소프트웨어 선봬",
+      "source": "냉동공조저널",
+      "sourceType": "검색/전문매체",
+      "summary": "[HARFKO 2024] 테크레인, BLDC/PMSM 모터 컨트롤 소프트웨어 선봬 냉동공조저널",
+      "keywords": [
+        "bldc",
+        "pmsm",
+        "모터"
       ],
       "rating": 4,
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WQXJuSnMySE1ZLTRsRmpIVGVXUG1Wd0FKTGJqUWF0YlAzd0tOcWROY3pRMnZ6eEg4QVlfOEtaQWp1bjdjbTN0dURKZ0lJVGRSOWxaUUFzbUY?oc=5",
-      "published": "2021-10-27T07:00:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOcU52Q2hnN0RkdVg1TEZTZmZiWDhHNF9peHpIUmJVRGhuZThPUHJmMUgwZUpUbHNGUlladGpqcV9JZUh4TzFydnRncHk4ODFIYzhQeGt2SGY2MFkzWmxyU3hjZndrUnVndnBJ?oc=5",
+      "published": "Mon, 01 Apr 2024 07:00:00 GMT"
     },
     {
-      "category": "CIRCUIT",
-      "title": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
-      "originalTitle": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
-      "source": "Infineon Technologies",
-      "sourceType": "뉴스/웹",
-      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
-      "checkPoints": [
-        "정격·Derating·발열",
-        "Protection·Reliability",
-        "BOM·검증·양산성"
+      "category": "FIRMWARE",
+      "title": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
+      "originalTitle": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
+      "source": "e4ds news",
+      "sourceType": "전문매체",
+      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 자료입니다.",
+      "keywords": [
+        "mcu",
+        "펌웨어",
+        "watchdog"
       ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUnJ1RHZ1WTZRR01NdllXTEhmMWhXTUozSUx3bDl4a3VHbGNGckJrQVZ6LWVKUzFZQ0VDY0lkN1dheW9KN3JpQ0ZTTXd1Tk5WeWpRWWdOVlh4VngxM29aalZUSjl3WFdmUGtscG9oMk4ycG9LNTdkaW1uaFItdDdGRnRn?oc=5",
-      "published": "2026-06-11T07:00:00+00:00"
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uWHh6d1QzWGY1WDRBdG1FcUE2WmJPRGwzSjQzRWZTX3Q4cFM0SEhEaUNscTFzbmpwQUh2X2Y1WUdXLVlnUEJ1LUpEcGRZZDhIUGRRZlFyRi1SUGNGYWJkSi14R25oUQ?oc=5",
+      "published": "2026-10-11T19:51:02+00:00"
     },
     {
       "category": "SMPS",
@@ -155,12 +164,12 @@
       "source": "Infineon Technologies",
       "sourceType": "뉴스/웹",
       "summary": "SMPS 토폴로지, 자성부품, 보상회로, 효율·발열 및 보호회로 관점의 자료입니다.",
-      "checkPoints": [
-        "Topology·Transformer·보상회로",
-        "MOSFET·Diode·Snubber·효율",
-        "OCP·OVP·OTP·절연·발열"
+      "keywords": [
+        "smps",
+        "회로",
+        "전원"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBSUnpvUFpmVXRFYTN6OS0wczBpU29Jb3BmdHFLS3dYbFVpZTdYUVkxaExxT0tlMDYzUkx5OFpVSThHS1dfYXZvSE1OSlBtTW9mRGJOZHptdjM3SW15eWpyUTlic3hlYWp5OWlINHpDbGxSMjVha3BiN2E3eEV6SDA?oc=5",
       "published": "2026-05-26T07:00:00+00:00"
     },
@@ -171,28 +180,28 @@
       "source": "Infineon Technologies",
       "sourceType": "뉴스/웹",
       "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
-      "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
+      "keywords": [
+        "bldc",
+        "pmsm",
+        "모터"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1LVN5VFU2WHMtMkJjRjN2ZnU3WHZLZkk4TjJWc3V3NGdtOVd6ZWNuekdoMmEzbENCNk11c2xFcV9xWERzRk9PaGRIMGZscnlnUWFad3dWRE52Vk92VDZQVkNjeGVTdDlxS1dlY1R0Rml4c2k2aGY5WVUzQXV5QjA?oc=5",
       "published": "2025-11-25T08:00:00+00:00"
     },
     {
-      "category": "EMI",
+      "category": "PCB",
       "title": "Seminar",
       "originalTitle": "Seminar",
       "source": "Infineon Technologies",
       "sourceType": "뉴스/웹",
       "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
-      "checkPoints": [
-        "전도/복사 Noise Source·Path",
-        "CM Choke·X/Y Cap·접지·Shield",
-        "PCB Loop·Switching Edge·Pre-scan"
+      "keywords": [
+        "pcb",
+        "emi",
+        "노이즈"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE01NUU0NXVGVUlOLThweGtSZHRLTkk2YXdTZG8xdXhJcnJSUWt1VVlWTW1tbmhmcEN5YkZDZ1pWT1VNQzVZOThDZVZhU3d0Vzg0eDdOcGZDZjhYR1dkN2JZYTZ3VnJWenFCd3hB?oc=5",
       "published": "2025-10-31T05:26:45+00:00"
     },
@@ -203,30 +212,14 @@
       "source": "Infineon Technologies",
       "sourceType": "뉴스/웹",
       "summary": "SMPS 토폴로지, 자성부품, 보상회로, 효율·발열 및 보호회로 관점의 자료입니다.",
-      "checkPoints": [
-        "Topology·Transformer·보상회로",
-        "MOSFET·Diode·Snubber·효율",
-        "OCP·OVP·OTP·절연·발열"
+      "keywords": [
+        "smps",
+        "회로",
+        "전원"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91REt3QzF2dWZRWUJKS0lpY3I2cDFWaVI5Z19RN3p3ckQzVF9NRzdyNjBiOERWVE1kN0FDUEt6cmtSZnktUUh5LU85NVJRVnU4Ym1CZW9VMFRkOTRhWnRyQUdBYkZualhUUWJYUEdCYkRDZE9FdFFRY2tKUmh0Tnc?oc=5",
       "published": "2025-09-17T07:00:00+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
-      "originalTitle": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
-      "source": "Infineon Technologies",
-      "sourceType": "뉴스/웹",
-      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
-      "checkPoints": [
-        "정격·Derating·발열",
-        "Protection·Reliability",
-        "BOM·검증·양산성"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4ZHBObXozeG9tMWlqUXpwamY3WkJYUENhV0VtUEpGdFZXWXlvZ2RMenYzc050UFBfLXV2T29hcHRDaFloSnFQa0pQckxHeEptTFY3YTVvWjI3UHlDT0lmbjR4d0IwcEdZYkZwMHVJU2V6WklfeDV1YXBHcHN0M0E?oc=5",
-      "published": "2025-07-30T07:00:00+00:00"
     },
     {
       "category": "MOTOR",
@@ -235,12 +228,12 @@
       "source": "ROHM",
       "sourceType": "뉴스/웹",
       "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
-      "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
+      "keywords": [
+        "bldc",
+        "pmsm",
+        "모터"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBHTWx4bkRCZWhVY0RjMGNhRVA5VWs2OGVPNzAwQ0ZHSlJkcWdVeXlOeDU0SGR2UFZOLVBnSTF6bU95dUtCd2IwRVliSDJjUGhSRGMxbXFHOA?oc=5",
       "published": "2021-09-15T07:00:00+00:00"
     },
@@ -251,30 +244,191 @@
       "source": "Microchip University",
       "sourceType": "뉴스/웹",
       "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
-      "checkPoints": [
-        "기동 성공률·저속 안정성",
-        "상전류·RPM·PWM Duty",
-        "Stall·과전류·온도 보호"
+      "keywords": [
+        "bldc",
+        "pmsm",
+        "모터"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vUmdBVUxOZFdrMkxWdVRicG9mc1lBTG01ZkxXdHA4d1dhQTU5ZjNCMV9ha094OFh6aEtQTG9jQlZVYk9yU3d3bV9QOTlVbjdSV1BwbHVn?oc=5",
       "published": "2021-04-28T15:42:04+00:00"
     },
     {
-      "category": "EMI",
+      "category": "PCB",
       "title": "로옴 주식회사 - ROHM Semiconductor",
       "originalTitle": "로옴 주식회사 - ROHM Semiconductor",
       "source": "ROHM",
       "sourceType": "뉴스/웹",
       "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
-      "checkPoints": [
-        "전도/복사 Noise Source·Path",
-        "CM Choke·X/Y Cap·접지·Shield",
-        "PCB Loop·Switching Edge·Pre-scan"
+      "keywords": [
+        "pcb",
+        "emi",
+        "노이즈"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE85dDdlN3lqUk9aclpPZVRfbmdIbHg1dGpOUjJEa0pQS1N2Si1jeGhWVzhMMUZwYnFRbmFv?oc=5",
       "published": "2012-09-04T09:00:57+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "FET의 발열 저감과 EMI 억제를 동시에 실현한 3상 Brushless 모터 드라이버 IC 개발",
+      "originalTitle": "FET의 발열 저감과 EMI 억제를 동시에 실현한 3상 Brushless 모터 드라이버 IC 개발",
+      "source": "ROHM",
+      "sourceType": "검색/전문매체",
+      "summary": "FET의 발열 저감과 EMI 억제를 동시에 실현한 3상 Brushless 모터 드라이버 IC 개발 ROHM",
+      "keywords": [
+        "모터",
+        "emi"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXBFSHdrWlctcjZ0V1JuOXBnQUg1eFI2Qjd5M2tySzlaVUtNdlFpelhaTmE1WUZuQlZwVXg5LTZpeFNvUnRHaGxTZEU4VU1HWkpyWHFNNVczQWxoS1hELURFaG9VY2hqZ1lUdk1LU1RtV1psQ3NBaXhVM0ExT084eHhuS2hXVGtHQllIalBmQnFzNjJY?oc=5",
+      "published": "Thu, 16 Oct 2025 07:00:00 GMT"
+    },
+    {
+      "category": "SMPS",
+      "title": "높은 출력전압 안정성으로, 서브 전원에 최적인 소형 프라이머리 LDO 개발 | 로옴 주식회사 - ROHM Semiconductor",
+      "originalTitle": "높은 출력전압 안정성으로, 서브 전원에 최적인 소형 프라이머리 LDO 개발 | 로옴 주식회사 - ROHM Semiconductor",
+      "source": "ROHM",
+      "sourceType": "검색/전문매체",
+      "summary": "높은 출력전압 안정성으로, 서브 전원에 최적인 소형 프라이머리 LDO 개발 | 로옴 주식회사 - ROHM Semiconductor ROHM",
+      "keywords": [
+        "emi",
+        "전원"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcnJuWmI4b25XUTN0M0FoWVFkRlJtdjEzR2h5MkNIZnVLVWdLaVRnOXh4Nk5nZU5lUXZwdjdtRWVvajkwU0ZEWjFfVTV4R2R0WkNpUG1mbjBud0xTZHNOci1KeWlGcndkVmtmc0VUeWVXOUVnYWE5NHZPalBYRG9UUHk0a1RrS2xpWXdiTEN0QQ?oc=5",
+      "published": "Tue, 20 Dec 2022 08:00:00 GMT"
+    },
+    {
+      "category": "SMPS",
+      "title": "로옴의 SoC용 PMIC, 차량용 종합 반도체 팹리스 기업 Telechips의 차세대 콕핏용 전원 레퍼런스 디자인에 채용",
+      "originalTitle": "로옴의 SoC용 PMIC, 차량용 종합 반도체 팹리스 기업 Telechips의 차세대 콕핏용 전원 레퍼런스 디자인에 채용",
+      "source": "ROHM",
+      "sourceType": "검색/전문매체",
+      "summary": "로옴의 SoC용 PMIC, 차량용 종합 반도체 팹리스 기업 Telechips의 차세대 콕핏용 전원 레퍼런스 디자인에 채용 ROHM",
+      "keywords": [
+        "전원",
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdXhoQ0x4cmF5LV92Z01YdHh0TURjeVRLeFhLZll4ZjZkZHM4Um5FZUJaMUo1MnhjNnJHSjJtejc0UDJRYnpzdEVZcFdUU0VuX3JHRER5X3FacWFhZWZTaGlPV3VXS3RMeV9jc0d0Rnd2YlpsRFI3Mk1xcFNfck0tNEN1YU9zUkhSY0xMY1A2TXBzQmc?oc=5",
+      "published": "Thu, 21 Nov 2024 08:00:00 GMT"
+    },
+    {
+      "category": "MOTOR",
+      "title": "NXP 반도체, SDV 엣지 노드용 모터 제어 솔루션으로 ‘S32’ 확장",
+      "originalTitle": "NXP 반도체, SDV 엣지 노드용 모터 제어 솔루션으로 ‘S32’ 확장",
+      "source": "www.autoelectronics.co.kr",
+      "sourceType": "검색/전문매체",
+      "summary": "NXP 반도체, SDV 엣지 노드용 모터 제어 솔루션으로 ‘S32’ 확장 www.autoelectronics.co.kr",
+      "keywords": [
+        "모터",
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5LdWhzM2tscWxXbzFwbG8yOU9nMDM2QW9YY1BoNU03dWViUUdUQ0ZGcURkcVVGVkhXZGtDQnV5SFQ1SGFaaGVrdy1wSzY3QnlqUjljVXR3cy1LWDF0V1VJeVR1MkFTRk8wREtaaG40VHVNcUlL?oc=5",
+      "published": "Wed, 08 Nov 2023 08:00:00 GMT"
+    },
+    {
+      "category": "SMPS",
+      "title": "ST, STM32G4 디지털 전원 및 모터 제어 프로젝트 가속화",
+      "originalTitle": "ST, STM32G4 디지털 전원 및 모터 제어 프로젝트 가속화",
+      "source": "elec4",
+      "sourceType": "검색/전문매체",
+      "summary": "ST, STM32G4 디지털 전원 및 모터 제어 프로젝트 가속화 elec4",
+      "keywords": [
+        "모터",
+        "전원"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9fMm9pemt2SXRKN1dpanBKUTd1WHRfY3NKZjQ3WlZMelp0aGF0TXRsREx6TnBKaWZnNDEwRUdPR1FQWU11R1Q5ekdKZTl6QzllSHI3M0laNUlvdHNOYWI0S0tFTFltT3ZiNFVTSmR3?oc=5",
+      "published": "Thu, 26 Sep 2019 07:00:00 GMT"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
+      "originalTitle": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
+      "keywords": [
+        "회로",
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUnJ1RHZ1WTZRR01NdllXTEhmMWhXTUozSUx3bDl4a3VHbGNGckJrQVZ6LWVKUzFZQ0VDY0lkN1dheW9KN3JpQ0ZTTXd1Tk5WeWpRWWdOVlh4VngxM29aalZUSjl3WFdmUGtscG9oMk4ycG9LNTdkaW1uaFItdDdGRnRn?oc=5",
+      "published": "2026-06-11T07:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
+      "originalTitle": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
+      "keywords": [
+        "mosfet",
+        "회로"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4ZHBObXozeG9tMWlqUXpwamY3WkJYUENhV0VtUEpGdFZXWXlvZ2RMenYzc050UFBfLXV2T29hcHRDaFloSnFQa0pQckxHeEptTFY3YTVvWjI3UHlDT0lmbjR4d0IwcEdZYkZwMHVJU2V6WklfeDV1YXBHcHN0M0E?oc=5",
+      "published": "2025-07-30T07:00:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "ST의 올인원 온라인 툴, STM32 및 STM8 마이크로컨트롤러로 모터 제어 설계 간소화",
+      "originalTitle": "ST의 올인원 온라인 툴, STM32 및 STM8 마이크로컨트롤러로 모터 제어 설계 간소화",
+      "source": "STMicroelectronics",
+      "sourceType": "검색/전문매체",
+      "summary": "ST의 올인원 온라인 툴, STM32 및 STM8 마이크로컨트롤러로 모터 제어 설계 간소화 STMicroelectronics",
+      "keywords": [
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrMEZWaktBX0UzWGpUVmdZRjREMmRvU1JVM0FWRDFhX0c0OUNkRG5hYUFteldDcTFaVWtMRUFveDJzVGNSUk5ydDVBU0IyX3pLNXE1el9rYWdDYXdGaUIwWGpKZnFXcFUzMmhuQw?oc=5",
+      "published": "Mon, 01 Apr 2019 07:00:00 GMT"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "NXP반도체 공식 웹사이트",
+      "originalTitle": "NXP반도체 공식 웹사이트",
+      "source": "NXP",
+      "sourceType": "검색/전문매체",
+      "summary": "NXP반도체 공식 웹사이트 NXP",
+      "keywords": [
+        "반도체"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9vbXhvS2ZvckNxU25fUFJYWldNX1A1M1RVcDc4RktuZkRfdVJzaF9kM2UwbGRNeXVBU0RtTkNPbnVBekhVaFR5VXJqMG43RzdHUmgyeUh3Qm1faHo0MUJhY2lqVlUxWnJ6Q2xB?oc=5",
+      "published": "Thu, 03 Jun 2021 08:12:39 GMT"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "ST, STM32G4 MCU 디스커버리 키트로 드론·전기차 지원",
+      "originalTitle": "ST, STM32G4 MCU 디스커버리 키트로 드론·전기차 지원",
+      "source": "테크월드",
+      "sourceType": "검색/전문매체",
+      "summary": "ST, STM32G4 MCU 디스커버리 키트로 드론·전기차 지원 테크월드",
+      "keywords": [
+        "mcu"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IaWZYZjBHWV9ZQnB0RnotU3VMcnZIMHNkVkthcm1pQWc0aTlkckpnc1ZjcXVZcXZLZlhJWlJLalh0a1BNZld4OWVTNWNzNUp2TVN6dmFyUms0al9uMkV1RXNuZnpfeXc?oc=5",
+      "published": "Fri, 27 Sep 2019 07:00:00 GMT"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "[웨비나리뷰]인피니언, “BMS MOSFET 병렬 사용시 VGS(th) 주의 必”",
+      "originalTitle": "[웨비나리뷰]인피니언, “BMS MOSFET 병렬 사용시 VGS(th) 주의 必”",
+      "source": "e4ds news",
+      "sourceType": "검색/전문매체",
+      "summary": "[웨비나리뷰]인피니언, “BMS MOSFET 병렬 사용시 VGS(th) 주의 必” e4ds news",
+      "keywords": [
+        "mosfet"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMaFpuMlBrLVNwcGhsZHJEZ2dhOWJ4MzNndlVqVXZGR0ZMcGlnczNGdTJuUng3dnU4LU9jUUFZSWItR2F0VlhzU0VLUmVqLVdtRGFHLXF3?oc=5",
+      "published": "Fri, 12 May 2023 07:00:00 GMT"
     }
   ]
 }
