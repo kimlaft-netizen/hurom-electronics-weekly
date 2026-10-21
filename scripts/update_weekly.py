@@ -1,261 +1,110 @@
-import json
-import re
-import urllib.parse
-import urllib.request
+import os, re, json, html, hashlib
+import urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 
-OUT = "data/weekly.json"
-DAYS = 14
-MAX_ITEMS = 20
-MAX_PER_TOPIC = 1
+OUT='data/weekly.json'; DAYS=14; MAX_ITEMS=20
+UA={'User-Agent':'Mozilla/5.0 HUROM-Electronics-Weekly/4.0'}
 
-# 휴롬 전장 실무 중심 검색어. 시장전망보다 기술/부품/설계 자료를 우선 수집한다.
-QUERIES = [
-    ("MOTOR", '(BLDC OR PMSM OR sensorless) (motor control OR motor driver OR FOC)'),
-    ("CIRCUIT", '(MOSFET OR gate driver OR current sensing) (motor OR appliance OR inverter)'),
-    ("FIRMWARE", '(MCU OR microcontroller) (motor control OR PWM OR ADC OR sensorless)'),
-    ("CIRCUIT", '(AC DC OR DC DC OR flyback OR buck) (appliance OR motor) power supply'),
-    ("APPLIANCE", '(juicer OR blender OR food processor OR kitchen appliance) (motor OR electronics OR inverter)'),
-    ("PCB", '(Altium OR PCB artwork OR PCB layout) (design rules OR routing OR stackup OR signal integrity)'),
-    ("PCB", '(PCB layout OR printed circuit board) (creepage OR clearance OR grounding OR thermal design)'),
-    ("SMPS", '(SMPS OR flyback OR LLC OR buck converter) (design OR transformer OR compensation OR feedback)'),
-    ("SMPS", '(switch mode power supply OR AC DC converter) (snubber OR MOSFET OR rectifier OR efficiency)'),
-    ("EMI", '(EMI OR EMC) (PCB layout OR filter OR common mode choke OR conducted emissions)'),
-    ("EMI", '(radiated emissions OR conducted emissions) (appliance OR SMPS OR motor drive)'),
-    ("FIRMWARE", '(embedded C OR microcontroller firmware) (coding OR debugging OR unit test OR static analysis)'),
-    ("FIRMWARE", '(STM32 OR Renesas OR Nuvoton OR Microchip) (firmware architecture OR bootloader OR watchdog OR RTOS)'),
+# 여러 출처를 각각 검색한다. Google News는 통합 색인으로 사용하고,
+# NAVER_CLIENT_ID/SECRET이 있으면 네이버 뉴스 API 결과도 직접 합친다.
+SOURCE_QUERIES=[
+ ('ETNEWS','site:etnews.com (반도체 OR 회로 OR 모터 OR 전원 OR 펌웨어 OR PCB OR EMI)'),
+ ('e4ds','site:e4ds.com (BLDC OR MCU OR SMPS OR PCB OR EMI OR 전력반도체)'),
+ ('ROHM','site:rohm.co.kr (모터드라이버 OR MOSFET OR 전원 IC OR MCU OR 기술자료)'),
+ ('ST','site:st.com (BLDC OR PMSM OR motor control OR STM32 OR power supply)'),
+ ('TI','site:ti.com (motor control OR gate driver OR current sensing OR power supply)'),
+ ('Infineon','site:infineon.com (motor control OR MOSFET OR PSoC OR gate driver)'),
+ ('Renesas','site:renesas.com (motor control OR MCU OR inverter OR firmware)'),
+ ('NXP','site:nxp.com (motor control OR MCU OR power management)'),
+ ('onsemi','site:onsemi.com (motor driver OR MOSFET OR power supply)'),
+ ('Microchip','site:microchip.com (motor control OR embedded C OR MCU OR SMPS)'),
+ ('Altium','site:resources.altium.com (PCB layout OR stackup OR routing OR EMC)'),
+ ('ALL','(BLDC OR PMSM OR sensorless OR SMPS OR PCB layout OR embedded C OR EMI EMC) appliance'),
 ]
+NAVER_QUERIES=['BLDC 모터 제어','PMSM 센서리스','PCB 아트웍 알티움','SMPS 설계','EMI EMC 대책','마이컴 펌웨어 코딩','전력반도체 게이트 드라이버','전류센싱 회로']
+BLOCK=['market size','market forecast','market share','growth trends','stock','investment','revenue forecast','2035','2036','job vacancy','course promotion','3.3kv','6.5kv','railway','ev traction']
+WEIGHTS={'bldc':12,'pmsm':12,'sensorless':14,'motor control':10,'motor driver':10,'foc':11,'bemf':10,'stall':9,'current sensing':9,'gate driver':8,'mosfet':7,'mcu':7,'microcontroller':7,'firmware':8,'embedded c':11,'bootloader':9,'watchdog':8,'rtos':8,'pwm':7,'adc':7,'altium':13,'pcb layout':12,'pcb artwork':13,'stackup':9,'routing':7,'creepage':8,'clearance':8,'signal integrity':9,'smps':13,'flyback':10,'llc':9,'snubber':9,'compensation':8,'emi':10,'emc':10,'conducted emissions':11,'radiated emissions':11,'common mode choke':9,'appliance':5,'blender':8,'juicer':8}
 
-# 시장조사, 투자, 자동차/산업용 초고전압 등 실무 관련성이 낮은 결과 제거
-BLOCK_WORDS = [
-    "market size", "market forecast", "market share", "growth trends", "industry report",
-    "research report", "stock", "shares", "investment", "investor", "revenue forecast",
-    "2030", "2031", "2032", "2033", "2034", "2035", "2036",
-    "electric vehicle", "ev traction", "automotive traction", "charging station",
-    "3.3kv", "6.5kv", "railway", "solar farm", "wind turbine", "data center",
-    "web development", "mobile app", "cryptocurrency", "course promotion", "job vacancy",
-]
-
-POSITIVE = {
-    "bldc": 10, "pmsm": 10, "sensorless": 12, "motor control": 9,
-    "motor driver": 9, "foc": 10, "field oriented": 10, "bemf": 9,
-    "current sensing": 8, "current sensor": 7, "gate driver": 7,
-    "microcontroller": 6, "mcu": 6, "pwm": 6, "adc": 6,
-    "flyback": 7, "buck": 6, "ac/dc": 6, "dc/dc": 6,
-    "appliance": 5, "blender": 8, "juicer": 8, "food processor": 8,
-    "stall": 9, "overcurrent": 8, "over current": 8, "emi": 8, "emc": 8,
-    "altium": 12, "pcb artwork": 12, "pcb layout": 10, "design rules": 8,
-    "routing": 6, "stackup": 8, "signal integrity": 8, "creepage": 8,
-    "clearance": 8, "grounding": 7, "thermal design": 7,
-    "smps": 12, "llc": 8, "transformer": 6, "compensation": 7,
-    "feedback loop": 8, "snubber": 9, "conducted emissions": 10,
-    "radiated emissions": 10, "common mode choke": 9, "filter": 5,
-    "embedded c": 10, "bootloader": 9, "watchdog": 8, "rtos": 8,
-    "static analysis": 8, "unit test": 7, "debugging": 6,
-}
-
-HEADERS = {"User-Agent": "Mozilla/5.0 (HUROM-Electronics-Weekly/3.0)"}
-
-
-def clean(text):
-    text = re.sub(r"<[^>]+>", " ", text or "")
-    text = text.replace("&nbsp;", " ").replace("&amp;", "&")
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def fetch(url):
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=25) as response:
-        return response.read()
-
-
-def news_url(query):
-    return "https://news.google.com/rss/search?" + urllib.parse.urlencode({
-        "q": query, "hl": "en-US", "gl": "US", "ceid": "US:en"
-    })
-
-
-def parse_date(text):
-    try:
-        dt = parsedate_to_datetime(text)
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(timezone.utc)
-    except Exception:
-        return None
-
-
-def source_from_title(title):
-    parts = [p.strip() for p in title.rsplit(" - ", 1)]
-    return parts[1] if len(parts) == 2 else ""
-
-
-def base_title(title):
-    return title.rsplit(" - ", 1)[0].strip()
-
-
-def category_of(default, text):
-    h = text.lower()
-    if any(x in h for x in ["bldc", "pmsm", "sensorless", "motor control", "motor driver", "foc"]):
-        return "MOTOR"
-    if any(x in h for x in ["mosfet", "gate driver", "current sensing", "flyback", "buck", "power supply", "emi", "emc"]):
-        return "CIRCUIT"
-    if any(x in h for x in ["altium", "pcb artwork", "pcb layout", "routing", "stackup", "signal integrity", "creepage", "clearance"]):
-        return "PCB"
-    if any(x in h for x in ["smps", "llc", "flyback", "buck converter", "snubber", "transformer", "compensation"]):
-        return "SMPS"
-    if any(x in h for x in ["conducted emissions", "radiated emissions", "common mode choke", "emi", "emc"]):
-        return "EMI"
-    if any(x in h for x in ["microcontroller", "mcu", "firmware", "embedded c", "bootloader", "watchdog", "rtos", "pwm", "adc", "uart"]):
-        return "FIRMWARE"
-    return default
-
-
-def relevance(text):
-    h = text.lower()
-    if any(word in h for word in BLOCK_WORDS):
-        return -100
-    return sum(weight for word, weight in POSITIVE.items() if word in h)
-
-
-def topic_key(title):
-    h = base_title(title).lower()
-    # 동일 제품/기술 보도는 하나의 주제로 묶는다.
-    tokens = re.findall(r"[a-z0-9]+", h)
-    stop = {"new", "with", "for", "and", "the", "from", "into", "control", "controls",
-            "launches", "introduces", "expands", "family", "system", "systems", "solution"}
-    tokens = [t for t in tokens if t not in stop and len(t) > 2]
-    return " ".join(tokens[:7])
-
-
-def korean_summary(category, title):
-    h = title.lower()
-    if "sensorless" in h:
-        return "센서리스 위치 추정과 기동 안정성 관련 기술입니다. 저속·고부하 조건의 BEMF 검출, 전류 샘플링 및 Stall 판단 관점에서 검토할 가치가 있습니다."
-    if "bldc" in h or "pmsm" in h or "motor control" in h:
-        return "BLDC/PMSM 모터 제어 관련 기술입니다. PWM 구성, 전류 피드백, 속도 안정성 및 보호 로직을 가전 모터 제어 관점에서 확인할 수 있습니다."
-    if "microcontroller" in h or "mcu" in h:
-        return "모터·전력 제어용 MCU 관련 기술입니다. PWM/ADC 자원, 연산 성능, 통신 인터페이스와 다중 모터 지원 여부를 비교 검토할 수 있습니다."
-    if "gate driver" in h or "mosfet" in h:
-        return "모터 구동 전력단 관련 기술입니다. Gate 구동 조건, 스위칭 손실, 발열, 보호 기능과 EMI/EMC 영향을 중심으로 검토할 수 있습니다."
-    if "current" in h and ("sense" in h or "sensor" in h):
-        return "전류 검출 관련 기술입니다. 측정 범위와 정확도, ADC 연계, 과전류 보호 및 부하 판단 적용성을 확인할 수 있습니다."
-    if any(x in h for x in ["flyback", "buck", "power supply", "ac/dc", "dc/dc"]):
-        return "가전 전원회로 관련 기술입니다. 토폴로지, 효율, 절연·보호 요구사항, BOM 및 EMI/EMC 영향을 비교 검토할 수 있습니다."
-    if category == "PCB":
-        return "PCB Artwork 및 회로 배치·배선 관련 기술입니다. Altium 설계 규칙, 전원·GND 경로, 절연거리, 발열, 신호 무결성과 양산 DFM 관점에서 검토할 수 있습니다."
-    if category == "SMPS":
-        return "SMPS 전원 설계 관련 기술입니다. 토폴로지 선정, 변압기·인덕터, 보상회로, MOSFET·정류부, Snubber, 효율·발열 및 보호회로 관점에서 검토할 수 있습니다."
-    if category == "EMI":
-        return "EMI/EMC 개선 관련 기술입니다. 전도·복사 노이즈 경로, 필터, Common Mode Choke, 접지, PCB Loop 면적과 모터·SMPS 스위칭 영향 관점에서 검토할 수 있습니다."
-    if category == "FIRMWARE":
-        return "마이컴 Firmware 설계·코딩 관련 기술입니다. Embedded C 구조, Driver/HAL 분리, 상태 머신, Interrupt, Watchdog, Bootloader, 디버깅 및 테스트 관점에서 검토할 수 있습니다."
-    if category == "APPLIANCE":
-        return "가전제품의 모터·전장 적용 동향입니다. 실제 사용 부하, 소비전력, 소음·진동 및 제어 기능 관점에서 참고할 수 있습니다."
-    return "가전 전장 설계와 관련된 공개 기술자료입니다. 회로, 모터 제어, Firmware 및 제품 적용 관점에서 핵심 사양을 확인할 수 있습니다."
-
-
-def check_points(category, title):
-    h = title.lower()
-    if category == "MOTOR":
-        return ["기동 성공률·저속 안정성", "상전류·RPM·PWM Duty", "Stall·과전류·온도 보호"]
-    if category == "CIRCUIT":
-        return ["정격 전압·전류·발열", "효율·스위칭 손실·BOM", "보호회로·EMI/EMC"]
-    if category == "PCB":
-        return ["Altium DRC·Layer Stack·Net Class", "전원/GND·고전류·Gate Loop 배선", "Creepage·Clearance·발열·DFM"]
-    if category == "SMPS":
-        return ["토폴로지·Transformer·보상회로", "MOSFET·Diode·Snubber·효율", "OCP·OVP·OTP·절연·발열"]
-    if category == "EMI":
-        return ["전도/복사 Noise Source·Path", "CM Choke·X/Y Cap·접지·Shield", "PCB Loop·Switching Edge·Pre-scan"]
-    if category == "FIRMWARE":
-        return ["Embedded C·상태 머신·ISR", "Driver/HAL·통신·Bootloader", "Watchdog·정적분석·Unit Test"]
-    return ["주방가전 적용 가능성", "부하·소음·소비전력", "기구·회로·FW 연계 영향"]
-
-
-def rating(score):
-    return 5 if score >= 28 else 4 if score >= 18 else 3
-
-
-def collect():
-    cutoff = datetime.now(timezone.utc) - timedelta(days=DAYS)
-    candidates = []
-    for default_cat, query in QUERIES:
-        try:
-            root = ET.fromstring(fetch(news_url(query)))
-            for node in root.findall(".//item")[:40]:
-                raw_title = clean(node.findtext("title"))
-                desc = clean(node.findtext("description"))
-                url = clean(node.findtext("link"))
-                dt = parse_date(clean(node.findtext("pubDate")))
-                text = raw_title + " " + desc
-                score = relevance(text)
-                if not raw_title or not url or score < 8 or (dt and dt < cutoff):
-                    continue
-                cat = category_of(default_cat, text)
-                title = base_title(raw_title)
-                candidates.append({
-                    "category": cat,
-                    "title": title[:180],
-                    "source": source_from_title(raw_title),
-                    "summary": korean_summary(cat, title),
-                    "checkPoints": check_points(cat, title),
-                    "rating": rating(score),
-                    "url": url,
-                    "published": dt.isoformat() if dt else "",
-                    "_score": score,
-                    "_topic": topic_key(raw_title),
-                })
-        except Exception as exc:
-            print("source error:", query, repr(exc))
-
-    # 동일 주제 기사는 관련도가 가장 높은 한 건만 선택한다.
-    candidates.sort(key=lambda x: (x["_score"], x["published"]), reverse=True)
-    selected, topic_counts, normalized_titles = [], {}, set()
-    for item in candidates:
-        norm = re.sub(r"\W+", "", item["title"].lower())[:150]
-        topic = item["_topic"]
-        if norm in normalized_titles or topic_counts.get(topic, 0) >= MAX_PER_TOPIC:
-            continue
-        normalized_titles.add(norm)
-        topic_counts[topic] = topic_counts.get(topic, 0) + 1
-        selected.append(item)
-        if len(selected) >= MAX_ITEMS:
-            break
-
-    for item in selected:
-        item.pop("_score", None)
-        item.pop("_topic", None)
-    return selected
-
-
-def load_old():
-    try:
-        with open(OUT, encoding="utf-8") as file:
-            return json.load(file)
-    except Exception:
-        return {"items": []}
-
-
+def fetch(url, headers=None):
+ req=urllib.request.Request(url,headers=headers or UA)
+ with urllib.request.urlopen(req,timeout=30) as r:return r.read()
+def clean(s):return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',html.unescape(s or ''))).strip()
+def parse_date(s):
+ try:
+  d=parsedate_to_datetime(s); return (d if d.tzinfo else d.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
+ except:return None
+def gnews(q):return 'https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q,'hl':'ko','gl':'KR','ceid':'KR:ko'})
+def score(text):
+ h=text.lower()
+ if any(x in h for x in BLOCK):return -100
+ return sum(v for k,v in WEIGHTS.items() if k in h)
+def category(text):
+ h=text.lower()
+ if any(x in h for x in ['altium','pcb layout','pcb artwork','stackup','routing','creepage','clearance','signal integrity']):return 'PCB'
+ if any(x in h for x in ['smps','flyback','llc','snubber','power supply','ac/dc','dc/dc']):return 'SMPS'
+ if any(x in h for x in ['conducted emissions','radiated emissions','common mode choke','emi','emc']):return 'EMI'
+ if any(x in h for x in ['bldc','pmsm','sensorless','motor control','motor driver','foc','bemf']):return 'MOTOR'
+ if any(x in h for x in ['embedded c','firmware','microcontroller','mcu','bootloader','watchdog','rtos','uart','pwm','adc']):return 'FIRMWARE'
+ return 'CIRCUIT'
+def fallback_summary(cat):
+ return {'PCB':'PCB 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 기술자료입니다.','SMPS':'SMPS 토폴로지, 자성부품, 보상회로, 효율·발열 및 보호회로 관점의 기술자료입니다.','EMI':'전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 기술자료입니다.','MOTOR':'BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 기술자료입니다.','FIRMWARE':'마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 기술자료입니다.','CIRCUIT':'가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 기술자료입니다.'}[cat]
+def checks(cat):
+ return {'PCB':['Altium DRC·Stackup·Net Class','전원/GND·고전류·Gate Loop','Creepage·Clearance·발열·DFM'],'SMPS':['Topology·Transformer·보상회로','MOSFET·Diode·Snubber·효율','OCP·OVP·OTP·절연·발열'],'EMI':['전도/복사 Noise Source·Path','CM Choke·X/Y Cap·접지·Shield','PCB Loop·Switching Edge·Pre-scan'],'MOTOR':['기동 성공률·저속 안정성','상전류·RPM·PWM Duty','Stall·과전류·온도 보호'],'FIRMWARE':['Embedded C·상태 머신·ISR','Driver/HAL·통신·Bootloader','Watchdog·정적분석·Unit Test'],'CIRCUIT':['정격·Derating·발열','Protection·Reliability','BOM·검증·양산성']}[cat]
+def translate_with_azure(title, snippet, cat):
+ endpoint=os.getenv('AZURE_OPENAI_ENDPOINT','').rstrip('/'); key=os.getenv('AZURE_OPENAI_API_KEY',''); dep=os.getenv('AZURE_OPENAI_DEPLOYMENT','')
+ if not(endpoint and key and dep):return title, fallback_summary(cat)
+ url=f'{endpoint}/openai/deployments/{dep}/chat/completions?api-version=2024-10-21'
+ prompt='''다음 뉴스 검색 메타정보를 한국어로 번역·요약하십시오. 원문에 없는 수치나 사양은 만들지 마십시오. JSON만 출력: {"titleKo":"한국어 제목","summaryKo":"2문장 기술 요약"}.\n제목: %s\n검색요약: %s\n분류: %s'''%(title,snippet,cat)
+ body=json.dumps({'messages':[{'role':'system','content':'가전 전장 기술 편집자입니다.'},{'role':'user','content':prompt}],'temperature':0.1,'response_format':{'type':'json_object'}}).encode()
+ try:
+  data=json.loads(fetch(url,{'Content-Type':'application/json','api-key':key,'User-Agent':UA['User-Agent']} if False else None))
+ except Exception:
+  try:
+   req=urllib.request.Request(url,data=body,headers={'Content-Type':'application/json','api-key':key})
+   with urllib.request.urlopen(req,timeout=45) as r:data=json.load(r)
+  except Exception as e:
+   print('Azure translation error',repr(e));return title,fallback_summary(cat)
+ try:
+  obj=json.loads(data['choices'][0]['message']['content']);return clean(obj.get('titleKo')) or title,clean(obj.get('summaryKo')) or fallback_summary(cat)
+ except:return title,fallback_summary(cat)
+def add_google(candidates):
+ cutoff=datetime.now(timezone.utc)-timedelta(days=DAYS)
+ for source,q in SOURCE_QUERIES:
+  try:
+   root=ET.fromstring(fetch(gnews(q)))
+   for n in root.findall('.//item')[:25]:
+    raw=clean(n.findtext('title')); desc=clean(n.findtext('description')); url=clean(n.findtext('link')); dt=parse_date(clean(n.findtext('pubDate')))
+    sc=score(raw+' '+desc)
+    if not raw or not url or sc<8 or (dt and dt<cutoff):continue
+    title=raw.rsplit(' - ',1)[0]; publisher=raw.rsplit(' - ',1)[1] if ' - ' in raw else source
+    candidates.append({'title':title,'snippet':desc,'url':url,'published':dt.isoformat() if dt else '','source':publisher or source,'sourceType':'Google News index','score':sc})
+  except Exception as e:print('Google source error',source,repr(e))
+def add_naver(candidates):
+ cid=os.getenv('NAVER_CLIENT_ID',''); secret=os.getenv('NAVER_CLIENT_SECRET','')
+ if not(cid and secret):return
+ for q in NAVER_QUERIES:
+  url='https://openapi.naver.com/v1/search/news.json?'+urllib.parse.urlencode({'query':q,'display':20,'sort':'date'})
+  try:
+   data=json.loads(fetch(url,{'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':secret,'User-Agent':UA['User-Agent']}))
+   for n in data.get('items',[]):
+    title=clean(n.get('title')); desc=clean(n.get('description')); sc=score(title+' '+desc)
+    if sc<8:continue
+    dt=parse_date(n.get('pubDate',''))
+    candidates.append({'title':title,'snippet':desc,'url':n.get('originallink') or n.get('link'),'published':dt.isoformat() if dt else '','source':'네이버 뉴스 검색','sourceType':'Naver API','score':sc})
+  except Exception as e:print('Naver source error',q,repr(e))
 def main():
-    items = collect()
-    if not items:
-        old_items = load_old().get("items", [])
-        if old_items:
-            print("No qualified new items; preserving existing", len(old_items), "items")
-            return
-        print("No qualified items and no prior issue available")
-        return
-    payload = {
-        "updated": datetime.now(timezone.utc).isoformat(),
-        "issueTitle": "이번 주 가전 전장 기술 TOP " + str(len(items)),
-        "items": items,
-    }
-    with open(OUT, "w", encoding="utf-8") as file:
-        json.dump(payload, file, ensure_ascii=False, indent=2)
-    print("Wrote", len(items), "curated items to", OUT)
-
-
-if __name__ == "__main__":
-    main()
+ c=[];add_google(c);add_naver(c);c.sort(key=lambda x:(x['score'],x['published']),reverse=True)
+ chosen=[];seen=set();source_count={}
+ for x in c:
+  key=''.join(re.findall(r'[a-z0-9가-힣]+',x['title'].lower()))[:90]
+  if key in seen or source_count.get(x['source'],0)>=3:continue
+  seen.add(key);source_count[x['source']]=source_count.get(x['source'],0)+1
+  cat=category(x['title']+' '+x['snippet']); ko_title,ko_summary=translate_with_azure(x['title'],x['snippet'],cat)
+  chosen.append({'category':cat,'title':ko_title,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':ko_summary,'checkPoints':checks(cat),'rating':5 if x['score']>=30 else 4 if x['score']>=18 else 3,'url':x['url'],'published':x['published']})
+  if len(chosen)>=MAX_ITEMS:break
+ if not chosen:print('No qualified items; existing file preserved');return
+ with open(OUT,'w',encoding='utf-8') as f:json.dump({'updated':datetime.now(timezone.utc).isoformat(),'issueTitle':f'이번 주 가전 전장 기술 TOP {len(chosen)}','translationMode':'Azure OpenAI' if os.getenv('AZURE_OPENAI_API_KEY') else '기본 한국어 요약','items':chosen},f,ensure_ascii=False,indent=2)
+ print('Wrote',len(chosen),'items from',len(source_count),'sources')
+if __name__=='__main__':main()
