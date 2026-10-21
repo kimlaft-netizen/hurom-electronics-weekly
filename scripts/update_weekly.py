@@ -7,16 +7,27 @@ OUT='data/weekly.json';MAX_ITEMS=30;UA='Mozilla/5.0 HUROM-Weekly-V8'
 RUN_END=datetime.now(timezone.utc);RUN_START=RUN_END-timedelta(days=7)
 Q_KR=[
  'BLDC 모터제어','PMSM 센서리스 FOC','모터 전류센싱 MOSFET 드라이버','가전 모터 청소기 믹서기 착즙기','회로 보호회로 게이트드라이버','Altium PCB 아트웍 EMC','SMPS 플라이백 벅 컨버터','EMI EMC 모터 노이즈 필터','MCU 펌웨어 PWM ADC RTOS','STM32 Renesas 모터 펌웨어','가전 전장 열설계 신뢰성','공개 블로그 카페 모터제어 회로'
+ ,'원액기 착즙기 녹즙기 BLDC 모터 제어 회로','블렌더 푸드프로세서 모터 드라이버 PWM 과전류','저속 착즙기 오거 스크류 모터 토크 과열','주방가전 착즙기 블렌더 EMI EMC PCB 전원 설계'
+ ,'가전 LED LCD 표시부 상태표시 버튼 스위치 MCU 회로','가전 IPM IGBT 전력모듈 인버터 게이트드라이버','가전 전선 하네스 커넥터 센서 온도 전류 통신 UART I2C SPI'
 ]
 Q_GLOBAL=[
  'BLDC PMSM motor control','sensorless FOC startup BEMF','motor driver current sensing MOSFET','appliance juicer blender motor electronics','PCB layout power electronics EMI','SMPS flyback buck converter design','EMI EMC conducted emissions filter','MCU firmware embedded C RTOS PWM','STM32 Renesas motor control firmware','appliance electronics thermal reliability','motor control engineering blog','site:hackaday.com motor driver PCB','site:eevblog.com SMPS EMI PCB','site:electronics.stackexchange.com motor driver PCB'
+ ,'juicer slow juicer BLDC motor control board electronics','blender food processor motor drive current sensing PWM','cold press juicer auger motor torque thermal protection','kitchen appliance juicer blender EMC EMI PCB power supply'
+ ,'home appliance LED LCD display indicator button switch MCU circuit','appliance IPM IGBT power module inverter gate driver','appliance wiring harness connector sensor UART I2C SPI CAN communication'
 ]
 Q=Q_KR+Q_GLOBAL
 S=['site:etnews.com 가전 모터 전원','site:e4ds.com 모터제어 전력반도체','site:blog.naver.com BLDC 모터 PCB','site:cafe.naver.com 모터제어 회로 PCB','site:ti.com motor gate driver current sensing','site:st.com motor control firmware STM32','site:resources.altium.com PCB EMI design','site:hackaday.com motor control PCB']
-BLOCK=['english as a second language','second language','제2언어','영어 교육','language education','automotive','electric vehicle','3300v','3.3kv','6.5kv','market size','market forecast','market share','stock','investment','2035','2036','job vacancy']
+BLOCK=['english as a second language','second language','제2언어','영어 교육','language education','automotive','electric vehicle','3300v','3.3kv','6.5kv','market size','market forecast','market share','stock','investment','2035','2036','job vacancy','calgary roughnecks','national lacrosse league','lacrosse game']
 AUTO=['automotive','electric vehicle','ev traction','차량용','전기차']
-APPLIANCE_CONTEXT=['appliance','가전','juicer','blender','food processor','vacuum cleaner','청소기','믹서기','착즙기']
-TERMS=['bldc','pmsm','sensorless','foc','bemf','motor','모터','모터제어','driver','gate drive','current control','current sensing','mosfet','gate driver','mcu','microcontroller','firmware','펌웨어','embedded c','watchdog','rtos','pwm','adc','uart','spi','i2c','isr','bootloader','stm32','renesas','nuvoton','microchip','infineon','altium','pcb','artwork','routing','stackup','creepage','clearance','gnd','grounding','high current','gate loop','dfm','smps','ac/dc','dc/dc','flyback','buck','llc','transformer','snubber','compensation','emi','emc','conducted emission','radiated emission','common mode choke','노이즈','회로','전원','반도체','가전','juicer','blender','food processor']
+APPLIANCE_CONTEXT=['appliance','가전','juicer','blender','food processor','vacuum cleaner','청소기','믹서기','착즙기','원액기','녹즙기','푸드프로세서','주서기','식품가공기']
+TERMS=['bldc','pmsm','sensorless','foc','bemf','motor','모터','모터제어','driver','gate drive','current control','current sensing','mosfet','gate driver','mcu','microcontroller','firmware','펌웨어','embedded c','watchdog','rtos','pwm','adc','uart','spi','i2c','isr','bootloader','stm32','renesas','nuvoton','microchip','infineon','altium','pcb','artwork','routing','stackup','creepage','clearance','gnd','grounding','high current','gate loop','dfm','smps','ac/dc','dc/dc','flyback','buck','llc','transformer','snubber','compensation','emi','emc','conducted emission','radiated emission','common mode choke','노이즈','회로','전원','반도체','가전','juicer','blender','food processor','food processing','kitchen appliance','slow juicer','cold press','juice extractor','auger','torque','stall current','overcurrent','thermal protection','gearbox','speed control','current limit','soft start','주방가전','착즙기','원액기','녹즙기','블렌더','푸드프로세서','주서기','식품가공기','저속착즙','스크류','오거','감속기','분쇄','칼날','속도제어','토크','정격전류','과전류','과열','온도보호']
+TERMS.extend(['led','led driver','led indicator','lcd','display','display module','seven segment','backlight','ipm','igbt','power module','switch','push button','tact switch','debounce','wiring','wire harness','harness','cable','connector','terminal','crimp','sensor','hall sensor','ntc','thermistor','temperature sensor','current sensor','pressure sensor','flow sensor','position sensor','proximity sensor','communication','can bus','canopen','rs485','modbus','bluetooth','wi-fi','엘이디','상태표시등','표시부','액정','디스플레이','백라이트','전력모듈','지능형전력모듈','스위치','버튼','푸시버튼','택트스위치','디바운스','배선','전선','케이블','하네스','커넥터','단자','압착','크림핑','센서','홀센서','온도센서','서미스터','전류센서','압력센서','유량센서','위치센서','근접센서','통신','통신프로토콜','캔통신','시리얼통신','무선통신'])
+
+def term_match(text,term):
+ text=(text or '').lower();term=term.lower()
+ if term.isascii() and term.isalnum() and len(term)<=4:
+  return re.search(r'(?<![a-z0-9])'+re.escape(term)+r'(?![a-z0-9])',text) is not None
+ return term in text
 def fetch(u,h=None,d=None,timeout=8):
  r=urllib.request.Request(u,data=d,headers=h or {'User-Agent':UA})
  for attempt in range(2):
@@ -58,7 +69,7 @@ def rel(t):
  h=t.lower()
  if any(x in h for x in BLOCK if x not in AUTO):return 0
  if any(x in h for x in AUTO) and not any(x in h for x in APPLIANCE_CONTEXT):return 0
- return sum(x in h for x in TERMS)
+ return sum(term_match(h,x) for x in TERMS)
 
 def language_group(title, source, url=''):
  s=(source or '').lower();host=urllib.parse.urlparse(url or '').netloc.lower()
@@ -89,11 +100,12 @@ def cat(t):
  if any(x in h for x in ['altium','pcb','artwork','routing','stackup','creepage','clearance']):return 'PCB'
  if any(x in h for x in ['smps','flyback','llc','snubber','power supply','전원']):return 'SMPS'
  if any(x in h for x in ['emi','emc','conducted emission','radiated emission','노이즈']):return 'EMI'
+ if any(x in h for x in ['firmware','펌웨어','embedded c','mcu','microcontroller','watchdog','rtos','pwm','adc']):return 'FIRMWARE'
+ if any(term_match(h,x) for x in ['led','lcd','display','ipm','igbt','switch','button','harness','wiring','wire','cable','connector','terminal','crimp','sensor','communication','uart','i2c','spi','can bus','canopen','rs485','modbus','bluetooth','wi-fi','엘이디','표시등','표시부','액정','디스플레이','백라이트','전력모듈','스위치','버튼','디바운스','배선','전선','케이블','하네스','커넥터','단자','압착','센서','통신','캔통신','시리얼통신','무선통신']):return 'COMPONENTS'
  if any(x in h for x in ['bldc','pmsm','sensorless','foc','bemf','motor','모터']):return 'MOTOR'
- if any(x in h for x in ['firmware','펌웨어','embedded c','mcu','microcontroller','watchdog','rtos','uart','pwm','adc']):return 'FIRMWARE'
  return 'CIRCUIT'
 def add(a,title,snip,url,date='',src='',typ='뉴스/웹',group=None):
- title=clean(title);snip=clean(snip);score=rel(title+' '+snip)
+ title=clean(title);snip=clean(snip);score=rel(title+' '+snip+' '+clean(src))
  if title and url and score and within_last_week(date):
   pd=parse_publish_date(date)
   source=src or urllib.parse.urlparse(url).netloc
@@ -277,7 +289,7 @@ def analyze(title,snip,c,article_text="",source=''):
  body=article_text or snip
  fallback=fallback_summary(body,title,source)
  if not fallback:fallback='본문 미리보기를 가져오지 못했습니다. 원문 링크에서 기사 내용을 확인해 주세요.'
- ks=[x for x in TERMS if x in (title+' '+snip+' '+article_text).lower()][:6] or [c]
+ ks=[x for x in TERMS if term_match(title+' '+snip+' '+article_text,x)][:6] or [c]
  if not article_text and not normalize_summary(snip,title,source):
   return title,fallback,ks
  ep=os.getenv('AZURE_OPENAI_ENDPOINT','').rstrip('/');key=os.getenv('AZURE_OPENAI_API_KEY');dep=os.getenv('AZURE_OPENAI_DEPLOYMENT')
@@ -294,7 +306,7 @@ def old(a):
  except:pass
 
 def select_candidates(items,max_items=MAX_ITEMS):
- ordered=sorted((x for x in items if within_last_week(x.get('published','')) and x.get('score',0)>=2),key=lambda x:x.get('score',0),reverse=True)
+ ordered=sorted((x for x in items if within_last_week(x.get('published','')) and x.get('score',0)>=1),key=lambda x:x.get('score',0),reverse=True)
  chosen=[];titles=[];publishers={};groups={'KR':0,'GLOBAL':0}
  def take(x,preferred_group=None,enforce_quota=False):
   group=x.get('languageGroup') or language_group(x.get('title',''),x.get('source',''),x.get('url',''))
@@ -313,8 +325,8 @@ def select_candidates(items,max_items=MAX_ITEMS):
  return chosen
 
 def relevance_rating(title,snippet,article_text=''):
- title_terms={term for term in TERMS if term in (title or '').lower()}
- all_terms={term for term in TERMS if term in (title+' '+snippet+' '+article_text).lower()}
+ title_terms={term for term in TERMS if term_match(title,term)}
+ all_terms={term for term in TERMS if term_match(title+' '+snippet+' '+article_text,term)}
  direct=len(title_terms);total=len(all_terms)
  if direct>=3 and total>=5:return 5
  if direct>=2 and total>=4:return 4
@@ -333,7 +345,7 @@ def main():
   if not resolved:return None
   x=resolved[0]
   c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source'])
-  if len(normalize_summary(s,x['title'],x['source']))<70:return None
+  if len(normalize_summary(s,x['title'],x['source']))<50:return None
   return {'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':relevance_rating(x['title'],x['snippet'],article_text),'url':x['url'],'published':x['published']}
  # First fill up to 15 usable cards in each language. Invalid articles do not
  # consume a slot, so the next candidate in that language gets a chance.
