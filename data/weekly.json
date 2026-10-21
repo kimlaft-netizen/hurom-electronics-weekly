@@ -1,97 +1,14 @@
 {
-  "updated": "2026-10-21T08:41:08.115170+00:00",
-  "windowStart": "2026-10-14T08:41:08.115170+00:00",
-  "windowEnd": "2026-10-21T08:41:08.115170+00:00",
-  "issueTitle": "가전 전장 기술 TOP 19",
-  "searchedCandidates": 39,
+  "updated": "2026-10-21T08:52:03.616180+00:00",
+  "windowStart": "2026-10-14T08:52:03.616180+00:00",
+  "windowEnd": "2026-10-21T08:52:03.616180+00:00",
+  "issueTitle": "가전 전장 기술 TOP 8",
+  "searchedCandidates": 36,
   "languageBalance": {
-    "KR": 10,
-    "GLOBAL": 9
+    "KR": 5,
+    "GLOBAL": 3
   },
   "items": [
-    {
-      "category": "MOTOR",
-      "title": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
-      "originalTitle": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
-      "source": "에이빙",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "아마스윙 / AMASSWING(대표 여환걸)은 오는 10월 21일(수)부터 23일(금)까지 사흘간 일산 킨텍스 제1전시장에서 개최되는 'HARFKO 2026(제18회 한국국제냉난방공조전)'에 참가한다고 밝혔다. 회사는 고효율·저소음·고신뢰성을 갖춘 차세대 일체형 EC 팬모터와 BLDC 팬모터를 앞세워 국내외 산업용 공조 및 냉동·냉장 시장 공략에 나설 계획이다. 아마스윙은 산업용 일체형 팬모터를 개발·생산하는 전문기업으로, 축적된 설계기술과 품질관리 시스템을 기반으로 산업용 공조와 냉동·냉장 분야에 냉각 솔루션을 공급해 오고 있다. 고객 맞춤형 제품 개발을 통해 국내외 시장을 넓혀 왔다는 것이 회사 측 설명이다. 주력 출품 제품은 IP56 등급을 적용한 고효율 EC 일체형 팬모터 'AW350S EC2FS'를 비롯해 BLDC 팬모터, 고풍량 산업용 냉각팬, 고객 맞춤형 팬모터 솔루션이다.",
-      "keywords": [
-        "bldc",
-        "모터",
-        "회로"
-      ],
-      "rating": 3,
-      "url": "https://kr.aving.net/news/articleViewAmp.html?idxno=1815657",
-      "published": "2026-10-18T06:55:50+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
-      "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
-      "source": "livesnews.com",
-      "sourceType": "검색/전문매체",
-      "languageGroup": "KR",
-      "summary": "글로벌 가전 브랜드 마이디어(Midea)가 자동먼지비움 스테이션을 갖춘 신제품 ‘마이디어 자동 먼지비움 무선청소기 MP9’을 출시한다고 밝혔다. 마이디어 자동먼지비움 무선청소기 MP9은 37,000Pa(파스칼)의 강력한 흡입력을 비롯해 안티탱글 브러쉬, 자동먼지비움 스테이션, 먼지 감지 자동 흡입모드 등을 적용한 BLDC 무선청소기다. 흡입력과 디자인, 기술력을 앞세워 소비자들의 호응을 얻었던 ‘마이디어 자동먼지비움 스테이션 BLDC 무선청소기 MP08KRGY-DS’의 후속 모델로, 전작의 장점을 계승하면서 청소 성능과 사용 편의성을 한층 강화한 것이 특징이다. 신제품은 BLDC 모터를 기반으로 최대 37,000Pa의 흡입력을 구현했다. 일상에서 발생하는 생활먼지는 물론 바닥 틈새나 카펫 사이에 쌓이기 쉬운 먼지까지 효과적으로 흡입할 수 있도록 설계해 다양한 주거 환경에서 활용할 수 있다.",
-      "keywords": [
-        "bldc",
-        "모터",
-        "가전"
-      ],
-      "rating": 3,
-      "url": "https://livesnews.com/news/article.html?no=64990",
-      "published": "2026-10-15T01:49:44+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
-      "originalTitle": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
-      "source": "전자신문",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "13일 서울 강남구 코엑스에서 열린 '한국전자전 2026(KES 2026)'에 아날로그·혼합신호 반도체 기업 노보센스(NOVOSENSE)가 참가해 산업용 센서와 전력반도체 관련 솔루션을 선보였다. 지난 2022년 한국 시장에 진출한 노보센스는 자동차와 산업용 장비, 전력 시스템에 사용되는 반도체를 공급하고 있으며, 에어컨·냉장고·세탁기·청소기 등 가전 분야에도 전력 관리와 온도·전류 감지, 모터 제어용 반도체 솔루션을 제공하고 있다. 이번 전시에서는 전류·압력·온도 센서와 전력반도체 드라이버, 서버 전원공급장치용 반도체 솔루션 등을 소개했다. 또한 AI 데이터센터용 전원공급·전력변환 시스템에 활용되는 반도체 솔루션도 함께 선보였다. 한편, 노보센스는 전시 현장에서 '휴머노이드 로봇 / 스마트 가전 트랜드 및 테크놀로지'를 주제로 기술 세미나를 진행했으며, 휴머노이드 로봇과 스마트 가전의 산업 동향을 비롯해 위치·각도 측정 센서와 모터 드라이버 등 관련 반도체 기술을 소개했다.",
-      "keywords": [
-        "모터",
-        "전원",
-        "반도체",
-        "가전"
-      ],
-      "rating": 3,
-      "url": "https://www.etnews.com/20261016000307",
-      "published": "2026-10-16T08:11:30+00:00"
-    },
-    {
-      "category": "SMPS",
-      "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
-      "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
-      "source": "전자신문",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "생성형 AI 경쟁이 반도체를 넘어 '전력' 경쟁으로 번지고 있다. 글로벌 빅테크 기업들이 AI 데이터센터 구축에 막대한 투자를 이어가면서, 늘어나는 전력을 얼마나 효율적으로 공급하고 관리하느냐가 데이터센터 경쟁력을 좌우하는 변수로 떠올랐다. AI 연산을 처리하는 GPU 서버는 기존 서버보다 훨씬 많은 전력을 소비한다. 서버 랙 하나에 들어가는 전력 밀도가 빠르게 높아지면서 데이터센터 운영사들은 전력 변환 과정에서 새는 손실을 줄이고 발열을 잡는 동시에 좁은 공간에 더 많은 전력 장비를 넣어야 하는 과제를 안게 됐다. 전력 효율이 1%포인트만 개선돼도 대규모 데이터센터에서는 운영비와 냉각 부담이 크게 줄어든다는 점에서, 전원 공급 장치(PSU)를 비롯한 전력 장비의 중요성이 커지고 있다.",
-      "keywords": [
-        "전원",
-        "반도체"
-      ],
-      "rating": 3,
-      "url": "https://www.etnews.com/20261015000313",
-      "published": "2026-10-16T00:00:00+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "LTspice, 설치만 해두고 못 쓰고 있다면, 지금 이 90분으로 바뀝니다",
-      "originalTitle": "LTspice, 설치만 해두고 못 쓰고 있다면, 지금 이 90분으로 바뀝니다",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
-      "keywords": [
-        "spi"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/webinar_detail.asp?idx=1024",
-      "published": "2026-10-15T07:00:00+00:00"
-    },
     {
       "category": "CIRCUIT",
       "title": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
@@ -110,113 +27,24 @@
       "published": "2026-10-20T02:40:00+00:00"
     },
     {
-      "category": "CIRCUIT",
-      "title": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
-      "originalTitle": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "ASML의 2026년 3분기 실적은 반도체 산업이 새로운 국면에 진입했음을 보여준다. 매출 116억 유로, 순이익 49억 유로로 사상 최대 실적을 기록했지만 시장이 주목한 것은 “2027∼2028년 생산능력으로도 고객 수요를 충족하기 어렵다”는 경고였다. AI 확산으로 첨단 반도체 수요가 폭증하면서 산업의 병목이 수요 부족에서 EUV 장비 공급 부족으로 이동하고 있다. 메모리 투자 확대와 High-NA EUV 도입이 가속되는 가운데, 향후 반도체 시장의 경쟁력은 가격보다 생산능력 확보 여부가 좌우할 전망이다. 이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요.",
-      "keywords": [
-        "반도체"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=23888",
-      "published": "2026-10-16T01:31:35+00:00"
-    },
-    {
-      "category": "FIRMWARE",
-      "title": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
-      "originalTitle": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "서울 금천구 디지털로 178 (가산동) 가산퍼블릭 A동 1823호 지하철 : 가산 디지털 단지역 6번출구 도보 9분 버스 : 5537, 6004, 5615, 5616, 5618, 5619, 5626, 5630, 5712, 5714, 21광명, 75부천, 652, 653, 5012, 금천03, 금천07 당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
-      "keywords": [
-        "펌웨어"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/webinar_detail.asp?idx=1034",
-      "published": "2026-10-19T01:04:02+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "[오프라인 실습] LTspice를 설계 검증 무기로 실전에서 바로 쓰는 법",
-      "originalTitle": "[오프라인 실습] LTspice를 설계 검증 무기로 실전에서 바로 쓰는 법",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "서울 금천구 디지털로 178 (가산동) 가산퍼블릭 A동 1823호 지하철 : 가산 디지털 단지역 6번출구 도보 9분 버스 : 5537, 6004, 5615, 5616, 5618, 5619, 5626, 5630, 5712, 5714, 21광명, 75부천, 652, 653, 5012, 금천03, 금천07 당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
-      "keywords": [
-        "spi"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/webinar_detail.asp?idx=1033",
-      "published": "2026-10-19T01:04:02+00:00"
-    },
-    {
       "category": "MOTOR",
-      "title": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
-      "originalTitle": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
-      "source": "이넷뉴스",
+      "title": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+      "originalTitle": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+      "source": "에이빙",
       "sourceType": "뉴스/검색",
       "languageGroup": "KR",
-      "summary": "에어로웨이가 강한 바람 중심의 성능 경쟁 대신 초저속 제어 기술을 강화하는 방향으로 거실실링팬을 개발하고 있다고 밝혔다. 기온이 내려가는 가을철에는 강한 바람이 오히려 실링팬 사용을 제한하는 요소가 될 수 있다는 점에 착안한 개발 방향이다. 실링팬의 성능은 그동안 얼마나 빠르게 회전하는지, 얼마나 강한 바람을 만들어내는지를 중심으로 평가돼 왔다. 여름철에는 실내 온도가 높을수록 공기를 빠르게 움직이는 능력이 체감 성능과 연결되기 때문에, 이 같은 기준이 제품 선택에 영향을 준다. 하지만 여름이 지나고 기온이 낮아지면 상황은 달라진다.",
+      "summary": "아마스윙 / AMASSWING(대표 여환걸)은 오는 10월 21일(수)부터 23일(금)까지 사흘간 일산 킨텍스 제1전시장에서 개최되는 'HARFKO 2026(제18회 한국국제냉난방공조전)'에 참가한다고 밝혔다. 회사는 고효율·저소음·고신뢰성을 갖춘 차세대 일체형 EC 팬모터와 BLDC 팬모터를 앞세워 국내외 산업용 공조 및 냉동·냉장 시장 공략에 나설 계획이다. 아마스윙은 산업용 일체형 팬모터를 개발·생산하는 전문기업으로, 축적된 설계기술과 품질관리 시스템을 기반으로 산업용 공조와 냉동·냉장 분야에 냉각 솔루션을 공급해 오고 있다. 고객 맞춤형 제품 개발을 통해 국내외 시장을 넓혀 왔다는 것이 회사 측 설명이다. 주력 출품 제품은 IP56 등급을 적용한 고효율 EC 일체형 팬모터 'AW350S EC2FS'를 비롯해 BLDC 팬모터, 고풍량 산업용 냉각팬, 고객 맞춤형 팬모터 솔루션이다.",
       "keywords": [
         "bldc",
-        "모터"
+        "모터",
+        "회로"
       ],
       "rating": 3,
-      "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=55536",
-      "published": "2026-10-21T04:47:10+00:00"
+      "url": "https://kr.aving.net/news/articleViewAmp.html?idxno=1815657",
+      "published": "2026-10-18T06:55:50+00:00"
     },
     {
-      "category": "MOTOR",
-      "title": "모터 슬롯이란 업데이트 공지의 기능 변경 항목",
-      "originalTitle": "모터 슬롯이란 업데이트 공지의 기능 변경 항목",
-      "source": "Calgary Roughnecks",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Calgary Roughnecks",
-      "keywords": [
-        "모터"
-      ],
-      "rating": 3,
-      "url": "https://calgaryroughnecks.com/calgary-roughnecks-unveil-new-mobile-app/?ID=%EB%8F%84%EB%B0%95%20%EB%B9%A0%EC%A7%80%EB%8A%94%20%EC%8B%AC%EB%A6%AC.html",
-      "published": "2026-10-18T19:16:40+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "기본 구조가 간결한지 살펴보는 모터 슬롯 이란",
-      "originalTitle": "기본 구조가 간결한지 살펴보는 모터 슬롯 이란",
-      "source": "Calgary Roughnecks",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Calgary Roughnecks",
-      "keywords": [
-        "모터"
-      ],
-      "rating": 3,
-      "url": "https://www.calgaryroughnecks.com/riggers-fall-to-knighthawks/?ID=%EB%B0%94%EC%B9%B4%EB%9D%BC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%ED%9E%88%EC%96%B4%EB%A1%9C%EB%A9%94%EC%9D%B4%EC%BB%A4.html",
-      "published": "2026-10-18T02:36:23+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "작동하지 않는 버튼인지 구별하는 모터 슬롯 극수 상태 표시",
-      "originalTitle": "작동하지 않는 버튼인지 구별하는 모터 슬롯 극수 상태 표시",
-      "source": "Calgary Roughnecks",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Calgary Roughnecks",
-      "keywords": [
-        "모터"
-      ],
-      "rating": 3,
-      "url": "https://www.calgaryroughnecks.com/roughnecks-partnership/?ID=9697.html",
-      "published": "2026-10-17T08:45:01+00:00"
-    },
-    {
-      "category": "CIRCUIT",
+      "category": "SMPS",
       "title": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
       "originalTitle": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
       "source": "https://www.newsphere.kr/",
@@ -233,7 +61,43 @@
       "published": "2026-10-16T13:52:34+00:00"
     },
     {
-      "category": "EMI",
+      "category": "SMPS",
+      "title": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+      "originalTitle": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "13일 서울 강남구 코엑스에서 열린 '한국전자전 2026(KES 2026)'에 아날로그·혼합신호 반도체 기업 노보센스(NOVOSENSE)가 참가해 산업용 센서와 전력반도체 관련 솔루션을 선보였다. 지난 2022년 한국 시장에 진출한 노보센스는 자동차와 산업용 장비, 전력 시스템에 사용되는 반도체를 공급하고 있으며, 에어컨·냉장고·세탁기·청소기 등 가전 분야에도 전력 관리와 온도·전류 감지, 모터 제어용 반도체 솔루션을 제공하고 있다. 이번 전시에서는 전류·압력·온도 센서와 전력반도체 드라이버, 서버 전원공급장치용 반도체 솔루션 등을 소개했다. 또한 AI 데이터센터용 전원공급·전력변환 시스템에 활용되는 반도체 솔루션도 함께 선보였다. 한편, 노보센스는 전시 현장에서 '휴머노이드 로봇 / 스마트 가전 트랜드 및 테크놀로지'를 주제로 기술 세미나를 진행했으며, 휴머노이드 로봇과 스마트 가전의 산업 동향을 비롯해 위치·각도 측정 센서와 모터 드라이버 등 관련 반도체 기술을 소개했다.",
+      "keywords": [
+        "모터",
+        "전원",
+        "반도체",
+        "가전"
+      ],
+      "rating": 3,
+      "url": "https://www.etnews.com/20261016000307",
+      "published": "2026-10-16T08:11:30+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+      "originalTitle": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+      "source": "Passionate In Marketing",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Two interchangeable jars (1300ml and 500ml) for individual and larger blends. Powerful ice crushing motor with six stainless-steel blades for smooth shakes, juices, dips and chutneys. BlendXL Duo available in White at ₹2,999 and Chrome Luxe Edition at ₹3,499. XECH Technologies is a leading manufacturer of innovative portable home appliances and consumer electronics has launched the XECH BlendXL Duo. A USB-C rechargeable dual-jar portable blender designed for smoothies, protein shakes, iced coffees, fruit drinks and ice-based blends.",
+      "keywords": [
+        "motor",
+        "uart",
+        "emi",
+        "blender"
+      ],
+      "rating": 3,
+      "url": "https://www.passionateinmarketing.com/xech-unveils-blendxl-duo-bringing-family-sized-portable-blender-in-india/",
+      "published": "2026-10-16T06:01:24+00:00"
+    },
+    {
+      "category": "SMPS",
       "title": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
       "originalTitle": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
       "source": "note",
@@ -254,70 +118,36 @@
     },
     {
       "category": "MOTOR",
-      "title": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
-      "originalTitle": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
-      "source": "EEJournal",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Subscribe to the EE Journal Daily Newsletter! – Full redundancy through two independent dies stacked in a compact QFN24 4×4 mm² package – ASIL D ready as a Safety Element out of Context (SEooC), with integrated diagnostics and independent fault detection for each die – Stray-field compensation per ISO 11452-8:2015 via an array of six horizontal Hall plates per die – High-speed analog sine/cosine outputs with low jitter for precise motor control TDK Corporation (TSE:6762) introduces the Micronas HAR 3025, a dual-die stray-field robust motor position sensor with analog sine/cosine output, designed for automotive and industrial safety-critical applications. The HAR 3025 extends TDK’s fast angular position sensor family with a fully redundant architecture housed in a single compact package, specifically addressing electric power steering systems, x-by-wire motor control applications, includi",
+      "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "source": "livesnews.com",
+      "sourceType": "검색/전문매체",
+      "languageGroup": "KR",
+      "summary": "글로벌 가전 브랜드 마이디어(Midea)가 자동먼지비움 스테이션을 갖춘 신제품 ‘마이디어 자동 먼지비움 무선청소기 MP9’을 출시한다고 밝혔다. 마이디어 자동먼지비움 무선청소기 MP9은 37,000Pa(파스칼)의 강력한 흡입력을 비롯해 안티탱글 브러쉬, 자동먼지비움 스테이션, 먼지 감지 자동 흡입모드 등을 적용한 BLDC 무선청소기다. 흡입력과 디자인, 기술력을 앞세워 소비자들의 호응을 얻었던 ‘마이디어 자동먼지비움 스테이션 BLDC 무선청소기 MP08KRGY-DS’의 후속 모델로, 전작의 장점을 계승하면서 청소 성능과 사용 편의성을 한층 강화한 것이 특징이다. 신제품은 BLDC 모터를 기반으로 최대 37,000Pa의 흡입력을 구현했다. 일상에서 발생하는 생활먼지는 물론 바닥 틈새나 카펫 사이에 쌓이기 쉬운 먼지까지 효과적으로 흡입할 수 있도록 설계해 다양한 주거 환경에서 활용할 수 있다.",
       "keywords": [
-        "pmsm",
-        "motor",
-        "microcontroller",
-        "compensation"
+        "bldc",
+        "모터",
+        "가전"
       ],
       "rating": 3,
-      "url": "https://www.eejournal.com/industry_news/tdk-introduces-new-dual-die-stray-field-robust-motor-position-sensor-for-asil-d-fail-operational-applications/",
-      "published": "2026-10-14T13:56:30+00:00"
+      "url": "https://livesnews.com/news/article.html?no=64990",
+      "published": "2026-10-15T01:49:44+00:00"
     },
     {
-      "category": "CIRCUIT",
-      "title": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
-      "originalTitle": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
-      "source": "Passionate In Marketing",
+      "category": "SMPS",
+      "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+      "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+      "source": "전자신문",
       "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Two interchangeable jars (1300ml and 500ml) for individual and larger blends. Powerful ice crushing motor with six stainless-steel blades for smooth shakes, juices, dips and chutneys. BlendXL Duo available in White at ₹2,999 and Chrome Luxe Edition at ₹3,499. XECH Technologies is a leading manufacturer of innovative portable home appliances and consumer electronics has launched the XECH BlendXL Duo. A USB-C rechargeable dual-jar portable blender designed for smoothies, protein shakes, iced coffees, fruit drinks and ice-based blends.",
+      "languageGroup": "KR",
+      "summary": "생성형 AI 경쟁이 반도체를 넘어 '전력' 경쟁으로 번지고 있다. 글로벌 빅테크 기업들이 AI 데이터센터 구축에 막대한 투자를 이어가면서, 늘어나는 전력을 얼마나 효율적으로 공급하고 관리하느냐가 데이터센터 경쟁력을 좌우하는 변수로 떠올랐다. AI 연산을 처리하는 GPU 서버는 기존 서버보다 훨씬 많은 전력을 소비한다. 서버 랙 하나에 들어가는 전력 밀도가 빠르게 높아지면서 데이터센터 운영사들은 전력 변환 과정에서 새는 손실을 줄이고 발열을 잡는 동시에 좁은 공간에 더 많은 전력 장비를 넣어야 하는 과제를 안게 됐다. 전력 효율이 1%포인트만 개선돼도 대규모 데이터센터에서는 운영비와 냉각 부담이 크게 줄어든다는 점에서, 전원 공급 장치(PSU)를 비롯한 전력 장비의 중요성이 커지고 있다.",
       "keywords": [
-        "motor",
-        "uart",
-        "emi",
-        "blender"
+        "전원",
+        "반도체"
       ],
-      "rating": 3,
-      "url": "https://www.passionateinmarketing.com/xech-unveils-blendxl-duo-bringing-family-sized-portable-blender-in-india/",
-      "published": "2026-10-16T06:01:24+00:00"
-    },
-    {
-      "category": "EMI",
-      "title": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification",
-      "originalTitle": "Free EMC Testing and Rectification Services: How VIIP's In-House Laboratory Accelerates Global Certification",
-      "source": "IndyStar",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "IndyStar",
-      "keywords": [
-        "emc"
-      ],
-      "rating": 3,
-      "url": "https://www.indystar.com/press-release/story/136910/free-emc-testing-and-rectification-services-how-viips-in-house-laboratory-accelerates-global-certification/",
-      "published": "2026-10-14T08:49:15+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "NASA’s Lunar Grounding Challenge is a Real Buzz",
-      "originalTitle": "NASA’s Lunar Grounding Challenge is a Real Buzz",
-      "source": "Hackaday",
-      "sourceType": "기술 블로그",
-      "languageGroup": "GLOBAL",
-      "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard to equalize with something like a lunar lander. For this reason to consult the public whilst dangling $150,000 of rewards in front of anyone ready to pounce with a good idea. Here on Earth we got many ways in which we can get rid of such an unwanted charge, with dry winter weather demonstrating quite effectively why humidity is a crucial factor here. With no real atmosphere on the Moon, each astronaut thus becomes a walking capacitor, which is worsened when said astronaut vent",
-      "keywords": [
-        "grounding",
-        "emi"
-      ],
-      "rating": 3,
-      "url": "https://hackaday.com/2026/10/20/nasas-lunar-grounding-challenge-is-a-real-buzz/",
-      "published": "2026-10-20T18:30:27+00:00"
+      "rating": 2,
+      "url": "https://www.etnews.com/20261015000313",
+      "published": "2026-10-16T00:00:00+00:00"
     }
   ]
 }
