@@ -1,8 +1,24 @@
 {
-  "updated": "2026-10-21T08:00:27.332127+00:00",
-  "windowStart": "2026-10-14T08:00:27.332127+00:00",
-  "windowEnd": "2026-10-21T08:00:27.332127+00:00",
-  "issueTitle": "가전 전장 기술 TOP 0",
-  "searchedCandidates": 0,
-  "items": []
+  "updated": "2026-10-21T08:14:03.723009+00:00",
+  "windowStart": "2026-10-14T08:14:03.723009+00:00",
+  "windowEnd": "2026-10-21T08:14:03.723009+00:00",
+  "issueTitle": "가전 전장 기술 TOP 1",
+  "searchedCandidates": 2,
+  "items": [
+    {
+      "category": "MOTOR",
+      "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "source": "livesnews.com",
+      "sourceType": "검색/전문매체",
+      "summary": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여 livesnews.com",
+      "keywords": [
+        "bldc",
+        "모터"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3eGhDVWZtRktVYS1ZTXZmMkJ0cTdfTkhaLW11X1VGdlJ0OXZnN2ZyWTJiUkdWNlY3V2UtdjVtUENDbU5EemQ2T2pBb1NPVTBEdTI1bWluR0RFNGho?oc=5",
+      "published": "2026-10-15T01:49:44+00:00"
+    }
+  ]
 }
