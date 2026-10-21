@@ -1,55 +1,24 @@
 {
-  "updated": "2026-10-21T06:38:36.330032+00:00",
-  "issueTitle": "이번 주 가전 전장 기술 TOP 5",
+  "updated": "2026-10-21T06:46:47.185954+00:00",
+  "issueTitle": "가전 전장 기술 TOP 17",
+  "searchedCandidates": 30,
   "translationMode": "기본 한국어 요약",
   "items": [
     {
       "category": "PCB",
-      "title": "PCB 트레이스 폭을 올바르게 정의하는 방법",
-      "originalTitle": "PCB 트레이스 폭을 올바르게 정의하는 방법",
+      "title": "PCB 설계자를 위한 EMI 및 EMC 준수 101",
+      "originalTitle": "PCB 설계자를 위한 EMI 및 EMC 준수 101",
       "source": "Altium",
-      "sourceType": "공식 기술자료",
-      "summary": "PCB 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 기술자료입니다.",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
       "checkPoints": [
         "Altium DRC·Stackup·Net Class",
         "전원/GND·고전류·Gate Loop",
         "Creepage·Clearance·발열·DFM"
       ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9Qd21TdC01S1lKN2JfVVVwYnd3U3IyTlNQWnNySW5yV2lhX1kxSW0zTjRLQlhzeEpDUXdYcTlxbkR4bTluS3NjRDB1cGVzalBOUDBZMi1YX1IzLUFRMVlvcF9TSHk3ZUdiSjRCWUR0Ml90WkE0?oc=5",
-      "published": "2026-10-13T04:07:37+00:00"
-    },
-    {
-      "category": "EMI",
-      "title": "영어를 제2언어로 만들기: 고등 교육에 EMI의 변화가 필요하다",
-      "originalTitle": "영어를 제2언어로 만들기: 고등 교육에 EMI의 변화가 필요하다",
-      "source": "Vietnam.vn",
-      "sourceType": "커뮤니티",
-      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 기술자료입니다.",
-      "checkPoints": [
-        "전도/복사 Noise Source·Path",
-        "CM Choke·X/Y Cap·접지·Shield",
-        "PCB Loop·Switching Edge·Pre-scan"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdnVkS1ZiTFluSEZlUWVsOVMtOWh4LXFsT2FEMVdCUVo0bk1IaWh6YnVKYTZ2S0d4UWhXZzB4dTRscmxKdzBpWUlLRmh4M0piOU1janVVNFI2czgzQnBQLXNCMlkxU3NseFpsNElDN0dHSmJvRTZWVEhNVnE0Y3p5M2o5d1R3bGtXTGt1d1pXZHRxRGJlZjg2d0VKaExib3pEdWZ1YQ?oc=5",
-      "published": "2026-10-17T11:51:14+00:00"
-    },
-    {
-      "category": "EMI",
-      "title": "[EMI] Software Defines What a Vehicle Can Do. Semiconductors Define What Software Can Become",
-      "originalTitle": "Software Defines What a Vehicle Can Do. Semiconductors Define What Software Can Become",
-      "source": "autoelectronics.co.kr",
-      "sourceType": "전문매체",
-      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 기술자료입니다.",
-      "checkPoints": [
-        "전도/복사 Noise Source·Path",
-        "CM Choke·X/Y Cap·접지·Shield",
-        "PCB Loop·Switching Edge·Pre-scan"
-      ],
-      "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1TU2RCbEpva3Vmb2k3RnBvYUJVaUlNNVRnTGFzNGxZMHMtU25RUmV6VFJaVkFDSHd4b1cxZmFfUWdKaFgwWGt2aVplTWVycWVvU0RKeVZFVXhsdjhTcS10OWxrUzFObkRfa0lvbHQwbXV5X3FY?oc=5",
-      "published": "2026-10-01T07:00:00+00:00"
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9hS1BocFJEUTUtMVVTYVRoYUJzdF92d2F5eE4wN29aeVNRZ0FsR3MxdzFOZkQtSXVYTVEtbEptcmwtaXVaVHcxbmU3VHNXNnhpQW13OU5kNUR3Sm9scEQxRWlvZGxNdDJPaHJub21ZY0hpN1psYzlyNUE4ejVLNms?oc=5",
+      "published": "2024-09-19T15:51:42+00:00"
     },
     {
       "category": "FIRMWARE",
@@ -57,31 +26,255 @@
       "originalTitle": "[STM32 MCU 제어 가이드] 버튼 입력 – LED 출력 동작 제어",
       "source": "e4ds news",
       "sourceType": "전문매체",
-      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 기술자료입니다.",
+      "summary": "마이컴 펌웨어 구조, 상태 머신, Interrupt, 통신, Watchdog 및 테스트 관점의 자료입니다.",
       "checkPoints": [
         "Embedded C·상태 머신·ISR",
         "Driver/HAL·통신·Bootloader",
         "Watchdog·정적분석·Unit Test"
       ],
-      "rating": 3,
+      "rating": 4,
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uWHh6d1QzWGY1WDRBdG1FcUE2WmJPRGwzSjQzRWZTX3Q4cFM0SEhEaUNscTFzbmpwQUh2X2Y1WUdXLVlnUEJ1LUpEcGRZZDhIUGRRZlFyRi1SUGNGYWJkSi14R25oUQ?oc=5",
       "published": "2026-10-11T19:51:02+00:00"
     },
     {
+      "category": "PCB",
+      "title": "EMI 제어 마스터하기: EMC 설계를 위한 스택업 선택 방법",
+      "originalTitle": "EMI 제어 마스터하기: EMC 설계를 위한 스택업 선택 방법",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "checkPoints": [
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5yQkRiaHM5cUl2R1g0OE1hYnUtUXF1QVhybTVCclF0NlZYeEMtcnFUNjdVbFdXUnNhWXhXNldiZnJCN2ZPUnh6WWZHc193UVdOOEFhNUlVVjV5Q2pZbUw3WV9YclV3TGMxUkRUanlSdjJjYmdTUk51bzdn?oc=5",
+      "published": "2025-03-11T12:21:11+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "PCB 설계에서 EMI 제어 마스터하기: PDN을 위한 디커플링 전략",
+      "originalTitle": "PCB 설계에서 EMI 제어 마스터하기: PDN을 위한 디커플링 전략",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "checkPoints": [
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pS2FHdEhNalhjR0g1M2tSaW5YZnRpQWVJd3ppMFIxTlhWT1F0Q3dVbjRrY1kxS250Y3ZuWnppTm9fM05PZXVLc25haWZFT2RHa1FUREgzcUFlRldsVWdZQjhidUZrcEp0WHEzMUxfWTI?oc=5",
+      "published": "2025-01-16T08:00:00+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "EMC 향상을 위한 6층 PCB 스택업 설계",
+      "originalTitle": "EMC 향상을 위한 6층 PCB 스택업 설계",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "checkPoints": [
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9TT1dwaUt2Z2UzT0hoVG5JWkdraUNQeVVrT3JBNnp4bEI2aE5OcTRReEUwS3FDd0gwMElYOVdtYkhqVFQtOXAyak9ScWhQTjU3Ml90YWNhb3JRTXVOdXdNQ1M3N3NzNGtlU00wd1BldEVlc2Fhb3VfRV9DbXQ?oc=5",
+      "published": "2024-10-15T13:41:09+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "EMI / EMC",
+      "originalTitle": "EMI / EMC",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "checkPoints": [
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1GcF85elJiR0p4X1JqaTJ1a1gxZHNVckhuaEdFU182RHFuZW5JREhlWGt3MU4yYVlkMk52alliNFZrX3ZyejZoNGNwUFIxMDUxTEtVakhDRWFhY2x5RjFNMzRJbEpOUEJt?oc=5",
+      "published": "2024-10-10T23:20:12+00:00"
+    },
+    {
+      "category": "PCB",
+      "title": "PCB 전원 무결성에 대한 완벽한 가이드: 기판부터 패키지까지",
+      "originalTitle": "PCB 전원 무결성에 대한 완벽한 가이드: 기판부터 패키지까지",
+      "source": "Altium",
+      "sourceType": "뉴스/웹",
+      "summary": "PCB Artwork, 배치·배선, 전원/GND 경로, 절연거리, 발열 및 DFM 관점의 자료입니다.",
+      "checkPoints": [
+        "Altium DRC·Stackup·Net Class",
+        "전원/GND·고전류·Gate Loop",
+        "Creepage·Clearance·발열·DFM"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAtbHJKR3ZIRDlrR0NxYUoybXlmLW9SSEY5cGZsQ1R4YTU4WEVCUTQtaXdjcXFsc05IS2VnODlKNU9Tb1RobTZQYzFBNVNZTTdWNHNrV00xQTY2OGZCeGRjLWtaMA?oc=5",
+      "published": "2023-02-10T08:00:00+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
+      "originalTitle": "제2회 반도체 개요 (2) 반도체 집적 회로 (LSI · IC) | 회로 설계와 EMC 설계의 밸런스：서론",
+      "source": "ROHM",
+      "sourceType": "뉴스/웹",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
+      "checkPoints": [
+        "전도/복사 Noise Source·Path",
+        "CM Choke·X/Y Cap·접지·Shield",
+        "PCB Loop·Switching Edge·Pre-scan"
+      ],
+      "rating": 4,
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WQXJuSnMySE1ZLTRsRmpIVGVXUG1Wd0FKTGJqUWF0YlAzd0tOcWROY3pRMnZ6eEg4QVlfOEtaQWp1bjdjbTN0dURKZ0lJVGRSOWxaUUFzbUY?oc=5",
+      "published": "2021-10-27T07:00:00+00:00"
+    },
+    {
       "category": "CIRCUIT",
-      "title": "[CIRCUIT] Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment",
-      "originalTitle": "Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment",
-      "source": "뉴스와이어",
-      "sourceType": "전문매체",
-      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 기술자료입니다.",
+      "title": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
+      "originalTitle": "[인피니언 아카데미] 휴머노이드 로봇 전기전자 아키텍처와 핵심 반도체 기술 (온라인 생중계)",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
       "checkPoints": [
         "정격·Derating·발열",
         "Protection·Reliability",
         "BOM·검증·양산성"
       ],
       "rating": 3,
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9odmlnbWJveFFhWEljcHhwWFlkbTFOWUhSOTFDMkMxSEpqM2doZC1TcXZJT0JtTmVRNVV6QTN5Wm9obnF0V3lxc3BMUTVZWngxZUdQY1FHa0lQbWZ1bW5r?oc=5",
-      "published": "2026-09-27T07:00:00+00:00"
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUnJ1RHZ1WTZRR01NdllXTEhmMWhXTUozSUx3bDl4a3VHbGNGckJrQVZ6LWVKUzFZQ0VDY0lkN1dheW9KN3JpQ0ZTTXd1Tk5WeWpRWWdOVlh4VngxM29aalZUSjl3WFdmUGtscG9oMk4ycG9LNTdkaW1uaFItdDdGRnRn?oc=5",
+      "published": "2026-06-11T07:00:00+00:00"
+    },
+    {
+      "category": "SMPS",
+      "title": "인피니언 CoolGaN™ BDS 40V G3 제품군, 휴대용 전원 설계에서 최대 82% 풋프린트 감소",
+      "originalTitle": "인피니언 CoolGaN™ BDS 40V G3 제품군, 휴대용 전원 설계에서 최대 82% 풋프린트 감소",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "SMPS 토폴로지, 자성부품, 보상회로, 효율·발열 및 보호회로 관점의 자료입니다.",
+      "checkPoints": [
+        "Topology·Transformer·보상회로",
+        "MOSFET·Diode·Snubber·효율",
+        "OCP·OVP·OTP·절연·발열"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBSUnpvUFpmVXRFYTN6OS0wczBpU29Jb3BmdHFLS3dYbFVpZTdYUVkxaExxT0tlMDYzUkx5OFpVSThHS1dfYXZvSE1OSlBtTW9mRGJOZHptdjM3SW15eWpyUTlic3hlYWp5OWlINHpDbGxSMjVha3BiN2E3eEV6SDA?oc=5",
+      "published": "2026-05-26T07:00:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "모터 제어를 위한 인피니언의 새로운 MOTIX™ 시스템온칩 제품군, 컴팩트하고 비용 효율적인 설계",
+      "originalTitle": "모터 제어를 위한 인피니언의 새로운 MOTIX™ 시스템온칩 제품군, 컴팩트하고 비용 효율적인 설계",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
+      "checkPoints": [
+        "기동 성공률·저속 안정성",
+        "상전류·RPM·PWM Duty",
+        "Stall·과전류·온도 보호"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1LVN5VFU2WHMtMkJjRjN2ZnU3WHZLZkk4TjJWc3V3NGdtOVd6ZWNuekdoMmEzbENCNk11c2xFcV9xWERzRk9PaGRIMGZscnlnUWFad3dWRE52Vk92VDZQVkNjeGVTdDlxS1dlY1R0Rml4c2k2aGY5WVUzQXV5QjA?oc=5",
+      "published": "2025-11-25T08:00:00+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "Seminar",
+      "originalTitle": "Seminar",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
+      "checkPoints": [
+        "전도/복사 Noise Source·Path",
+        "CM Choke·X/Y Cap·접지·Shield",
+        "PCB Loop·Switching Edge·Pre-scan"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE01NUU0NXVGVUlOLThweGtSZHRLTkk2YXdTZG8xdXhJcnJSUWt1VVlWTW1tbmhmcEN5YkZDZ1pWT1VNQzVZOThDZVZhU3d0Vzg0eDdOcGZDZjhYR1dkN2JZYTZ3VnJWenFCd3hB?oc=5",
+      "published": "2025-10-31T05:26:45+00:00"
+    },
+    {
+      "category": "SMPS",
+      "title": "인피니언, AI 데이터센터 및 서버용 12kW 고밀도 전원공급장치 레퍼런스 디자인 출시",
+      "originalTitle": "인피니언, AI 데이터센터 및 서버용 12kW 고밀도 전원공급장치 레퍼런스 디자인 출시",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "SMPS 토폴로지, 자성부품, 보상회로, 효율·발열 및 보호회로 관점의 자료입니다.",
+      "checkPoints": [
+        "Topology·Transformer·보상회로",
+        "MOSFET·Diode·Snubber·효율",
+        "OCP·OVP·OTP·절연·발열"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91REt3QzF2dWZRWUJKS0lpY3I2cDFWaVI5Z19RN3p3ckQzVF9NRzdyNjBiOERWVE1kN0FDUEt6cmtSZnktUUh5LU85NVJRVnU4Ym1CZW9VMFRkOTRhWnRyQUdBYkZualhUUWJYUEdCYkRDZE9FdFFRY2tKUmh0Tnc?oc=5",
+      "published": "2025-09-17T07:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
+      "originalTitle": "인피니언의 Q-DPAK CoolSiC™ MOSFET 1200V G2, 산업용 애플리케이션에 더 높은 전력 밀도 제공",
+      "source": "Infineon Technologies",
+      "sourceType": "뉴스/웹",
+      "summary": "가전 회로설계의 부품 선정, 보호, 발열 및 신뢰성 관점의 자료입니다.",
+      "checkPoints": [
+        "정격·Derating·발열",
+        "Protection·Reliability",
+        "BOM·검증·양산성"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4ZHBObXozeG9tMWlqUXpwamY3WkJYUENhV0VtUEpGdFZXWXlvZ2RMenYzc050UFBfLXV2T29hcHRDaFloSnFQa0pQckxHeEptTFY3YTVvWjI3UHlDT0lmbjR4d0IwcEdZYkZwMHVJU2V6WklfeDV1YXBHcHN0M0E?oc=5",
+      "published": "2025-07-30T07:00:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "Brushless 모터의 센서 탑재와 센서레스 구동의 특징과 사용 용도",
+      "originalTitle": "Brushless 모터의 센서 탑재와 센서레스 구동의 특징과 사용 용도",
+      "source": "ROHM",
+      "sourceType": "뉴스/웹",
+      "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
+      "checkPoints": [
+        "기동 성공률·저속 안정성",
+        "상전류·RPM·PWM Duty",
+        "Stall·과전류·온도 보호"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBHTWx4bkRCZWhVY0RjMGNhRVA5VWs2OGVPNzAwQ0ZHSlJkcWdVeXlOeDU0SGR2UFZOLVBnSTF6bU95dUtCd2IwRVliSDJjUGhSRGMxbXFHOA?oc=5",
+      "published": "2021-09-15T07:00:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "모터 제어",
+      "originalTitle": "모터 제어",
+      "source": "Microchip University",
+      "sourceType": "뉴스/웹",
+      "summary": "BLDC/PMSM 기동, 전류·속도 제어, 센서리스 및 보호 로직 관점의 자료입니다.",
+      "checkPoints": [
+        "기동 성공률·저속 안정성",
+        "상전류·RPM·PWM Duty",
+        "Stall·과전류·온도 보호"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vUmdBVUxOZFdrMkxWdVRicG9mc1lBTG01ZkxXdHA4d1dhQTU5ZjNCMV9ha094OFh6aEtQTG9jQlZVYk9yU3d3bV9QOTlVbjdSV1BwbHVn?oc=5",
+      "published": "2021-04-28T15:42:04+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "로옴 주식회사 - ROHM Semiconductor",
+      "originalTitle": "로옴 주식회사 - ROHM Semiconductor",
+      "source": "ROHM",
+      "sourceType": "뉴스/웹",
+      "summary": "전도·복사 노이즈, 필터, 접지, PCB Loop 및 스위칭 영향 관점의 자료입니다.",
+      "checkPoints": [
+        "전도/복사 Noise Source·Path",
+        "CM Choke·X/Y Cap·접지·Shield",
+        "PCB Loop·Switching Edge·Pre-scan"
+      ],
+      "rating": 3,
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE85dDdlN3lqUk9aclpPZVRfbmdIbHg1dGpOUjJEa0pQS1N2Si1jeGhWVzhMMUZwYnFRbmFv?oc=5",
+      "published": "2012-09-04T09:00:57+00:00"
     }
   ]
 }
