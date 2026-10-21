@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from datetime import datetime,timezone,timedelta
 from email.utils import parsedate_to_datetime
 OUT='data/weekly.json';MAX_ITEMS=30;UA='Mozilla/5.0 HUROM-Weekly-V8'
+RUN_END=datetime.now(timezone.utc);RUN_START=RUN_END-timedelta(days=7)
 Q=['BLDC PMSM sensorless FOC motor control','motor driver gate driver current sensing MOSFET','Altium PCB artwork routing stackup grounding creepage clearance','SMPS flyback buck LLC transformer snubber compensation','EMI EMC conducted radiated emissions common mode choke','microcontroller firmware embedded C RTOS watchdog bootloader UART PWM ADC','STM32 Renesas Nuvoton Microchip Infineon firmware motor','juicer blender food processor motor electronics']
 S=['site:etnews.com 반도체 회로 모터 전원 펌웨어 PCB EMI','site:e4ds.com BLDC MCU SMPS PCB EMI 전력반도체','site:rohm.co.kr 모터드라이버 MOSFET 전원IC MCU','site:st.com BLDC PMSM motor control STM32','site:ti.com motor control gate driver current sensing','site:infineon.com motor control MOSFET PSoC','site:renesas.com motor control MCU inverter firmware','site:nxp.com motor control MCU','site:onsemi.com motor driver MOSFET','site:microchip.com motor control embedded C','site:resources.altium.com PCB layout stackup EMC','site:blog.naver.com BLDC PCB SMPS EMI 펌웨어','site:tistory.com BLDC Altium PCB SMPS EMI firmware','site:eevblog.com PCB SMPS EMI motor control','site:electronics.stackexchange.com BLDC PCB SMPS EMI microcontroller']
 BLOCK=['english as a second language','second language','제2언어','영어 교육','language education','automotive','electric vehicle','3300v','3.3kv','6.5kv','market size','market forecast','market share','stock','investment','2035','2036','job vacancy']
@@ -14,6 +15,13 @@ def clean(s):return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',html.unescape(s or '
 def parse_publish_date(date_text):
  if not date_text:return None
  t=str(date_text).strip()
+ # Parse ISO first. email.utils accepts some ISO-like inputs but can silently
+ # discard their time component, which would let a future timestamp through.
+ try:
+  d=datetime.fromisoformat(t.replace('Z','+00:00'))
+  if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
+  return d.astimezone(timezone.utc)
+ except Exception:pass
  try:
   d=parsedate_to_datetime(t)
   if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
@@ -22,17 +30,12 @@ def parse_publish_date(date_text):
  for fmt in ('%Y%m%d','%Y-%m-%d','%Y/%m/%d'):
   try:return datetime.strptime(t[:10] if fmt!='%Y%m%d' else t[:8],fmt).replace(tzinfo=timezone.utc)
   except Exception:pass
- try:
-  d=datetime.fromisoformat(t.replace('Z','+00:00'))
-  if d.tzinfo is None:d=d.replace(tzinfo=timezone.utc)
-  return d.astimezone(timezone.utc)
- except Exception:return None
+ return None
 
 def within_last_week(date_text):
  d=parse_publish_date(date_text)
  if d is None:return False
- now=datetime.now(timezone.utc);cutoff=now-timedelta(days=7)
- return cutoff <= d <= now
+ return RUN_START <= d <= RUN_END
 
 def rel(t):
  h=t.lower()
@@ -76,7 +79,11 @@ def cse(a):
   for start in [1,11,21,31,41]:
    try:
     u='https://www.googleapis.com/customsearch/v1?'+urllib.parse.urlencode({'key':key,'cx':cx,'q':q,'start':start,'num':10,'dateRestrict':'d7'});d=json.loads(fetch(u))
-    for x in d.get('items',[]):add(a,x.get('title'),x.get('snippet'),x.get('link'))
+    for x in d.get('items',[]):
+     meta=(x.get('pagemap') or {}).get('metatags') or [{}]
+     m=meta[0] if meta else {}
+     date=next((m.get(k) for k in ('article:published_time','datepublished','date','pubdate','og:updated_time') if m.get(k)), '')
+     add(a,x.get('title'),x.get('snippet'),x.get('link'),date,'Google 검색','검색/웹')
    except Exception as e:print('cse',repr(e));break
 
 class ArticleParser(HTMLParser):
@@ -131,6 +138,12 @@ def main():
   if not k or k in seen or srcn.get(x['source'],0)>=6:continue
   seen.add(k);srcn[x['source']]=srcn.get(x['source'],0)+1;c=cat(x['title']+' '+x['snippet']);article_text=get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
   if len(out)>=MAX_ITEMS:break
- if out:json.dump({'updated':datetime.now(timezone.utc).isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'items':out},open(OUT,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
+ # Last mandatory check immediately before writing. Never carry stale cards forward.
+ out=[x for x in out if within_last_week(x.get('published',''))]
+ for x in out:
+  x['published']=parse_publish_date(x['published']).isoformat()
+ os.makedirs(os.path.dirname(OUT),exist_ok=True)
+ payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'items':out}
+ with open(OUT,'w',encoding='utf-8') as f:json.dump(payload,f,ensure_ascii=False,indent=2)
  print('candidates',len(a),'selected',len(out))
 if __name__=='__main__':main()
