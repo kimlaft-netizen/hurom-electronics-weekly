@@ -97,8 +97,16 @@ def duplicate_title(title, seen_titles):
   prior_models=set(re.findall(r'\b[a-z]+\d+[a-z0-9]*\b',prior.lower()))
   if model_ids & prior_models and shared & tech_terms:return True
  return False
-def cat(t):
- h=t.lower()
+def cat(title,snippet=''):
+ t=(title or '').lower();h=(t+' '+(snippet or '').lower())
+ emi_title=any(term_match(t,x) for x in ['emi','emc','conducted emission','radiated emission','emi filter','emc filter','noise filter','노이즈 필터','전자파 필터'])
+ smps_title=any(term_match(t,x) for x in ['smps','flyback','buck converter','buck','llc','ac/dc','dc/dc','switching regulator','power supply','스위칭 전원','플라이백','벅 컨버터'])
+ # Give the headline's primary subject more weight than secondary terms in a
+ # search snippet. This prevents EMI-filter market/design articles from being
+ # misrouted to SMPS just because the body mentions AC/DC or DC/DC.
+ if any(term_match(t,x) for x in ['emi filter','emc filter','emi 필터','emc 필터','noise filter','노이즈 필터']):return 'EMI'
+ if emi_title and not smps_title:return 'EMI'
+ if smps_title and not emi_title:return 'SMPS'
  if any(x in h for x in ['altium','pcb','artwork','routing','stackup','creepage','clearance']):return 'PCB'
  if any(x in h for x in ['smps','flyback','llc','snubber','power supply','전원']):return 'SMPS'
  if any(x in h for x in ['emi','emc','conducted emission','radiated emission','노이즈']):return 'EMI'
@@ -347,7 +355,7 @@ def main():
   resolved=resolve_selected_links([x])
   if not resolved:return None
   x=resolved[0]
-  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source'])
+  c=cat(x['title'],x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source'])
   if not normalize_summary(s,x['title'],x['source']) or s.startswith('본문 미리보기를 가져오지 못했습니다'):return None
   return {'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':relevance_rating(x['title'],x['snippet'],article_text),'url':x['url'],'published':x['published']}
  # First fill up to 15 usable cards in each language. Invalid articles do not
