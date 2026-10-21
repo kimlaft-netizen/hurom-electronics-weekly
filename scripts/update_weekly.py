@@ -1,4 +1,5 @@
 import os,re,json,html,time,urllib.parse,urllib.request,urllib.error,xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor,as_completed
 from html.parser import HTMLParser
 from datetime import datetime,timezone,timedelta
 from email.utils import parsedate_to_datetime
@@ -106,6 +107,53 @@ def gnews(a):
     raw=clean(n.findtext('title'));src=raw.rsplit(' - ',1)[1] if ' - ' in raw else '';title=raw.rsplit(' - ',1)[0];add(a,title,n.findtext('description'),clean(n.findtext('link')),clean(n.findtext('pubDate')),src,'뉴스/검색',group)
   except Exception as e:print('gnews query failed',q,repr(e))
   time.sleep(0.35)
+
+def resolve_google_news_url(url):
+ # Google News RSS article links are JS-driven redirect pages, not publisher URLs.
+ # Resolve them before saving so readers never land on Google's "Sorry" page.
+ try:
+  parsed=urllib.parse.urlparse(url)
+  if parsed.hostname not in ('news.google.com','www.news.google.com'):return url
+  gid=parsed.path.rstrip('/').split('/')[-1]
+  if not gid:return None
+  headers={'User-Agent':UA,'Cookie':'CONSENT=YES+cb; SOCS=CAI'}
+  page_req=urllib.request.Request(f'https://news.google.com/rss/articles/{gid}',headers=headers)
+  page=urllib.request.urlopen(page_req,timeout=6).read().decode('utf-8','ignore')
+  sg=re.search(r'data-n-a-sg="([^"]+)"',page)
+  ts=re.search(r'data-n-a-ts="([^"]+)"',page)
+  article_id=re.search(r'data-n-a-id="([^"]+)"',page)
+  if not(sg and ts and article_id):return None
+  gid=article_id.group(1)
+  inner=(
+   '["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,'
+   'null,null,null,null,null,0,1],"X","X",1,[1,1,1],1,1,null,0,0,null,0],'
+   f'"{gid}",{ts.group(1)},"{sg.group(1)}"]'
+  )
+  body=urllib.parse.urlencode({'f.req':json.dumps([[['Fbv4je',inner,None,'generic']]])}).encode()
+  req=urllib.request.Request(
+   'https://news.google.com/_/DotsSplashUi/data/batchexecute',data=body,
+   headers={**headers,'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'})
+  raw=urllib.request.urlopen(req,timeout=6).read().decode('utf-8','ignore')
+  payload=raw.split('\n\n',1)[-1]
+  row=json.loads(payload)[0][2]
+  if not row:return None
+  real_url=json.loads(row)[1]
+  return real_url if urllib.parse.urlparse(real_url).scheme in ('http','https') and 'news.google.com' not in urllib.parse.urlparse(real_url).netloc else None
+ except Exception as e:
+  print('Google News link resolution failed',repr(e))
+  return None
+
+def resolve_selected_links(selected):
+ targets=[x for x in selected if urllib.parse.urlparse(x.get('url','')).hostname in ('news.google.com','www.news.google.com')]
+ if not targets:return selected
+ with ThreadPoolExecutor(max_workers=4) as pool:
+  futures={pool.submit(resolve_google_news_url,x['url']):x for x in targets}
+  for future in as_completed(futures):
+   item=futures[future];resolved=future.result()
+   if resolved:item['url']=resolved
+   else:item['skipGoogleRedirect']=True
+ return [x for x in selected if not x.get('skipGoogleRedirect')]
+
 def naver(a):
  cid=os.getenv('NAVER_CLIENT_ID');sec=os.getenv('NAVER_CLIENT_SECRET')
  if not(cid and sec):
@@ -185,27 +233,60 @@ def get_article_text(url):
    if any(noise in x.lower() for noise in ['google 검색에서 더 쉽게','관심 있는 itchosun 기사','subscribe to our newsletter','sign up for our newsletter','advertisement']):continue
    if len(x)>=35 and x not in paras:paras.append(x)
   text=' '.join(paras)
+  if len(text)<180:
+   # Many publishers expose the actual article body as JSON-LD even when the
+   # visible article is rendered by JavaScript and contains no usable <p> tags.
+   bodies=re.findall(r'"articleBody"\s*:\s*("(?:\\.|[^"\\])*")',raw,re.I)
+   for body in bodies:
+    try:
+     value=clean(json.loads(body))
+     if len(value)>len(text):text=value
+    except Exception:pass
   if len(text)<180 and p.meta:text=clean(' '.join(p.meta))
   return text[:4500]
  except Exception as e:
   print('article fetch',url[:80],repr(e));return ''
 
-def fallback_summary(text,limit=420):
+def normalize_summary(text,title='',source=''):
  text=clean(text)
- if not text:return '검색 결과에 확인 가능한 기사 본문 요약이 없습니다.'
+ if not text:return ''
+ # Search descriptions sometimes contain only the headline plus its outlet.
+ text=re.sub(r'\s*(?:\||｜|[-–—])\s*(?:에이빙|aving)\s*$', '', text, flags=re.I).strip()
+ if source:
+  outlet=re.escape(clean(source))
+  text=re.sub(rf'\s*(?:\||｜|[-–—])\s*{outlet}\s*$', '', text, flags=re.I).strip()
+ if title:
+  key=lambda value:re.sub(r'[^a-z0-9가-힣]','',clean(value).lower())
+  normalized_text=key(text);normalized_title=key(title)
+  if normalized_title and normalized_text.startswith(normalized_title):
+   text=text[len(clean(title)):].lstrip(' \t\r\n|｜:：-–—·…\"\'')
+   text=re.sub(r'^(?:에이빙|aving)\b\s*','',text,flags=re.I).strip()
+ if not text:return ''
+ return text[:900].rstrip()
+
+def fallback_summary(text,title='',source='',limit=900):
+ text=normalize_summary(text,title,source)
+ if not text:return ''
  sentences=[x.strip() for x in re.split(r'(?<=[.!?。])\s+',text) if len(x.strip())>24]
- result=' '.join(sentences[:2]) if len(sentences)>1 else text
+ result=' '.join(sentences[:5]) if sentences else text
  return result[:limit].rstrip()
 
-def analyze(title,snip,c,article_text=""):
- fallback=fallback_summary(article_text or snip);ks=[x for x in TERMS if x in (title+' '+snip+' '+article_text).lower()][:6] or [c]
+def analyze(title,snip,c,article_text="",source=''):
+ # Prefer genuine page text. A headline-only search snippet is never shown as
+ # if it were article content.
+ body=article_text or snip
+ fallback=fallback_summary(body,title,source)
+ if not fallback:fallback='본문 미리보기를 가져오지 못했습니다. 원문 링크에서 기사 내용을 확인해 주세요.'
+ ks=[x for x in TERMS if x in (title+' '+snip+' '+article_text).lower()][:6] or [c]
+ if not article_text and not normalize_summary(snip,title,source):
+  return title,fallback,ks
  ep=os.getenv('AZURE_OPENAI_ENDPOINT','').rstrip('/');key=os.getenv('AZURE_OPENAI_API_KEY');dep=os.getenv('AZURE_OPENAI_DEPLOYMENT')
  if not(ep and key and dep):return title,fallback,ks
  source_text=(article_text[:4000] if article_text else snip)
- prompt='제공된 기사 본문 또는 검색요약에 있는 사실만 사용해 한국어로 정리. 없는 사실은 만들지 말 것. JSON만 출력 {\"titleKo\":\"\",\"articleSummaryKo\":\"\",\"keywords\":[]}. articleSummaryKo는 해당 자료의 구체적 핵심내용 2~3문장 260자 이하. keywords는 실제 확인되는 기술어 3~6개. 제목:'+title+' 본문/요약:'+source_text
+ prompt='기사 제목을 요약에 반복하지 말고, 매체명이나 기자명을 덧붙이지 말 것. 본문에 적힌 사실만 사용해 한국어로 기술적인 본문 핵심을 구체적으로 요약하고 없는 내용은 만들지 말 것. JSON만 출력 {\"titleKo\":\"\",\"articleSummaryKo\":\"\",\"keywords\":[]}. articleSummaryKo는 제목이 아닌 기사 본문 내용 4~5문장, 최대 450자. keywords는 본문에서 확인되는 기술어 3~6개. 제목:'+title+' 본문:'+source_text
  body=json.dumps({'messages':[{'role':'system','content':'가전 전장 기술 편집자'},{'role':'user','content':prompt}],'temperature':0,'response_format':{'type':'json_object'}}).encode()
  try:
-  u=f'{ep}/openai/deployments/{dep}/chat/completions?api-version=2024-10-21';d=json.loads(fetch(u,{'Content-Type':'application/json','api-key':key,'User-Agent':UA},body));o=json.loads(d['choices'][0]['message']['content']);return clean(o.get('titleKo')) or title,clean(o.get('articleSummaryKo')) or fallback,[clean(str(x)) for x in o.get('keywords',[])][:6] or ks
+  u=f'{ep}/openai/deployments/{dep}/chat/completions?api-version=2024-10-21';d=json.loads(fetch(u,{'Content-Type':'application/json','api-key':key,'User-Agent':UA},body));o=json.loads(d['choices'][0]['message']['content']);summary=fallback_summary(o.get('articleSummaryKo',''),title,source) or fallback;return clean(o.get('titleKo')) or title,summary,[clean(str(x)) for x in o.get('keywords',[])][:6] or ks
  except Exception as e:print('ai',repr(e));return title,fallback,ks
 def old(a):
  try:
@@ -233,8 +314,9 @@ def select_candidates(items):
 
 def main():
  a=[];gnews(a);naver(a);public_rss(a);cse(a);old(a);out=[];selected=select_candidates(a)
+ selected=resolve_selected_links(selected)
  for x in selected:
-  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
+  c=cat(x['title']+' '+x['snippet']);article_text='' if x['sourceType']=='공개 카페 글' else get_article_text(x['url']);t,s,kw=analyze(x['title'],x['snippet'],c,article_text,x['source']);out.append({'category':c,'title':t,'originalTitle':x['title'],'source':x['source'],'sourceType':x['sourceType'],'languageGroup':x.get('languageGroup') or language_group(x['title'],x['source'],x['url']),'summary':s,'keywords':kw,'rating':5 if x['score']>=6 else 4 if x['score']>=3 else 3,'url':x['url'],'published':x['published']})
  # Last mandatory check immediately before writing. Never carry stale cards forward.
  out=[x for x in out if within_last_week(x.get('published',''))]
  for x in out:
