@@ -1,4 +1,104 @@
 {
-  "updated": "2026-10-21T05:59:56.668246+00:00",
-  "items": []
+  "updated": "2026-10-21T06:04:23.349349+00:00",
+  "items": [
+    {
+      "category": "MOTOR",
+      "title": "HPMicro HPM5100 RISC-V MCU integrates four 16-bit ADCs, four op-amps for analog sensing and motor control - CNX Software",
+      "summary": "HPMicro HPM5100 RISC-V MCU integrates four 16-bit ADCs, four op-amps for analog sensing and motor control    CNX Software",
+      "point1": "BLDC/PMSM 제어 관점 검토",
+      "point2": "기동·전류·속도·보호 로직 확인",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTmhTdHZMdzNkbll0WlJWUTVFQU5GQjdHb0tCaW10ZmhrdkFsTEpvd2xwQXZoeDNHNlpyZ0VuejB6SUYycTVHTXc4a3FkMXViTmJXeWwtVkZiWFFXV05IZzBsdWFPMnRzUEJOaVVKaFh6Mmwwa0l1ZlM0czNZNVFIQk9WLXVCXzVBUWlHMFY1cFBfSHFOd1dvNmQ2RTVxN1lzNWtUZWN2RWhhUmZySzZXM09qcTF6RGZGRG9WNkRTMEw1cGxtNVdiYmhjNEg3YkpFb2tjaW5Rcmw4Zk9MX1HSAeYBQVVfeXFMTXF0bjlxRjJnZWVKWXQ2eXI1NHIyMDRQNlNHNGE3Q0ptMkZ3ZWZQVlh4eU1ReWFqbkwydGxkX2NFWkx0ZEs0bllxSm43OW1OQXd2c1hnUjVXdVdNSTRqX0E5UzVQMkgyeHYzOGhWX3k2d3QwaDl1MlZSUmtmRUhVTHdJRWFBZWlETkgzTktpSEl0dU5Zb242c2xvVVFiMmxhUlZQSjJRQ294MldRMVl6UWZzamFVYWgxQm4zcE9tcGstWGplVnZiR21HMGlEUGRtUENMU1BxSlZMSFFGQTl1WHl0cGxWM3c?oc=5",
+      "published": "2026-10-15T07:00:44+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "DC Motor Control Devices Market Forecast to 2035, Driven by Industrial Automation and Robotics Demand - IndexBox",
+      "summary": "DC Motor Control Devices Market Forecast to 2035, Driven by Industrial Automation and Robotics Demand    IndexBox",
+      "point1": "BLDC/PMSM 제어 관점 검토",
+      "point2": "기동·전류·속도·보호 로직 확인",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZE5GNUFnaDJzTUpidFdvNDJhbXVsLW5Fa3hYM2NFUzViRVBzeEVWeG41eUliblNZTno3bFhpa1N5MHRSN3NSSEt5Vy1UdFN2YzZXd3AxUkJZRFIyRFpYS0hSSlk4UUJXdFRON3hHbFBBU2VqU0FJSDBFb1VZVHowUUhpckFtd0JGUnBoX3dQRW9HNE10X3NmSXh6TVl4ZFNkdDVVTmc5THZTekptUVBYY0hPblVOSm1zdzBHTmJpUEo1Q0FwQzFaelpB?oc=5",
+      "published": "2026-10-21T05:26:04+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "Infineon PSOC Control C3: New Microcontrollers Control Four Motors and Support Post-Quantum Security - igor´sLAB",
+      "summary": "Infineon PSOC Control C3: New Microcontrollers Control Four Motors and Support Post-Quantum Security    igor´sLAB",
+      "point1": "MCU/FW 제어 관점 검토",
+      "point2": "PWM·ADC·통신·진단 로직 확인",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOVV4Um1JMDRRQ1UxMFpJZFhmemZNYnZpTnk4MGc2TGtNMERIbEJmTlZ5SUJBWlhhRlpubHVCWFhaN09pYjVER1JlZ0x6U3Y5LWpCcXR0MDk0WE5TdzhLXzRzNDZQSnRVZWNNRXlKSktocEZjbjZILWpWeU5DQzBTbVVHMGF0YTg0ckR4Nnln?oc=5",
+      "published": "2026-10-21T04:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "Power University: A six-decade power supply circuit from workshop to modern lecture hall - Vietnam.vn",
+      "summary": "Power University: A six-decade power supply circuit from workshop to modern lecture hall    Vietnam.vn",
+      "point1": "전원·구동·센싱 회로 관점 검토",
+      "point2": "효율·보호·EMI/EMC 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORktkZ3RNWEdUeXR3Z2txWVM3T25OYzVEOWFMMDNWY1RWcmJxU3o3NE1pTy15VDhQVnVqNnV0cUxOdzZWenZabm9EOUdLbU03Q3NpSXAtbzNQWHlYWEh1ekpRRXRZSHNyQm1wN0tUOGpnR0hFRmVWeXd5QVNLczZOVmNGZjJzaUtjMkZqaWMtTm5lMWU1Um9JWXVKZ1RyOFVYNkpqYUJnVXpTSVEyakpv?oc=5",
+      "published": "2026-10-20T12:24:19+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "Infineon Expands PSOCTM Control C3 family With PSC3M/P6 Featuring Advanced Security for Multi-Motor Control and Power Conversion Systems - ELE Times",
+      "summary": "Infineon Expands PSOCTM Control C3 family With PSC3M/P6 Featuring Advanced Security for Multi-Motor Control and Power Conversion Systems    ELE Times",
+      "point1": "BLDC/PMSM 제어 관점 검토",
+      "point2": "기동·전류·속도·보호 로직 확인",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQYkN1ZTlZMHk1N2ZlMVBvUWZTTkpPMkVuZ2ZrRDNiLU5mNm1kUmtQM3JwcjFRS2RjXzV5UDV5Vmo0bFMzY3lWM0V1YS1Wb0QySGhCNzJScC05TFNZYWxpRTMycU1QYmtfLWZnNW1HTjI2NXRPWnNjem5JVlFLeGp2dk9zcllYeFJJTGZTdmdCS3dXaUZxZnpuWXgzZ0FfMTV1eUJ5MFNHZUQxRzUxUF92U2I3SF9kMnFoeGtvYlJ5YWtjc0p6dl9nRVc1U3RMSnJ0VWlSYnZJSWEwN2lNRXRoVWtZcGJPVWp5OFlUdWtVbmlmdw?oc=5",
+      "published": "2026-10-19T11:28:59+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "Infineon expands PSOC Control C3 family with secure MCUs for motor and power control - eeNews Europe",
+      "summary": "Infineon expands PSOC Control C3 family with secure MCUs for motor and power control    eeNews Europe",
+      "point1": "MCU/FW 제어 관점 검토",
+      "point2": "PWM·ADC·통신·진단 로직 확인",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRngybEdzQWtIXzBVaGg5NTJGS3NQVndIc19ZMjZPZUF5dUdfcFBtQUk2RHBVNFB3bUJJLURDczdOdmF6X09jZ1BLaDY0TnZnNW5lbUc1QUxQeUlHYUQtSENadWQ2VUtpdHJuLWRTMndBdzNSXzV4RTR4NldHYlRVVWMyalBmQ1U5Z2NVeEhZVGlJb3IwSTNjTTNxd1g3d3pFYmlEN0tpRWhyeGVaMFhjV1ExQTlYQzlz?oc=5",
+      "published": "2026-10-19T09:22:36+00:00"
+    },
+    {
+      "category": "APPLIANCE",
+      "title": "LG showcases 68-year appliance legacy in New York, touts AI home robot future - CHOSUNBIZ - Chosunbiz",
+      "summary": "LG showcases 68-year appliance legacy in New York, touts AI home robot future - CHOSUNBIZ    Chosunbiz",
+      "point1": "가전제품 적용 가능성 검토",
+      "point2": "전장·모터 시스템 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNanNBVnBLZlNSdEEzYTg0RkpDOUJRMWRXaTdTU3VLRWV2SGIzM1R0Y0pOdmp1S3h3ak9Ja2dOSHo1TWdFRXFuSHRWZFJsUlktWHZlTUNNc0ViTkJZYURvTEJQakR4TVFlZEdjQXBLbHN5eWZxcTZJY2RIT1dqaExVQnFjNUpPWXk4X0g4MzZ30gGOAUFVX3lxTE1qc0FWcEtmU1J0QTNhODRGSkM5QlExZFdpN1NTdUtFZXZIYjMzVHRjSk52anVLeHdqT0lrZ05IejVNZ0VFcW5IdFZkUmxSWS1YdmVNQ01zRWJOQllhRG9MQlBqRHhNUWVkR2NBcEtsc3l5ZnFxNkljZEhPV2poTFVCcWM1Sk9ZeThfSDgzNnc?oc=5",
+      "published": "2026-10-19T01:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "Vox Power launches 600W addition to EIRE AC/DC power supply range - New Electronics",
+      "summary": "Vox Power launches 600W addition to EIRE AC/DC power supply range    New Electronics",
+      "point1": "전원·구동·센싱 회로 관점 검토",
+      "point2": "효율·보호·EMI/EMC 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTmY5N2NlVVJfMTlpUkdtQzNLajdGZkNOTzM0VUdsd3FlWXBIWllHRUcxNDJaV0pZb1dRS1owY2V6RTN0Z2ZqYWhNUXRwWWNmUW9vbEh2TU9oaEdzYmRqam1ST0pSaXlsZW50R0RVSU5IVnZJSkRtN3hSYUZVa21SRWR5dWVZWkhELW92MllKaEltMW9fZTFfVjhWTDNUejZmcHJDSUFpc081Yy1KendteHdRbWRqMmZSX0w5aUdZQQ?oc=5",
+      "published": "2026-10-16T13:03:05+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "Practical MOSFET Electronics: From Theory to Working Circuits ... - eeNews Europe",
+      "summary": "Practical MOSFET Electronics: From Theory to Working Circuits ...    eeNews Europe",
+      "point1": "전원·구동·센싱 회로 관점 검토",
+      "point2": "효율·보호·EMI/EMC 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbVkxc2hMWlo0NVdJVElwMlBELW1OQmhRMjZ2NGRfTjFFTkREQ0c3S0ltRklIRTZQajFnOTI5MFFMclRfMG1FNUh0eDd5dTEtd0tSRDhqc3dxa3Z0UE95bU1MWDhVem43ZG1zQ2Vfc0ZzY2g1dW9oZU1WaFJJMTlMMEczalp3am5jRk9tQ0JTVTlZMF9RRkw1Sw?oc=5",
+      "published": "2026-10-14T08:35:53+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "Toshiba introduces 3.3kV SiC MOSFET module for industrial power applications - New Electronics",
+      "summary": "Toshiba introduces 3.3kV SiC MOSFET module for industrial power applications    New Electronics",
+      "point1": "전원·구동·센싱 회로 관점 검토",
+      "point2": "효율·보호·EMI/EMC 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOVdpYzNPSDl4NlR2Y0tFWDJkb1JELWIxV3loSjZBTXBwR1FNQW83YkxuVGI5SGZSMmtPenhUQmRwbEphT1VxaTNVRU96ZTJQcWU5VjdUd0U2OUtHTnhuZHhLWWxERVppb1IwdkNLRWtac0o3aktDRWZqeDFUNU40T0Z5cDl0RlVJV0RNc0hqVUQ5UXM1cDVNQ3hTM1lRajdjZ2RVQ2JhNU9qcm91b2h1VDBUWW9DcEh6c1gwY2JNX2ZGbmM2WDg5aDJIZU1zQQ?oc=5",
+      "published": "2026-10-12T08:18:53+00:00"
+    },
+    {
+      "category": "APPLIANCE",
+      "title": "Household Appliances Market Size, Share & 2035 Growth Trends - Business Research Insights",
+      "summary": "Household Appliances Market Size, Share & 2035 Growth Trends    Business Research Insights",
+      "point1": "가전제품 적용 가능성 검토",
+      "point2": "전장·모터 시스템 영향 확인",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaVZVUi03aExlNF94S09rRFZnYTIzdTl0czJ5SDk2WHQ3TE4xcGRMRVBwTUE2OXNpTTVCdHM5ZnNoVW1NZDhqNU1ERkozRElOcUtNUEstcWFnaGxULVVsUlRRR2ozY1BQYTliNGc0cFgwUk40Y0ZySjBubktLUDBMdVJUb1BFQWRDV01zZDVReFdrbld2?oc=5",
+      "published": "2026-10-09T07:00:00+00:00"
+    }
+  ]
 }
