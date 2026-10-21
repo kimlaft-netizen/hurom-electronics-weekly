@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 
-OUT='data/weekly.json'; DAYS=60; MAX_ITEMS=20; MIN_ITEMS=20
+OUT='data/weekly.json'; DAYS=60; MAX_ITEMS=30; MIN_ITEMS=30
 UA={'User-Agent':'Mozilla/5.0 HUROM-Electronics-Weekly/4.0'}
 
 # 여러 출처를 각각 검색한다. Google News는 통합 색인으로 사용하고,
@@ -29,6 +29,13 @@ SOURCE_QUERIES=[
  ('MCU2','(STM32 OR Renesas OR Nuvoton OR Microchip OR Infineon MCU) motor power control'),
  ('MOTOR2','(FOC OR six step OR field oriented control OR BEMF OR stall detection) BLDC PMSM'),
  ('COMP','(current sensor OR MOSFET OR gate driver OR motor driver OR power IC) electronics'),
+ ('BLOGKR','(BLDC OR PCB OR SMPS OR EMI OR 펌웨어) (블로그 OR 개발기 OR 설계기 OR 트러블슈팅)'),
+ ('NAVERBLOG','site:blog.naver.com (BLDC OR PCB 설계 OR SMPS OR EMI EMC OR MCU 펌웨어)'),
+ ('TISTORY','site:tistory.com (BLDC OR Altium OR PCB layout OR SMPS OR EMI OR embedded firmware)'),
+ ('EEVBlog','site:eevblog.com (PCB layout OR SMPS OR EMI EMC OR motor control OR firmware)'),
+ ('Hackaday','site:hackaday.com (motor control OR PCB design OR power supply OR embedded firmware)'),
+ ('StackExchange','site:electronics.stackexchange.com (BLDC OR PCB layout OR SMPS OR EMI OR microcontroller firmware)'),
+ ('Community','(BLDC OR PMSM OR PCB OR SMPS OR EMI OR MCU) (forum OR community OR troubleshooting)'),
 ]
 NAVER_QUERIES=['BLDC 모터 제어','PMSM 센서리스','PCB 아트웍 알티움','SMPS 설계','EMI EMC 대책','마이컴 펌웨어 코딩','전력반도체 게이트 드라이버','전류센싱 회로']
 BLOCK=['market size','market forecast','market share','growth trends','stock','investment','revenue forecast','2035','2036','job vacancy','course promotion','3.3kv','6.5kv','railway','ev traction']
@@ -86,7 +93,11 @@ def add_google(candidates):
     sc=score(raw+' '+desc)
     if not raw or not url or sc<4 or (dt and dt<cutoff):continue
     title=raw.rsplit(' - ',1)[0]; publisher=raw.rsplit(' - ',1)[1] if ' - ' in raw else source
-    candidates.append({'title':title,'snippet':desc,'url':url,'published':dt.isoformat() if dt else '','source':publisher or source,'sourceType':'Google News index','score':sc})
+    stype='전문매체'
+    if source in ['ROHM','ST','TI','Infineon','Renesas','NXP','onsemi','Microchip','Altium']: stype='공식 기술자료'
+    elif source in ['NAVERBLOG','TISTORY','Hackaday']: stype='기술블로그'
+    elif source in ['EEVBlog','StackExchange','Community']: stype='커뮤니티'
+    candidates.append({'title':title,'snippet':desc,'url':url,'published':dt.isoformat() if dt else '','source':publisher or source,'sourceType':stype,'score':sc})
   except Exception as e:print('Google source error',source,repr(e))
 def add_naver(candidates):
  cid=os.getenv('NAVER_CLIENT_ID',''); secret=os.getenv('NAVER_CLIENT_SECRET','')
@@ -99,7 +110,7 @@ def add_naver(candidates):
     title=clean(n.get('title')); desc=clean(n.get('description')); sc=score(title+' '+desc)
     if sc<4:continue
     dt=parse_date(n.get('pubDate',''))
-    candidates.append({'title':title,'snippet':desc,'url':n.get('originallink') or n.get('link'),'published':dt.isoformat() if dt else '','source':'네이버 뉴스 검색','sourceType':'Naver API','score':sc})
+    candidates.append({'title':title,'snippet':desc,'url':n.get('originallink') or n.get('link'),'published':dt.isoformat() if dt else '','source':'네이버 뉴스 검색','sourceType':'뉴스/포털','score':sc})
   except Exception as e:print('Naver source error',q,repr(e))
 def main():
  c=[];add_google(c);add_naver(c);c.sort(key=lambda x:(x['score'],x['published']),reverse=True)
