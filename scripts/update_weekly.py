@@ -412,7 +412,7 @@ def main():
    snapshot={'week':week_key,'updated':previous.get('updated',''),'issueTitle':previous.get('issueTitle',''),'items':previous['items']}
    weeks=[w for w in weeks if w.get('week')!=week_key]
    weeks.append(snapshot)
- archive['weeks']=sorted(weeks,key=lambda w:w.get('week',''),reverse=True)[:20]
+ archive['weeks']=sorted(weeks,key=lambda w:w.get('week',''),reverse=True)[:52]
  with open(archive_path,'w',encoding='utf-8') as f:json.dump(archive,f,ensure_ascii=False,indent=2)
  payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'전장 기술 TOP {len(out)}','searchedCandidates':len(a),'languageBalance':{'KR':sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL':sum(1 for x in out if x.get('languageGroup')=='GLOBAL')},'items':out}
  with open(OUT,'w',encoding='utf-8') as f:json.dump(payload,f,ensure_ascii=False,indent=2)
