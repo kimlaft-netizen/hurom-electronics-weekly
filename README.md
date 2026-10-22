@@ -3,7 +3,7 @@
 매주 공개 RSS/기술자료를 수집해 `data/weekly.json`을 갱신하는 정적 사이트입니다.
 
 ## 자동 업데이트
-- GitHub Actions: 매주 월요일 00:00 UTC (한국시간 월요일 09:00)
+- GitHub Actions: 매주 일요일 23:00 UTC (한국시간 월요일 08:00)
 - 수동 실행: Actions > Weekly Electronics Update > Run workflow
 - 데이터: `scripts/update_weekly.py`가 공개 RSS를 읽고 키워드 필터링 후 저장
 - 배포: GitHub 저장소를 Vercel 프로젝트에 연결하면 push 시 자동 배포
