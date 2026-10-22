@@ -382,6 +382,24 @@ def main():
  for x in out:
   x['published']=parse_publish_date(x['published']).isoformat()
  os.makedirs(os.path.dirname(OUT),exist_ok=True)
+ # Archive the previously published issue before replacing weekly.json.
+ # A date key makes repeated runs on the same day idempotent.
+ archive_path='data/archive.json'
+ try:
+  with open(archive_path,encoding='utf-8') as f:archive=json.load(f)
+ except (OSError,ValueError):archive={'weeks':[]}
+ weeks=archive.get('weeks',[])
+ try:
+  with open(OUT,encoding='utf-8') as f:previous=json.load(f)
+ except (OSError,ValueError):previous={}
+ if previous.get('items'):
+  week_key=(previous.get('windowEnd') or previous.get('updated') or '')[:10]
+  if week_key:
+   snapshot={'week':week_key,'updated':previous.get('updated',''),'issueTitle':previous.get('issueTitle',''),'items':previous['items']}
+   weeks=[w for w in weeks if w.get('week')!=week_key]
+   weeks.append(snapshot)
+ archive['weeks']=sorted(weeks,key=lambda w:w.get('week',''),reverse=True)
+ with open(archive_path,'w',encoding='utf-8') as f:json.dump(archive,f,ensure_ascii=False,indent=2)
  payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'languageBalance':{'KR':sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL':sum(1 for x in out if x.get('languageGroup')=='GLOBAL')},'items':out}
  with open(OUT,'w',encoding='utf-8') as f:json.dump(payload,f,ensure_ascii=False,indent=2)
  print('candidates',len(a),'KR',sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL',sum(1 for x in out if x.get('languageGroup')=='GLOBAL'),'selected',len(out))
