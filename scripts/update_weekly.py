@@ -99,22 +99,36 @@ def duplicate_title(title, seen_titles):
  return False
 def cat(title,snippet=''):
  t=(title or '').lower();h=(t+' '+(snippet or '').lower())
- emi_title=any(term_match(t,x) for x in ['emi','emc','conducted emission','radiated emission','emi filter','emc filter','noise filter','노이즈 필터','전자파 필터'])
- smps_title=any(term_match(t,x) for x in ['smps','flyback','buck converter','buck','llc','ac/dc','dc/dc','switching regulator','power supply','스위칭 전원','플라이백','벅 컨버터'])
- # Give the headline's primary subject more weight than secondary terms in a
- # search snippet. This prevents EMI-filter market/design articles from being
- # misrouted to SMPS just because the body mentions AC/DC or DC/DC.
- if any(term_match(t,x) for x in ['emi filter','emc filter','emi 필터','emc 필터','noise filter','노이즈 필터']):return 'EMI'
- if emi_title and not smps_title:return 'EMI'
- if smps_title and not emi_title:return 'SMPS'
- if any(x in h for x in ['altium','pcb','artwork','routing','stackup','creepage','clearance']):return 'PCB'
- if any(x in h for x in ['smps','flyback','llc','snubber','power supply','전원']):return 'SMPS'
- if any(x in h for x in ['emi','emc','conducted emission','radiated emission','노이즈']):return 'EMI'
- if any(term_match(h,x) for x in ['ai','artificial intelligence','machine learning','deep learning','tinyml','edge ai','on-device ai','ai inference','neural network','predictive maintenance','fault detection','인공지능','머신러닝','딥러닝','엣지ai','온디바이스ai','신경망','예지보전','고장진단']):return 'AI'
- if any(x in h for x in ['firmware','펌웨어','embedded c','mcu','microcontroller','watchdog','rtos','pwm','adc']):return 'FIRMWARE'
- if any(term_match(h,x) for x in ['led','lcd','display','ipm','igbt','switch','button','harness','wiring','wire','cable','connector','terminal','crimp','sensor','communication','uart','i2c','spi','can bus','canopen','rs485','modbus','bluetooth','wi-fi','엘이디','표시등','표시부','액정','디스플레이','백라이트','전력모듈','스위치','버튼','디바운스','배선','전선','케이블','하네스','커넥터','단자','압착','센서','통신','캔통신','시리얼통신','무선통신']):return 'COMPONENTS'
- if any(x in h for x in ['bldc','pmsm','sensorless','foc','bemf','motor','모터']):return 'MOTOR'
+ def has(text,terms):return any(term_match(text,x) for x in terms)
+ emi=['emi','emc','conducted emission','radiated emission','emi filter','emc filter','noise filter','노이즈 필터','전자파 필터','emi 필터','emc 필터']
+ smps=['smps','flyback','buck converter','buck','llc','ac/dc','dc/dc','switching regulator','power supply','스위칭 전원','플라이백','벅 컨버터']
+ pcb=['altium','pcb artwork','pcb layout','pcb design','artwork','routing','stackup','creepage','clearance']
+ parts=['semiconductor','semiconductors','semiconductor chip','integrated circuit','chipset','chip supply','power semiconductor','memory chip','dram','nand','memory','soc','cpu','gpu','ipm','igbt','power module','반도체','반도체칩','반도체 칩','칩셋','칩 공급','전력반도체','전력 반도체','메모리 반도체','메모리칩']
+ ai=['ai','artificial intelligence','machine learning','deep learning','tinyml','edge ai','on-device ai','ai inference','neural network','predictive maintenance','fault detection','인공지능','머신러닝','딥러닝','엣지ai','온디바이스ai','신경망','예지보전','고장진단']
+ firmware=['firmware','embedded c','mcu','microcontroller','watchdog','rtos','pwm','adc','펌웨어','마이크로컨트롤러']
+ components=['led','lcd','display','ipm','igbt','switch','button','harness','wiring','wire','cable','connector','terminal','crimp','sensor','communication','uart','i2c','spi','can bus','canopen','rs485','modbus','bluetooth','wi-fi','엘이디','표시등','표시부','액정','디스플레이','백라이트','전력모듈','스위치','버튼','디바운스','배선','전선','케이블','하네스','커넥터','단자','압착','센서','통신','캔통신','시리얼통신','무선통신']
+ motor=['bldc','pmsm','sensorless','foc','bemf','motor','모터제어','모터']
+ # Decide from the headline first so secondary mentions in the snippet cannot
+ # override the article's actual subject.
+ if has(t,emi):return 'EMI'
+ if has(t,smps):return 'SMPS'
+ if has(t,pcb):return 'PCB'
+ if has(t,parts):return 'COMPONENTS'
+ if has(t,ai):return 'AI'
+ if has(t,firmware):return 'FIRMWARE'
+ if has(t,components):return 'COMPONENTS'
+ if has(t,motor):return 'MOTOR'
+ # When the headline is broad, use clear technical cues in the snippet. AI is
+ # intentionally excluded here; a passing AI mention does not make an article AI.
+ if has(h,pcb):return 'PCB'
+ if has(h,smps):return 'SMPS'
+ if has(h,emi):return 'EMI'
+ if has(h,parts):return 'COMPONENTS'
+ if has(h,firmware):return 'FIRMWARE'
+ if has(h,components):return 'COMPONENTS'
+ if has(h,motor):return 'MOTOR'
  return 'CIRCUIT'
+
 def add(a,title,snip,url,date='',src='',typ='뉴스/웹',group=None):
  title=clean(title);snip=clean(snip);score=rel(title+' '+snip+' '+clean(src))
  if title and url and score and within_last_week(date):
