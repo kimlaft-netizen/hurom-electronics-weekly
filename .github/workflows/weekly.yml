@@ -3,7 +3,7 @@ name: Weekly Electronics Update
 'on':
   schedule:
     - cron: '0 23 * * 0'
-    - cron: '50 0 22 10 *'
+    - cron: '5 1 22 10 *'
   workflow_dispatch: {}
 
 permissions:
@@ -21,7 +21,7 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           SCHEDULE_CRON: ${{ github.event.schedule }}
         run: |
-          if [[ "$EVENT_NAME" == "schedule" && "$SCHEDULE_CRON" == "50 0 22 10 *" && "$(date -u +%F)" != "2026-10-22" ]]; then
+          if [[ "$EVENT_NAME" == "schedule" && "$SCHEDULE_CRON" == "5 1 22 10 *" && "$(date -u +%F)" != "2026-10-22" ]]; then
             echo "run_update=false" >> "$GITHUB_OUTPUT"
           else
             echo "run_update=true" >> "$GITHUB_OUTPUT"
