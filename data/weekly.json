@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-22T00:47:15.636211+00:00",
-  "windowStart": "2026-10-15T00:47:15.636211+00:00",
-  "windowEnd": "2026-10-22T00:47:15.636211+00:00",
+  "updated": "2026-10-22T01:21:21.951688+00:00",
+  "windowStart": "2026-10-15T01:21:21.951688+00:00",
+  "windowEnd": "2026-10-22T01:21:21.951688+00:00",
   "issueTitle": "전장 기술 TOP 22",
-  "searchedCandidates": 43,
+  "searchedCandidates": 44,
   "languageBalance": {
     "KR": 13,
     "GLOBAL": 9
@@ -45,24 +45,6 @@
       "rating": 4,
       "url": "https://kr.aving.net/news/articleViewAmp.html?idxno=1815657",
       "published": "2026-10-18T06:55:50+00:00"
-    },
-    {
-      "category": "MOTOR",
-      "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
-      "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
-      "source": "livesnews.com",
-      "sourceType": "검색/전문매체",
-      "languageGroup": "KR",
-      "summary": "글로벌 가전 브랜드 마이디어(Midea)가 자동먼지비움 스테이션을 갖춘 신제품 ‘마이디어 자동 먼지비움 무선청소기 MP9’을 출시한다고 밝혔다. 마이디어 자동먼지비움 무선청소기 MP9은 37,000Pa(파스칼)의 강력한 흡입력을 비롯해 안티탱글 브러쉬, 자동먼지비움 스테이션, 먼지 감지 자동 흡입모드 등을 적용한 BLDC 무선청소기다. 흡입력과 디자인, 기술력을 앞세워 소비자들의 호응을 얻었던 ‘마이디어 자동먼지비움 스테이션 BLDC 무선청소기 MP08KRGY-DS’의 후속 모델로, 전작의 장점을 계승하면서 청소 성능과 사용 편의성을 한층 강화한 것이 특징이다. 신제품은 BLDC 모터를 기반으로 최대 37,000Pa의 흡입력을 구현했다. 일상에서 발생하는 생활먼지는 물론 바닥 틈새나 카펫 사이에 쌓이기 쉬운 먼지까지 효과적으로 흡입할 수 있도록 설계해 다양한 주거 환경에서 활용할 수 있다.",
-      "keywords": [
-        "bldc",
-        "모터",
-        "가전",
-        "센서"
-      ],
-      "rating": 4,
-      "url": "https://livesnews.com/news/article.html?no=64990",
-      "published": "2026-10-15T01:49:44+00:00"
     },
     {
       "category": "AI",
@@ -264,6 +246,23 @@
       "rating": 3,
       "url": "https://www.srtimes.kr/news/articleView.html?idxno=214908",
       "published": "2026-10-15T08:53:27+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+      "source": "livesnews.com",
+      "sourceType": "검색/전문매체",
+      "languageGroup": "KR",
+      "summary": "글로벌 가전 브랜드 마이디어(Midea)가 자동먼지비움 스테이션을 갖춘 신제품 ‘마이디어 자동 먼지비움 무선청소기 MP9’을 출시한다고 밝혔다. 마이디어 자동먼지비움 무선청소기 MP9은 37,000Pa(파스칼)의 강력한 흡입력을 비롯해 안티탱글 브러쉬, 자동먼지비움 스테이션, 먼지 감지 자동 흡입모드 등을 적용한 BLDC 무선청소기다. 흡입력과 디자인, 기술력을 앞세워 소비자들의 호응을 얻었던 ‘마이디어 자동먼지비움 스테이션 BLDC 무선청소기 MP08KRGY-DS’의 후속 모델로, 전작의 장점을 계승하면서 청소 성능과 사용 편의성을 한층 강화한 것이 특징이다. 신제품은 BLDC 모터를 기반으로 최대 37,000Pa의 흡입력을 구현했다. 일상에서 발생하는 생활먼지는 물론 바닥 틈새나 카펫 사이에 쌓이기 쉬운 먼지까지 효과적으로 흡입할 수 있도록 설계해 다양한 주거 환경에서 활용할 수 있다.",
+      "keywords": [
+        "bldc",
+        "모터",
+        "가전"
+      ],
+      "rating": 3,
+      "url": "https://livesnews.com/news/article.html?no=64990",
+      "published": "2026-10-15T01:49:44+00:00"
     },
     {
       "category": "MOTOR",

@@ -1,6 +1,393 @@
 {
   "weeks": [
     {
+      "week": "2026-10-22",
+      "updated": "2026-10-22T00:47:15.636211+00:00",
+      "issueTitle": "전장 기술 TOP 22",
+      "items": [
+        {
+          "category": "COMPONENTS",
+          "title": "Every Type of Current Sensor Explained",
+          "originalTitle": "Every Type of Current Sensor Explained",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "Measuring electric currents is an essential element of many electrical systems, but doing so in a way that is as nonintrusive as possible is not an easy problem to solve. Due to this we got a wide variety of current sensors to choose from for any given application, with [ElectrArc240] The fairly low-tech, cheap and quite reliable method of using a shunt resistor is first demonstrated. This sees a lot of use in fairly low-voltage and low-current applications, with for example videocards using it to limit the amount of power the GPU can use, a feature that modders will happily bypass. Here simply the voltage drop across a known resistance value is measured, from which the current can be derived. Of course, you got higher voltage and higher current applications too, as well as direct- and alternating current, with the latter especially allowing for easy current measurements simply from the",
+          "keywords": [
+            "current sensing",
+            "transformer",
+            "sensor",
+            "current sensor"
+          ],
+          "rating": 4,
+          "url": "https://hackaday.com/2026/10/21/every-type-of-current-sensor-explained/",
+          "published": "2026-10-21T23:00:21+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+          "originalTitle": "아마스윙, HARFKO 2026서 일체형 EC·BLDC 팬모터 공개... \"고효율 냉각 솔루션 제시\" |",
+          "source": "에이빙",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "아마스윙 / AMASSWING(대표 여환걸)은 오는 10월 21일(수)부터 23일(금)까지 사흘간 일산 킨텍스 제1전시장에서 개최되는 'HARFKO 2026(제18회 한국국제냉난방공조전)'에 참가한다고 밝혔다. 회사는 고효율·저소음·고신뢰성을 갖춘 차세대 일체형 EC 팬모터와 BLDC 팬모터를 앞세워 국내외 산업용 공조 및 냉동·냉장 시장 공략에 나설 계획이다. 아마스윙은 산업용 일체형 팬모터를 개발·생산하는 전문기업으로, 축적된 설계기술과 품질관리 시스템을 기반으로 산업용 공조와 냉동·냉장 분야에 냉각 솔루션을 공급해 오고 있다. 고객 맞춤형 제품 개발을 통해 국내외 시장을 넓혀 왔다는 것이 회사 측 설명이다. 주력 출품 제품은 IP56 등급을 적용한 고효율 EC 일체형 팬모터 'AW350S EC2FS'를 비롯해 BLDC 팬모터, 고풍량 산업용 냉각팬, 고객 맞춤형 팬모터 솔루션이다.",
+          "keywords": [
+            "bldc",
+            "모터",
+            "회로",
+            "switch",
+            "배선"
+          ],
+          "rating": 4,
+          "url": "https://kr.aving.net/news/articleViewAmp.html?idxno=1815657",
+          "published": "2026-10-18T06:55:50+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+          "originalTitle": "마이디어, BLDC 모터 탑재 무선청소기 ‘MP9’ 선봬…청소 효율성 높여",
+          "source": "livesnews.com",
+          "sourceType": "검색/전문매체",
+          "languageGroup": "KR",
+          "summary": "글로벌 가전 브랜드 마이디어(Midea)가 자동먼지비움 스테이션을 갖춘 신제품 ‘마이디어 자동 먼지비움 무선청소기 MP9’을 출시한다고 밝혔다. 마이디어 자동먼지비움 무선청소기 MP9은 37,000Pa(파스칼)의 강력한 흡입력을 비롯해 안티탱글 브러쉬, 자동먼지비움 스테이션, 먼지 감지 자동 흡입모드 등을 적용한 BLDC 무선청소기다. 흡입력과 디자인, 기술력을 앞세워 소비자들의 호응을 얻었던 ‘마이디어 자동먼지비움 스테이션 BLDC 무선청소기 MP08KRGY-DS’의 후속 모델로, 전작의 장점을 계승하면서 청소 성능과 사용 편의성을 한층 강화한 것이 특징이다. 신제품은 BLDC 모터를 기반으로 최대 37,000Pa의 흡입력을 구현했다. 일상에서 발생하는 생활먼지는 물론 바닥 틈새나 카펫 사이에 쌓이기 쉬운 먼지까지 효과적으로 흡입할 수 있도록 설계해 다양한 주거 환경에서 활용할 수 있다.",
+          "keywords": [
+            "bldc",
+            "모터",
+            "가전",
+            "센서"
+          ],
+          "rating": 4,
+          "url": "https://livesnews.com/news/article.html?no=64990",
+          "published": "2026-10-15T01:49:44+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+          "originalTitle": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+          "source": "전자신문",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "국가정보원이 국가보안시설에 반입되는 카메라 탑재 사물인터넷(IoT) 기기의 보안조치 강화에 나섰지만 정작 국내에는 IoT 제품의 보안기준과 사후관리 체계가 제대로 갖춰지지 않았다. 당장 문제가 된 커넥티드 차량에 대한 기준은 물론 가장 널리 보급된 스마트가전에 대한 보안 체계마저 명확하지 않다. 스마트기기가 수집하는 정보의 범위는 빠르게 확대되고 있다. 과거에는 인터넷 연결을 통한 원격제어나 기기 상태 확인에 그쳤지만 최근에는 카메라와 마이크, 각종 센서로 주변 환경을 인식하고 인공지능(AI)으로 분석하는 기능까지 일반화되고 있다. 제품의 기능이 고도화될수록 외부로 유출될 수 있는 정보의 양과 민감도도 높아지는 구조다.",
+          "keywords": [
+            "가전",
+            "인공지능",
+            "센서",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.etnews.com/20261021000248",
+          "published": "2026-10-21T07:00:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+          "originalTitle": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+          "source": "Johnson Controls",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Keeping your systems running with predictive maintenance, remote diagnostics, and condition-based strategies to maximize uptime and reduce risks. Funding more than $6B in customer projects worldwide, we partner with you to determine the best way to make your project happen. Maximize uptime, strengthen security and deploy faster Data Centers designed to address your challenges with advanced thermal management, controls, security and fire protection systems. Smarter, safer, and more resilient AI data center solutions The most comprehensive integrated data center solutions available today. We engineer and design chillers to meet the harshest environments, providing your chiller with maximum uptime.",
+          "keywords": [
+            "sensor",
+            "machine learning",
+            "predictive maintenance",
+            "fault detection"
+          ],
+          "rating": 3,
+          "url": "https://www.johnsoncontrols.com/building-insights/thought-leadership/predictive-maintenance-analytics",
+          "published": "2026-10-20T12:05:47+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
+          "originalTitle": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 마우저 일렉트로닉스가 마이크로칩의 200MHz 32비트 디지털 신호 컨트롤러 dsPIC33AK256MPS306 공급을 시작했다. 고분해능 제어 기능과 양자 내성 암호 보안을 결합한 이 제품은 AI 서버, 데이터센터, 자동차, 산업 애플리케이션을 대상으로 한다. SiC·GaN 전력반도체 시스템의 고속 제어에 활용 가능하며 ISO 26262, AEC-Q100 인증을 획득했다. 마우저 일렉트로닉스가 암페놀 CDI와 글로벌 유통 계약을 체결하고 항공우주·방산 분야용 RF 인터커넥트 제품 공급을 확대한다.",
+          "keywords": [
+            "infineon",
+            "반도체",
+            "토크",
+            "케이블",
+            "커넥터",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23907",
+          "published": "2026-10-20T02:40:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+          "originalTitle": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+          "source": "비즈월드",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "[비즈월드] 1969년 국내 최초로 탄생한 ‘백조세탁기(WP-181)’와 1965년 국내 첫 독자 모델 냉장고인 ‘눈표냉장고(GR-120)’에서 시작된 한국 가전의 역사가 AI(인공지능)와 로봇 기술이 결합된 ‘피지컬 AI’ 시대의 주역으로 거듭나고 있다. LG전자는 1958년 창립 이래 축적해 온 가전 혁신의 여정과 미래 비전을 담은 브랜드 헤리티지 영상 ‘삶이 묻는 질문, LG가 답하다(Life Asks, LG Answers)’를 미국 뉴욕 타임스스퀘어 옥외 전광판에 공개했다고 19일 밝혔다. 이번 캠페인은 가사 노동의 부담을 덜어 고객이 집에서 더 가치 있는 일에 집중할 수 있도록 돕는 LG전자의 가전 지향점인 ‘제로 레이버 홈(Zero Labor Home)’을 글로벌 고객에게 각인시키기 위해 기획됐다고 한다. 총 160초 분량의 이번 영상은 고객의 일상 속 작고 소소한 불편을 기술 혁신으로 해결해 온 LG 가전의 헤리티지를 집중 조명한다. 세탁 가전 분야에서는 1969년 국내 최초 세탁기 출시 이후, 분리 세탁 니즈를 반영해 드럼세탁기 하단에 소형 통돌이를 결합한 ‘LG 트윈워시(2015년)’, 세탁기와 건조기를 일체형 타워 구조로 완성한 ‘LG 워시타워(2020년)’로 이어지는 진화 과정을 보여준다.",
+          "keywords": [
+            "모터",
+            "가전",
+            "인공지능"
+          ],
+          "rating": 3,
+          "url": "https://www.bizwnews.com/news/articleView.html?idxno=149309",
+          "published": "2026-10-19T07:58:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
+          "originalTitle": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 산업용 통신 및 자동화 솔루션 분야의 선도기업 힐셔가 SPE(Single-Pair Ethernet) 기술 포트폴리오를 확장하며 신규 평가 보드를 선보였다. 새롭게 공개된 NXEB-90-SPE 평가 보드는 힐셔의 다중 프로토콜 컨트롤러 netX 90을 기반으로 설계됐으며, 사용자와 개발자가 SPE를 활용해 산업용 애플리케이션을 보다 효율적으로 개발하고 평가할 수 있는 옵션을 제공한다. 산업용 통신 솔루션 기업 힐셔가 기자간담회를 통해 유럽연합(EU)의 디지털 신년 전략 2030을 기반으로 한 사이버복원력법(CRA) 등 주요 보안 규제에 대한 대응 전략과 신제품을 소개했다. 힐셔는 EU 사이버복원력법 등 강화되는 보안 규제에 대응해, 산업 현장에 최적화된 첨단 보안 기능과 다양한 산업용 통신 프로토콜을 지원하는 netX 시리즈 신제품을 중심으로 글로벌 시장과 한국 시장에서 경쟁력을 강화하고 있다.",
+          "keywords": [
+            "모터",
+            "토크",
+            "커넥터",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23905",
+          "published": "2026-10-19T03:38:00+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
+          "originalTitle": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
+          "source": "Reliable Plant",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "today announced the launch of a continuous motor current monitoring solution that helps industrial maintenance teams see emerging risks in AC motor-driven assets before they escalate into downtime. Unlike many mechanical faults, which vibration sensors are well suited to detect, electrical and load-related issues can develop with little or no early vibration signature, leaving maintenance teams with an incomplete picture of motor health. AssetWatch Electrical Monitoring addresses this gap directly. The solution continuously monitors RMS current across all three phases of AC motors, helping identify overload conditions, power transmission issues such as slipping belts or failing couplings, and current unbalance that shorten motor life. Where periodic spot checks see a motor only during a technician's visit, continuous monitoring never looks away, catching problems as they",
+          "keywords": [
+            "motor",
+            "sensor",
+            "predictive maintenance"
+          ],
+          "rating": 3,
+          "url": "https://www.reliableplant.com/Read/33171/assetwatch-adds-electrical-monitoring-to-catch-hidden-motor-faults-before-y-cause-downtime",
+          "published": "2026-10-18T04:00:59+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
+          "originalTitle": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
+          "source": "https://www.newsphere.kr/",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "[뉴스환경] 마우저 일렉트로닉스가 알레그로 마이크로시스템즈의 절연형 실리콘카바이드 게이트 드라이버 AHV85003과 AHV85043 공급을 시작했다. 전력반도체를 빠르고 안전하게 켜고 끄는 회로를 줄여 고전압 전력변환 장치 설계를 단순화하는 제품이다. 칩셋은 제어신호와 바이어스 전력을 함께 전달하는 파워-쓰루 구조를 적용했다. 기존 부트스트랩 회로나 별도 보조전원장치가 필요 없어 부품목록과 회로공간을 줄일 수 있다. 각 제품은 실리콘카바이드 트랜지스터의 고주파 스위칭을 위해 6A 출력의 풀업·풀다운 핀과 조절 가능한 음전압 출력을 제공한다.",
+          "keywords": [
+            "회로",
+            "전원",
+            "반도체"
+          ],
+          "rating": 3,
+          "url": "https://www.newsphere.kr/news/articleView.html?idxno=2979",
+          "published": "2026-10-16T13:52:34+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+          "originalTitle": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
+          "source": "전자신문",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "13일 서울 강남구 코엑스에서 열린 '한국전자전 2026(KES 2026)'에 아날로그·혼합신호 반도체 기업 노보센스(NOVOSENSE)가 참가해 산업용 센서와 전력반도체 관련 솔루션을 선보였다. 지난 2022년 한국 시장에 진출한 노보센스는 자동차와 산업용 장비, 전력 시스템에 사용되는 반도체를 공급하고 있으며, 에어컨·냉장고·세탁기·청소기 등 가전 분야에도 전력 관리와 온도·전류 감지, 모터 제어용 반도체 솔루션을 제공하고 있다. 이번 전시에서는 전류·압력·온도 센서와 전력반도체 드라이버, 서버 전원공급장치용 반도체 솔루션 등을 소개했다. 또한 AI 데이터센터용 전원공급·전력변환 시스템에 활용되는 반도체 솔루션도 함께 선보였다. 한편, 노보센스는 전시 현장에서 '휴머노이드 로봇 / 스마트 가전 트랜드 및 테크놀로지'를 주제로 기술 세미나를 진행했으며, 휴머노이드 로봇과 스마트 가전의 산업 동향을 비롯해 위치·각도 측정 센서와 모터 드라이버 등 관련 반도체 기술을 소개했다.",
+          "keywords": [
+            "모터",
+            "전원",
+            "반도체",
+            "가전",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.etnews.com/20261016000307",
+          "published": "2026-10-16T08:11:30+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "The Role of AI in Predictive Maintenance: How Factories Are Reducing Downtime",
+          "originalTitle": "The Role of AI in Predictive Maintenance: How Factories Are Reducing Downtime",
+          "source": "Analytics Insight",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "AI detects early signs of machine faults through sensor data and helps prevent unexpected breakdowns. Predictive maintenance helps factories reduce downtime, control repair costs, and protect production schedules. AI delivers better results when teams combine accurate data, skilled technicians, and timely maintenance actions. When a machine malfunctions, it can disrupt the whole line. This can further lead to missed deadlines and increased repair bills.",
+          "keywords": [
+            "sensor",
+            "artificial intelligence",
+            "predictive maintenance"
+          ],
+          "rating": 3,
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/the-role-of-ai-in-predictive-maintenance-how-factories-are-reducing-downtime",
+          "published": "2026-10-16T04:00:00+00:00"
+        },
+        {
+          "category": "EMI",
+          "title": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
+          "originalTitle": "파워 EMI 필터 시장 규모 9억 9,700만 달러 전망: 세계 산업 현황, 경쟁 분석, 성장 동향 2026｜QYResearch",
+          "source": "note",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "「파워 EMI 필터―글로벌 시장 점유율 및 순위, 전체 매출 및 수요 전망, 2026~2032」 를 발표했습니다. 본고에서는 제품 정의, 기술 구성, 시장 규모, 경쟁 구조, 제품 사양, 용도, 지역 구조, 가치 사슬의 변화를 정리하고 있습니다. 특히 스위칭 주파수의 상승, 전력 밀도의 향상, 전동화·에너지 저장 장치의 확대, 반도체·의료 기기의 고도화, EMC 적합 요구 강화 등을 배경으로 고전류·고전압·저누설 전류·고감쇠 설계로 전환되는 시장 기회에 초점을 맞추고 있습니다. 파워 EMI 필터는 AC/DC 전원 입력, 모터 드라이브·인버터, DC 버스 등의 전원 회로에 설치되는 전자기 노이즈 억제 부품입니다. 일반적으로 공통 모드 초크, 차동 모드 인덕터, X/Y 안전 커패시터, 댐핑/방전 회로, 금속 케이스, 접지 구조, 단자 또는 버스바 등으로 구성됩니다.",
+          "keywords": [
+            "모터",
+            "pcb",
+            "ac/dc",
+            "dc/dc",
+            "emi",
+            "emc"
+          ],
+          "rating": 3,
+          "url": "https://note.com/qy_research/n/n6a96ab26302e?hl=ko",
+          "published": "2026-10-16T03:44:36+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
+          "originalTitle": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
+          "source": "SR타임스",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "MCU·모터 드라이버·센서 공급 강화, 통합 반도체 솔루션 개발 추진 [SRT(에스알 타임스) 최진욱 기자] 중국 반도체 기업 노보센스가 휴머노이드 로봇 시장 성장에 발맞춰 센서와 모터 드라이버, 전력관리 반도체 등 관련 제품 공급 확대에 나서고 있다. 노보센스는 15일 서울 코엑스에서 진행 중인 ‘한국 전자전(KES) 2026’에 참가해 휴머노이드 로봇 산업의 성장 가능성과 자사의 제품 경쟁력, 향후 사업 확대 방향 등을 공유했다. 발표를 진행한 노보센스의 야치 자오(YaQi Zhao) 담당은 “휴머노이드 로봇 산업은 여전히 초기 단계지만, 향후 성장 잠재력은 상당하다”며 “올해 회사의 휴머노이드 로봇 관련 매출은 전년비 3배 수준으로 증가할 것으로 전망된다”고 밝혔다. 이어 “중국 로봇 기업들이 기본적인 하드웨어 제어 능력을 확보했지만, 복잡한 생산 현장과 일상 환경에서 활용하기에는 여전히 기술적 한계가 남아 있다”며 “특히 실제 환경에서 수집한 데이터가 부족해 인공지능(AI) 역량이 충분한 수준에 도달하지 못했고, 정밀한 작업과 높은 신뢰성이 요구되는 분야에서도 기술적 개선이 필요하다”고 진단했다. 이에 노보센스는 자동차용 반도체 분야에서 축적한 기술력을 로봇 시장으로 확대한다는 전략을 제시했다.",
+          "keywords": [
+            "모터",
+            "mcu",
+            "반도체",
+            "가전",
+            "인공지능",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.srtimes.kr/news/articleView.html?idxno=214908",
+          "published": "2026-10-15T08:53:27+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+          "originalTitle": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+          "source": "이넷뉴스",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "에어로웨이가 강한 바람 중심의 성능 경쟁 대신 초저속 제어 기술을 강화하는 방향으로 거실실링팬을 개발하고 있다고 밝혔다. 기온이 내려가는 가을철에는 강한 바람이 오히려 실링팬 사용을 제한하는 요소가 될 수 있다는 점에 착안한 개발 방향이다. 실링팬의 성능은 그동안 얼마나 빠르게 회전하는지, 얼마나 강한 바람을 만들어내는지를 중심으로 평가돼 왔다. 여름철에는 실내 온도가 높을수록 공기를 빠르게 움직이는 능력이 체감 성능과 연결되기 때문에, 이 같은 기준이 제품 선택에 영향을 준다. 하지만 여름이 지나고 기온이 낮아지면 상황은 달라진다.",
+          "keywords": [
+            "bldc",
+            "모터"
+          ],
+          "rating": 2,
+          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=55536",
+          "published": "2026-10-21T04:47:10+00:00"
+        },
+        {
+          "category": "CIRCUIT",
+          "title": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+          "originalTitle": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard to equalize with something like a lunar lander. For this reason to consult the public whilst dangling $150,000 of rewards in front of anyone ready to pounce with a good idea. Here on Earth we have many ways in which we can get rid of unwanted charge: dry winter weather, for instance, demonstrates effectively that humidity is a crucial factor here. With no real atmosphere on the Moon, each astronaut becomes a walking capacitor, which is worsened when said astronaut ventures out",
+          "keywords": [
+            "grounding",
+            "current limit"
+          ],
+          "rating": 2,
+          "url": "https://hackaday.com/2026/10/20/nasas-lunar-grounding-challenge-is-a-real-buzz/",
+          "published": "2026-10-20T18:30:27+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+          "originalTitle": "XECH Unveils BlendXL Duo, Bringing Family-Sized Portable Blender in India",
+          "source": "Passionate In Marketing",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Two interchangeable jars (1300ml and 500ml) for individual and larger blends. Powerful ice crushing motor with six stainless-steel blades for smooth shakes, juices, dips and chutneys. BlendXL Duo available in White at ₹2,999 and Chrome Luxe Edition at ₹3,499. XECH Technologies is a leading manufacturer of innovative portable home appliances and consumer electronics has launched the XECH BlendXL Duo. A USB-C rechargeable dual-jar portable blender designed for smoothies, protein shakes, iced coffees, fruit drinks and ice-based blends.",
+          "keywords": [
+            "motor",
+            "blender"
+          ],
+          "rating": 2,
+          "url": "https://www.passionateinmarketing.com/xech-unveils-blendxl-duo-bringing-family-sized-portable-blender-in-india/",
+          "published": "2026-10-16T06:01:24+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+          "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
+          "source": "전자신문",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "생성형 AI 경쟁이 반도체를 넘어 '전력' 경쟁으로 번지고 있다. 글로벌 빅테크 기업들이 AI 데이터센터 구축에 막대한 투자를 이어가면서, 늘어나는 전력을 얼마나 효율적으로 공급하고 관리하느냐가 데이터센터 경쟁력을 좌우하는 변수로 떠올랐다. AI 연산을 처리하는 GPU 서버는 기존 서버보다 훨씬 많은 전력을 소비한다. 서버 랙 하나에 들어가는 전력 밀도가 빠르게 높아지면서 데이터센터 운영사들은 전력 변환 과정에서 새는 손실을 줄이고 발열을 잡는 동시에 좁은 공간에 더 많은 전력 장비를 넣어야 하는 과제를 안게 됐다. 전력 효율이 1%포인트만 개선돼도 대규모 데이터센터에서는 운영비와 냉각 부담이 크게 줄어든다는 점에서, 전원 공급 장치(PSU)를 비롯한 전력 장비의 중요성이 커지고 있다.",
+          "keywords": [
+            "전원",
+            "반도체"
+          ],
+          "rating": 2,
+          "url": "https://www.etnews.com/20261015000313",
+          "published": "2026-10-16T00:00:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+          "originalTitle": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+          "source": "Army.mil",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Army.mil",
+          "keywords": [
+            "predictive maintenance"
+          ],
+          "rating": 1,
+          "url": "https://www.army.mil/article-amp/295642/modernizing_heavy_equipment_transporter_sustainment_driving_predictive_maintenance_and_readiness_gains_using_tdacs_rugged_dsc",
+          "published": "2026-10-21T16:14:29+00:00"
+        },
+        {
+          "category": "CIRCUIT",
+          "title": "2026 고급 엔지니어 실무 마스터 클래스 - 저잡음/저전력 회로 이해 및 고급 응용 회로 설계",
+          "originalTitle": "2026 고급 엔지니어 실무 마스터 클래스 - 저잡음/저전력 회로 이해 및 고급 응용 회로 설계",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "서울 금천구 디지털로 178 (가산동) 가산퍼블릭 A동 1823호 지하철 : 가산 디지털 단지역 6번출구 도보 9분 버스 : 5537, 6004, 5615, 5616, 5618, 5619, 5626, 5630, 5712, 5714, 21광명, 75부천, 652, 653, 5012, 금천03, 금천07 당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+          "keywords": [
+            "회로"
+          ],
+          "rating": 1,
+          "url": "https://www.e4ds.com/webinar_detail.asp?idx=1035",
+          "published": "2026-10-20T20:35:18+00:00"
+        },
+        {
+          "category": "FIRMWARE",
+          "title": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+          "originalTitle": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "서울 금천구 디지털로 178 (가산동) 가산퍼블릭 A동 1823호 지하철 : 가산 디지털 단지역 6번출구 도보 9분 버스 : 5537, 6004, 5615, 5616, 5618, 5619, 5626, 5630, 5712, 5714, 21광명, 75부천, 652, 653, 5012, 금천03, 금천07 당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+          "keywords": [
+            "펌웨어"
+          ],
+          "rating": 1,
+          "url": "https://www.e4ds.com/webinar_detail.asp?idx=1034",
+          "published": "2026-10-19T01:04:02+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "거리 측정을 넘어 3D 공간 인식으로, 차세대 dToF LiDAR 센서 VL53L9",
+          "originalTitle": "거리 측정을 넘어 3D 공간 인식으로, 차세대 dToF LiDAR 센서 VL53L9",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+          "keywords": [
+            "센서"
+          ],
+          "rating": 1,
+          "url": "https://www.e4ds.com/webinar_detail.asp?idx=1041",
+          "published": "2026-10-15T20:23:38+00:00"
+        }
+      ]
+    },
+    {
       "week": "2026-10-21",
       "updated": "2026-10-21T09:14:18.508415+00:00",
       "issueTitle": "가전 전장 기술 TOP 20",
