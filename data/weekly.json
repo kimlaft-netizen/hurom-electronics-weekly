@@ -1,33 +1,31 @@
 {
-  "updated": "2026-10-21T09:14:18.508415+00:00",
-  "windowStart": "2026-10-14T09:14:18.508415+00:00",
-  "windowEnd": "2026-10-21T09:14:18.508415+00:00",
-  "issueTitle": "가전 전장 기술 TOP 20",
+  "updated": "2026-10-22T00:28:17.393516+00:00",
+  "windowStart": "2026-10-15T00:28:17.393516+00:00",
+  "windowEnd": "2026-10-22T00:28:17.393516+00:00",
+  "issueTitle": "전장 기술 TOP 22",
   "searchedCandidates": 40,
   "languageBalance": {
-    "KR": 12,
-    "GLOBAL": 8
+    "KR": 13,
+    "GLOBAL": 9
   },
   "items": [
     {
       "category": "COMPONENTS",
-      "title": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
-      "originalTitle": "TDK introduces new dual-die, stray-field robust motor position sensor for ASIL D fail operational applications",
-      "source": "EEJournal",
-      "sourceType": "뉴스/검색",
+      "title": "Every Type of Current Sensor Explained",
+      "originalTitle": "Every Type of Current Sensor Explained",
+      "source": "Hackaday",
+      "sourceType": "기술 블로그",
       "languageGroup": "GLOBAL",
-      "summary": "Subscribe to the EE Journal Daily Newsletter! – Full redundancy through two independent dies stacked in a compact QFN24 4×4 mm² package – ASIL D ready as a Safety Element out of Context (SEooC), with integrated diagnostics and independent fault detection for each die – Stray-field compensation per ISO 11452-8:2015 via an array of six horizontal Hall plates per die – High-speed analog sine/cosine outputs with low jitter for precise motor control TDK Corporation (TSE:6762) introduces the Micronas HAR 3025, a dual-die stray-field robust motor position sensor with analog sine/cosine output, designed for automotive and industrial safety-critical applications. The HAR 3025 extends TDK’s fast angular position sensor family with a fully redundant architecture housed in a single compact package, specifically addressing electric power steering systems, x-by-wire motor control applications, includi",
+      "summary": "Measuring electric currents is an essential element of many electrical systems, but doing so in a way that is as nonintrusive as possible is not an easy problem to solve. Due to this we got a wide variety of current sensors to choose from for any given application, with [ElectrArc240] The fairly low-tech, cheap and quite reliable method of using a shunt resistor is first demonstrated. This sees a lot of use in fairly low-voltage and low-current applications, with for example videocards using it to limit the amount of power the GPU can use, a feature that modders will happily bypass. Here simply the voltage drop across a known resistance value is measured, from which the current can be derived. Of course, you got higher voltage and higher current applications too, as well as direct- and alternating current, with the latter especially allowing for easy current measurements simply from the",
       "keywords": [
-        "pmsm",
-        "motor",
-        "microcontroller",
-        "compensation",
-        "switch",
-        "sensor"
+        "current sensing",
+        "transformer",
+        "sensor",
+        "current sensor"
       ],
-      "rating": 5,
-      "url": "https://www.eejournal.com/industry_news/tdk-introduces-new-dual-die-stray-field-robust-motor-position-sensor-for-asil-d-fail-operational-applications/",
-      "published": "2026-10-14T13:56:30+00:00"
+      "rating": 4,
+      "url": "https://hackaday.com/2026/10/21/every-type-of-current-sensor-explained/",
+      "published": "2026-10-21T23:00:21+00:00"
     },
     {
       "category": "MOTOR",
@@ -65,6 +63,24 @@
       "rating": 4,
       "url": "https://livesnews.com/news/article.html?no=64990",
       "published": "2026-10-15T01:49:44+00:00"
+    },
+    {
+      "category": "AI",
+      "title": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+      "originalTitle": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "국가정보원이 국가보안시설에 반입되는 카메라 탑재 사물인터넷(IoT) 기기의 보안조치 강화에 나섰지만 정작 국내에는 IoT 제품의 보안기준과 사후관리 체계가 제대로 갖춰지지 않았다. 당장 문제가 된 커넥티드 차량에 대한 기준은 물론 가장 널리 보급된 스마트가전에 대한 보안 체계마저 명확하지 않다. 스마트기기가 수집하는 정보의 범위는 빠르게 확대되고 있다. 과거에는 인터넷 연결을 통한 원격제어나 기기 상태 확인에 그쳤지만 최근에는 카메라와 마이크, 각종 센서로 주변 환경을 인식하고 인공지능(AI)으로 분석하는 기능까지 일반화되고 있다. 제품의 기능이 고도화될수록 외부로 유출될 수 있는 정보의 양과 민감도도 높아지는 구조다.",
+      "keywords": [
+        "가전",
+        "인공지능",
+        "센서",
+        "통신"
+      ],
+      "rating": 3,
+      "url": "https://www.etnews.com/20261021000248",
+      "published": "2026-10-21T07:00:00+00:00"
     },
     {
       "category": "AI",
@@ -272,7 +288,7 @@
       "source": "Hackaday",
       "sourceType": "기술 블로그",
       "languageGroup": "GLOBAL",
-      "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard to equalize with something like a lunar lander. For this reason to consult the public whilst dangling $150,000 of rewards in front of anyone ready to pounce with a good idea. Here on Earth we got many ways in which we can get rid of such an unwanted charge, with dry winter weather demonstrating quite effectively why humidity is a crucial factor here. With no real atmosphere on the Moon, each astronaut thus becomes a walking capacitor, which is worsened when said astronaut vent",
+      "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard to equalize with something like a lunar lander. For this reason to consult the public whilst dangling $150,000 of rewards in front of anyone ready to pounce with a good idea. Here on Earth we have many ways in which we can get rid of unwanted charge: dry winter weather, for instance, demonstrates effectively that humidity is a crucial factor here. With no real atmosphere on the Moon, each astronaut becomes a walking capacitor, which is worsened when said astronaut ventures out",
       "keywords": [
         "grounding",
         "current limit"
@@ -298,22 +314,6 @@
       "published": "2026-10-16T06:01:24+00:00"
     },
     {
-      "category": "CIRCUIT",
-      "title": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
-      "originalTitle": "ASML, 3Q 사상최대 실적…“ASML 생산능력이 첨단 반도체 공급능력 상한선 결정”",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "ASML의 2026년 3분기 실적은 반도체 산업이 새로운 국면에 진입했음을 보여준다. 매출 116억 유로, 순이익 49억 유로로 사상 최대 실적을 기록했지만 시장이 주목한 것은 “2027∼2028년 생산능력으로도 고객 수요를 충족하기 어렵다”는 경고였다. AI 확산으로 첨단 반도체 수요가 폭증하면서 산업의 병목이 수요 부족에서 EUV 장비 공급 부족으로 이동하고 있다. 메모리 투자 확대와 High-NA EUV 도입이 가속되는 가운데, 향후 반도체 시장의 경쟁력은 가격보다 생산능력 확보 여부가 좌우할 전망이다. 이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요.",
-      "keywords": [
-        "반도체",
-        "토크"
-      ],
-      "rating": 2,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=23888",
-      "published": "2026-10-16T01:31:35+00:00"
-    },
-    {
       "category": "SMPS",
       "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
       "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
@@ -328,6 +328,36 @@
       "rating": 2,
       "url": "https://www.etnews.com/20261015000313",
       "published": "2026-10-16T00:00:00+00:00"
+    },
+    {
+      "category": "AI",
+      "title": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+      "originalTitle": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+      "source": "Army.mil",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Army.mil",
+      "keywords": [
+        "predictive maintenance"
+      ],
+      "rating": 1,
+      "url": "https://www.army.mil/article-amp/295642/modernizing_heavy_equipment_transporter_sustainment_driving_predictive_maintenance_and_readiness_gains_using_tdacs_rugged_dsc",
+      "published": "2026-10-21T16:14:29+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "2026 고급 엔지니어 실무 마스터 클래스 - 저잡음/저전력 회로 이해 및 고급 응용 회로 설계",
+      "originalTitle": "2026 고급 엔지니어 실무 마스터 클래스 - 저잡음/저전력 회로 이해 및 고급 응용 회로 설계",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "서울 금천구 디지털로 178 (가산동) 가산퍼블릭 A동 1823호 지하철 : 가산 디지털 단지역 6번출구 도보 9분 버스 : 5537, 6004, 5615, 5616, 5618, 5619, 5626, 5630, 5712, 5714, 21광명, 75부천, 652, 653, 5012, 금천03, 금천07 당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+      "keywords": [
+        "회로"
+      ],
+      "rating": 1,
+      "url": "https://www.e4ds.com/webinar_detail.asp?idx=1035",
+      "published": "2026-10-20T20:35:18+00:00"
     },
     {
       "category": "FIRMWARE",
