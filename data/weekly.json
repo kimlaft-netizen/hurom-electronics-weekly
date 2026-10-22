@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-22T00:34:05.422621+00:00",
-  "windowStart": "2026-10-15T00:34:05.422621+00:00",
-  "windowEnd": "2026-10-22T00:34:05.422621+00:00",
+  "updated": "2026-10-22T00:39:12.049994+00:00",
+  "windowStart": "2026-10-15T00:39:12.049994+00:00",
+  "windowEnd": "2026-10-22T00:39:12.049994+00:00",
   "issueTitle": "전장 기술 TOP 22",
   "searchedCandidates": 43,
   "languageBalance": {
@@ -75,8 +75,7 @@
       "keywords": [
         "가전",
         "인공지능",
-        "센서",
-        "통신"
+        "센서"
       ],
       "rating": 3,
       "url": "https://www.etnews.com/20261021000248",
@@ -101,7 +100,7 @@
       "published": "2026-10-20T12:05:47+00:00"
     },
     {
-      "category": "CIRCUIT",
+      "category": "COMPONENTS",
       "title": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
       "originalTitle": "마우저, NXP 반도체 Ara240 DNPU 공급 개시",
       "source": "e4ds news",
@@ -156,7 +155,7 @@
       "published": "2026-10-19T03:38:00+00:00"
     },
     {
-      "category": "COMPONENTS",
+      "category": "MOTOR",
       "title": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
       "originalTitle": "AssetWatch Adds Electrical Monitoring to Catch Hidden Motor Faults Before They Cause Downtime",
       "source": "Reliable Plant",
@@ -173,7 +172,7 @@
       "published": "2026-10-18T04:00:59+00:00"
     },
     {
-      "category": "SMPS",
+      "category": "COMPONENTS",
       "title": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
       "originalTitle": "SiC 전력변환 회로 간소화할 절연형 칩셋 공급",
       "source": "https://www.newsphere.kr/",
@@ -190,7 +189,7 @@
       "published": "2026-10-16T13:52:34+00:00"
     },
     {
-      "category": "SMPS",
+      "category": "COMPONENTS",
       "title": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
       "originalTitle": "[영상] 노보센스, KES 2026서 산업용·로봇용 반도체 기술 선보여",
       "source": "전자신문",
@@ -246,7 +245,7 @@
       "published": "2026-10-16T03:44:36+00:00"
     },
     {
-      "category": "AI",
+      "category": "COMPONENTS",
       "title": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
       "originalTitle": "노보센스, 휴머노이드 로봇용 반도체 공급 확대…“올해 관련 매출 3배 증가 전망",
       "source": "SR타임스",
@@ -314,7 +313,7 @@
       "published": "2026-10-16T06:01:24+00:00"
     },
     {
-      "category": "SMPS",
+      "category": "AI",
       "title": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
       "originalTitle": "“AI 경쟁, 결국 전력의 문제”… 솔루엠, 고효율 전원 솔루션으로 데이터센터 시장 공략",
       "source": "전자신문",
