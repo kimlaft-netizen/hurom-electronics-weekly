@@ -400,7 +400,7 @@ def main():
    weeks.append(snapshot)
  archive['weeks']=sorted(weeks,key=lambda w:w.get('week',''),reverse=True)
  with open(archive_path,'w',encoding='utf-8') as f:json.dump(archive,f,ensure_ascii=False,indent=2)
- payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'가전 전장 기술 TOP {len(out)}','searchedCandidates':len(a),'languageBalance':{'KR':sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL':sum(1 for x in out if x.get('languageGroup')=='GLOBAL')},'items':out}
+ payload={'updated':RUN_END.isoformat(),'windowStart':RUN_START.isoformat(),'windowEnd':RUN_END.isoformat(),'issueTitle':f'전장 기술 TOP {len(out)}','searchedCandidates':len(a),'languageBalance':{'KR':sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL':sum(1 for x in out if x.get('languageGroup')=='GLOBAL')},'items':out}
  with open(OUT,'w',encoding='utf-8') as f:json.dump(payload,f,ensure_ascii=False,indent=2)
  print('candidates',len(a),'KR',sum(1 for x in out if x.get('languageGroup')=='KR'),'GLOBAL',sum(1 for x in out if x.get('languageGroup')=='GLOBAL'),'selected',len(out))
 if __name__=='__main__':main()
