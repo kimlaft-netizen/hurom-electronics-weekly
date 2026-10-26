@@ -1,15 +1,1 @@
-name: Schedule Test
 
-'on':
-  schedule:
-    - cron: '33 * * * *'
-  workflow_dispatch: {}
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show scheduled time
-        run: |
-          echo "Schedule test started"
-          date -u
