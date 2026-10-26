@@ -1,6 +1,322 @@
 {
   "weeks": [
     {
+      "week": "2026-10-26",
+      "updated": "2026-10-26T00:04:13.301385+00:00",
+      "issueTitle": "전장 기술 TOP 18",
+      "items": [
+        {
+          "category": "COMPONENTS",
+          "title": "Every Type of Current Sensor Explained",
+          "originalTitle": "Every Type of Current Sensor Explained",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "Measuring electric currents is an essential element of many electrical systems, but doing so in a way that is as nonintrusive as possible is not an easy problem to solve. Due to this we got a wide variety of current sensors to choose from for any given application, with [ElectrArc240] The fairly low-tech, cheap and quite reliable method of using a shunt resistor is first demonstrated. This sees a lot of use in fairly low-voltage and low-current applications, with for example videocards using it to limit the amount of power the GPU can use, a feature that modders will happily bypass. Here simply the voltage drop across a known resistance value is measured, from which the current can be derived. Of course, you got higher voltage and higher current applications too, as well as direct- and alternating current, with the latter especially allowing for easy current measurements simply from the",
+          "keywords": [
+            "current sensing",
+            "pcb",
+            "transformer",
+            "sensor",
+            "current sensor"
+          ],
+          "rating": 4,
+          "url": "https://hackaday.com/2026/10/21/every-type-of-current-sensor-explained/",
+          "published": "2026-10-21T23:00:21+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "[HARFKO 2026] 공조E 절감 해법 ‘고효율 EC·BLDC 팬’",
+          "originalTitle": "[HARFKO 2026] 공조E 절감 해법 ‘고효율 EC·BLDC 팬’",
+          "source": "칸(KHARN)",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "공조기와 냉동기, 데이터센터 냉각설비의 심장 역할을 하는 팬(송풍기)에도 고효율화 바람이 불고 있다. ‘제18회 한국국제냉난방공조전(HARFKO 2026)’이 지난 10월21일부터 23일까지 3일간 고양 킨텍스에서 열렸다. 한국냉동공조산업협회가 주관한 이번 전시회는 ‘스마트기술로 이끄는 HVAC&R 혁신: AI·IoT로 완성되는 냉난방공조의 미래’를 주제로 개최됐다. 이번 전시회에서는 회전수를 자유롭게 제어해 필요한 만큼만 전력을 쓰는 EC·BLDC모터 기반 팬이 대거 소개됐다. 모터와 팬, 제어기를 하나로 합친 일체형 제품과 금속 대신 엔지니어링 플라스틱을 쓴 경량 송풍팬, 대형 공간의 공기를 순환시키는 에어무빙팬까지 다양한 제품이 관람객의 이목을 끌었다.",
+          "keywords": [
+            "bldc",
+            "모터",
+            "pwm",
+            "전원",
+            "반도체",
+            "rs485"
+          ],
+          "rating": 3,
+          "url": "https://www.kharn.kr/news/article.html?no=32268",
+          "published": "2026-10-25T09:31:13+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "머크, 첨단 소재·공급 기술로 차세대 반도체 혁신 지원…음성 몰리브덴 생산설비 개소",
+          "originalTitle": "머크, 첨단 소재·공급 기술로 차세대 반도체 혁신 지원…음성 몰리브덴 생산설비 개소",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "글로벌 과학기술 기업 머크(Merck)가 충북 음성에 신규 몰리브덴 전구체 생산설비를 구축하고 본격 가동에 나섰다. 반도체 미세화가 한계에 다가서는 가운데 차세대 배선 소재와 안정적인 공급 솔루션을 동시에 제공함으로써 한국 반도체 산업의 혁신을 지원하겠다는 전략이다. 한국머크는 22일 충청북도 음성 사업장에서 이산화이염화몰리브덴(MoO₂Cl₂) 신규 생산설비 개소식을 개최했다. 행사에는 벤자민 하인 머크 일렉트로닉스 CEO를 비롯해 슈레시 라자라만 CTO, 케빈 고만 통합공급망 헤드, 빙 한 박막 사업부 헤드 등이 참석했다. 인공지능(AI) 확산과 초고성능 반도체 수요 증가에 따라 반도체 제조공정은 더욱 복잡해지고 있으며, 기존 소재만으로는 미래 기술 요구를 충족하기 어려운 상황이다.",
+          "keywords": [
+            "반도체",
+            "토크",
+            "인공지능",
+            "디스플레이",
+            "배선",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23927",
+          "published": "2026-10-22T06:16:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "어플라이드 머티어리얼즈 코리아, ‘반도체의 날’ 산업포장 수훈",
+          "originalTitle": "어플라이드 머티어리얼즈 코리아, ‘반도체의 날’ 산업포장 수훈",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. AI 컴퓨팅 수요 증가에 따른 3D 적층 구조와 HBM 기술 확대에 대응하기 위해 어플라이드 머티어리얼즈가 신규 반도체 제조 장비 6종을 공개했다. Opta Quad CMP, Nokota Vmax 2 ECD, Producer Avila 2 PECVD 등 첨단 패키징 공정 장비 3종, VeritySEM 7AP와 SEMVision G7AP 전자빔 계측 시스템 2종, Centura Prime 에피 시스템 1종으로 구성된 라인업이다. 어플라이드 머티어리얼즈 코리아가 초록우산어린이재단과 손잡고 경기도 4개 지역 아동을 대상으로 AI·반도체 체험 교육과 전통문화예술 교육을 지원한다. AI 비전 센서와 반도체 STEM 키트를 활용한 융합 교육을 제공하며, 330여 명의 초등학생과 지역아동센터 아동이 참여할 예정이다.",
+          "keywords": [
+            "반도체",
+            "토크",
+            "인공지능",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23923",
+          "published": "2026-10-22T01:50:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+          "originalTitle": "[이슈플러스]車부터 AI 가전까지 정보수집 확대…제품 검증·사후관리 '구멍'",
+          "source": "전자신문",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "국가정보원이 국가보안시설에 반입되는 카메라 탑재 사물인터넷(IoT) 기기의 보안조치 강화에 나섰지만 정작 국내에는 IoT 제품의 보안기준과 사후관리 체계가 제대로 갖춰지지 않았다. 당장 문제가 된 커넥티드 차량에 대한 기준은 물론 가장 널리 보급된 스마트가전에 대한 보안 체계마저 명확하지 않다. 스마트기기가 수집하는 정보의 범위는 빠르게 확대되고 있다. 과거에는 인터넷 연결을 통한 원격제어나 기기 상태 확인에 그쳤지만 최근에는 카메라와 마이크, 각종 센서로 주변 환경을 인식하고 인공지능(AI)으로 분석하는 기능까지 일반화되고 있다. 제품의 기능이 고도화될수록 외부로 유출될 수 있는 정보의 양과 민감도도 높아지는 구조다.",
+          "keywords": [
+            "가전",
+            "인공지능",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.etnews.com/20261021000248",
+          "published": "2026-10-21T07:00:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+          "originalTitle": "Predictive maintenance analytics: how better insight leads to smarter maintenance",
+          "source": "Johnson Controls",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Keeping your systems running with predictive maintenance, remote diagnostics, and condition-based strategies to maximize uptime and reduce risks. Funding more than $6B in customer projects worldwide, we partner with you to determine the best way to make your project happen. Maximize uptime, strengthen security and deploy faster Data Centers designed to address your challenges with advanced thermal management, controls, security and fire protection systems. Smarter, safer, and more resilient AI data center solutions The most comprehensive integrated data center solutions available today. We engineer and design chillers to meet the harshest environments, providing your chiller with maximum uptime.",
+          "keywords": [
+            "sensor",
+            "machine learning",
+            "predictive maintenance",
+            "fault detection"
+          ],
+          "rating": 3,
+          "url": "https://www.johnsoncontrols.com/building-insights/thought-leadership/predictive-maintenance-analytics",
+          "published": "2026-10-20T12:05:47+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+          "originalTitle": "[산업 HOT 뉴스] “가사 노동 없는 삶 만든다”…백조세탁기서 AI홈로봇까지, LG 가전 60년의 집념",
+          "source": "비즈월드",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "[비즈월드] 1969년 국내 최초로 탄생한 ‘백조세탁기(WP-181)’와 1965년 국내 첫 독자 모델 냉장고인 ‘눈표냉장고(GR-120)’에서 시작된 한국 가전의 역사가 AI(인공지능)와 로봇 기술이 결합된 ‘피지컬 AI’ 시대의 주역으로 거듭나고 있다. LG전자는 1958년 창립 이래 축적해 온 가전 혁신의 여정과 미래 비전을 담은 브랜드 헤리티지 영상 ‘삶이 묻는 질문, LG가 답하다(Life Asks, LG Answers)’를 미국 뉴욕 타임스스퀘어 옥외 전광판에 공개했다고 19일 밝혔다. 이번 캠페인은 가사 노동의 부담을 덜어 고객이 집에서 더 가치 있는 일에 집중할 수 있도록 돕는 LG전자의 가전 지향점인 ‘제로 레이버 홈(Zero Labor Home)’을 글로벌 고객에게 각인시키기 위해 기획됐다고 한다. 총 160초 분량의 이번 영상은 고객의 일상 속 작고 소소한 불편을 기술 혁신으로 해결해 온 LG 가전의 헤리티지를 집중 조명한다. 세탁 가전 분야에서는 1969년 국내 최초 세탁기 출시 이후, 분리 세탁 니즈를 반영해 드럼세탁기 하단에 소형 통돌이를 결합한 ‘LG 트윈워시(2015년)’, 세탁기와 건조기를 일체형 타워 구조로 완성한 ‘LG 워시타워(2020년)’로 이어지는 진화 과정을 보여준다.",
+          "keywords": [
+            "모터",
+            "가전",
+            "인공지능"
+          ],
+          "rating": 3,
+          "url": "https://www.bizwnews.com/news/articleView.html?idxno=149309",
+          "published": "2026-10-19T07:58:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
+          "originalTitle": "힐셔, 커넥터 미탑재형 임베디드 모듈 ‘comX 90CN’ 출시",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 산업용 통신 및 자동화 솔루션 분야의 선도기업 힐셔가 SPE(Single-Pair Ethernet) 기술 포트폴리오를 확장하며 신규 평가 보드를 선보였다. 새롭게 공개된 NXEB-90-SPE 평가 보드는 힐셔의 다중 프로토콜 컨트롤러 netX 90을 기반으로 설계됐으며, 사용자와 개발자가 SPE를 활용해 산업용 애플리케이션을 보다 효율적으로 개발하고 평가할 수 있는 옵션을 제공한다. 산업용 통신 솔루션 기업 힐셔가 기자간담회를 통해 유럽연합(EU)의 디지털 신년 전략 2030을 기반으로 한 사이버복원력법(CRA) 등 주요 보안 규제에 대한 대응 전략과 신제품을 소개했다. 힐셔는 EU 사이버복원력법 등 강화되는 보안 규제에 대응해, 산업 현장에 최적화된 첨단 보안 기능과 다양한 산업용 통신 프로토콜을 지원하는 netX 시리즈 신제품을 중심으로 글로벌 시장과 한국 시장에서 경쟁력을 강화하고 있다.",
+          "keywords": [
+            "모터",
+            "토크",
+            "커넥터",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23905",
+          "published": "2026-10-19T03:38:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "Mesh Network Telephony Over Bluetooth on Android Phones",
+          "originalTitle": "Mesh Network Telephony Over Bluetooth on Android Phones",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "Telephony is a bit of a mixed bag. On the one hand, being able to talk to people in far off places is kind of neat, at least in theory. On the other hand, you’re usually reliant on a centralized network, which isn’t ideal to the mindset of most hackers.[Gautam]’s deals with that last one, offering a decentralized mesh network solution based on Bluetooth for Android phones that can handle both voice and video. Rather than relying on dedicated hardware, this particular mesh piggybacks on your phone, and exists only as an Android application. Calls are end-to-end encrypted for both voice and video — though two-way video calling is still experimental.",
+          "keywords": [
+            "motor",
+            "bluetooth"
+          ],
+          "rating": 2,
+          "url": "https://hackaday.com/2026/10/25/mesh-network-telephony-over-bluetooth-on-android-phones/",
+          "published": "2026-10-25T17:00:31+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "Pushing Bluetooth out to 12 Kilometers",
+          "originalTitle": "Pushing Bluetooth out to 12 Kilometers",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "Bluetooth is a short-range protocol that’s great for peripherals and finding your keys, but it’s limited range is mainly a product of how it’s usually implemented. A recent video from [nktbuilds] demonstrates this by extending its range out to 12 kilometers, or around 7.5 miles. The secret is twofold: one is the antenna, a parabolic unit that captures far more than the dinky dipole in your phone. The other is a very sensitive receiver with a much lower noise floor. What you won’t see here is any extra power than you get stock out of one of those generic coin-sized Bluetooth tracker tags.",
+          "keywords": [
+            "communication",
+            "bluetooth"
+          ],
+          "rating": 2,
+          "url": "https://hackaday.com/2026/10/24/pushing-bluetooth-out-to-12-kilometers/",
+          "published": "2026-10-25T05:00:51+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Using Closed AI Models Can Minimize Your Risk",
+          "originalTitle": "Using Closed AI Models Can Minimize Your Risk",
+          "source": "Embedded Computing Design",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Artificial intelligence is becoming a practical component of embedded systems, from predictive maintenance and motor control to machine vision, industrial automation, and smart building infrastructure. But as developers integrate AI into these products, they face a security question that extends beyond the accuracy of the model: Who controls the model, what data can it access, and how much of the system’s behavior can an attacker influence? Closed AI models can help reduce these risks by limiting access to model internals, controlling distribution, and establishing a more predictable deployment environment. That does not automatically make a system secure. A closed model can still be vulnerable to input manipulation, compromised firmware, insecure interfaces, and stolen credentials.",
+          "keywords": [
+            "motor",
+            "mcu",
+            "firmware",
+            "embedded c",
+            "bootloader",
+            "renesas"
+          ],
+          "rating": 2,
+          "url": "https://embeddedcomputing.com/technology/ai-machine-learning/using-closed-ai-models-can-minimize-your-risk",
+          "published": "2026-10-23T15:12:07+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "Motor & Motor-Drive Sensors Market",
+          "originalTitle": "Motor & Motor-Drive Sensors Market",
+          "source": "MarketsandMarkets",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "MarketsandMarkets",
+          "keywords": [
+            "motor",
+            "sensor"
+          ],
+          "rating": 2,
+          "url": "https://www.marketsandmarkets.com/Market-Reports/motor-motor-drive-sensors-market-23549197.html",
+          "published": "2026-10-23T10:21:11+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "전기연, SiC 반도체 결함 발광 파장 15년 만에 재규명",
+          "originalTitle": "전기연, SiC 반도체 결함 발광 파장 15년 만에 재규명",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 한국전기연구원(KERI) 기술 기반 창업기업 메디인테크를 주관기관으로 한 국내 산·학·연·병 컨소시엄이 AI 기반 차세대 로봇 내시경 플랫폼 개발에 착수했다. 이번 과제는 2026년 4월부터 2031년 12월까지 진행되며, 총 228억원이 투입된다. 컨소시엄은 기존 연성 내시경의 수동 조작 한계를 줄이고, AI 자율 조향과 초정밀 치료 술기 자동화 기술을 결합한 지능형 플랫폼을 개발할 계획이다. 연구가 계획대로 진행되면 일본 기업 중심의 연성 내시경 시장에서 국내 기술 기반 경쟁력을 확보하는 계기가 될 것으로 보인다.",
+          "keywords": [
+            "반도체",
+            "토크"
+          ],
+          "rating": 2,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23939",
+          "published": "2026-10-23T00:58:00+00:00"
+        },
+        {
+          "category": "CIRCUIT",
+          "title": "I'm a kitchen appliance reviewer, and these are the top blenders I recommend for silky sauces, soups, and smoothies",
+          "originalTitle": "I'm a kitchen appliance reviewer, and these are the top blenders I recommend for silky sauces, soups, and smoothies",
+          "source": "TechRadar",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Sign up with your email below to instantly access member features, newsletters and exclusive Insider perks By submitting your information, you confirm you are aged 16 or over, have read our Your membership journey starts here. Keep exploring and earning more as a member. News, deals, reviews, guides and more… News, deals, reviews, guides and more on the newest computing gadgets Start exploring exclusive deals, expert advice and more Unlock and manage exclusive Techradar member rewards. Sign up for breaking news, reviews, opinion, top tech deals, and more. Unlock instant access to exclusive member features.",
+          "keywords": [
+            "blender",
+            "kitchen appliance"
+          ],
+          "rating": 2,
+          "url": "https://www.techradar.com/best/best-blenders",
+          "published": "2026-10-22T16:07:01+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+          "originalTitle": "에어로웨이, 거실실링팬 초저속 제어에 모터·블레이드 설계 반영",
+          "source": "이넷뉴스",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "에어로웨이가 강한 바람 중심의 성능 경쟁 대신 초저속 제어 기술을 강화하는 방향으로 거실실링팬을 개발하고 있다고 밝혔다. 기온이 내려가는 가을철에는 강한 바람이 오히려 실링팬 사용을 제한하는 요소가 될 수 있다는 점에 착안한 개발 방향이다. 실링팬의 성능은 그동안 얼마나 빠르게 회전하는지, 얼마나 강한 바람을 만들어내는지를 중심으로 평가돼 왔다. 여름철에는 실내 온도가 높을수록 공기를 빠르게 움직이는 능력이 체감 성능과 연결되기 때문에, 이 같은 기준이 제품 선택에 영향을 준다. 하지만 여름이 지나고 기온이 낮아지면 상황은 달라진다.",
+          "keywords": [
+            "bldc",
+            "모터"
+          ],
+          "rating": 2,
+          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=55536",
+          "published": "2026-10-21T04:47:10+00:00"
+        },
+        {
+          "category": "CIRCUIT",
+          "title": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+          "originalTitle": "NASA’s Lunar Grounding Challenge is a Real Buzz",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "One could make a joke about how an astronaut walking on the lunar surface is rather akin to a cat walking on the carpet in the living room, but out in space the resulting triboelectric discharge can do a lot more damage than just some stinging fingers and a bemused looking cat. The problem that NASA and other space agencies are dealing with is that the charge that builds up on a lunar-walking astronaut is very hard to equalize with something like a lunar lander. For this reason to consult the public whilst dangling $150,000 of rewards in front of anyone ready to pounce with a good idea. Here on Earth we have many ways in which we can get rid of unwanted charge: dry winter weather, for instance, demonstrates effectively that humidity is a crucial factor here. With no real atmosphere on the Moon, each astronaut becomes a walking capacitor, which is worsened when said astronaut ventures out",
+          "keywords": [
+            "grounding",
+            "current limit"
+          ],
+          "rating": 2,
+          "url": "https://hackaday.com/2026/10/20/nasas-lunar-grounding-challenge-is-a-real-buzz/",
+          "published": "2026-10-20T18:30:27+00:00"
+        },
+        {
+          "category": "FIRMWARE",
+          "title": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+          "originalTitle": "[오프라인 실습] ESP32 제품 개발 및 펌웨어 바이브 코딩 오프라인 강의",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+          "keywords": [
+            "펌웨어"
+          ],
+          "rating": 1,
+          "url": "https://www.e4ds.com/webinar_detail.asp?idx=1042",
+          "published": "2026-10-22T02:08:05+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+          "originalTitle": "Modernizing Heavy Equipment Transporter Sustainment: Driving Predictive Maintenance and Readiness Gains Using TDAC’s Rugged DSC",
+          "source": "Army.mil",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Army.mil",
+          "keywords": [
+            "predictive maintenance"
+          ],
+          "rating": 1,
+          "url": "https://www.army.mil/article/295642/modernizing_heavy_equipment_transporter_sustainment_driving_predictive_maintenance_and_readiness_gains_using_tdacs_rugged_dsc",
+          "published": "2026-10-21T07:00:00+00:00"
+        }
+      ]
+    },
+    {
       "week": "2026-10-22",
       "updated": "2026-10-22T01:21:21.951688+00:00",
       "issueTitle": "전장 기술 TOP 22",

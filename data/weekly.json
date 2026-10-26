@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-26T00:04:13.301385+00:00",
-  "windowStart": "2026-10-19T00:04:13.301385+00:00",
-  "windowEnd": "2026-10-26T00:04:13.301385+00:00",
+  "updated": "2026-10-26T00:51:10.129019+00:00",
+  "windowStart": "2026-10-19T00:51:10.129019+00:00",
+  "windowEnd": "2026-10-26T00:51:10.129019+00:00",
   "issueTitle": "전장 기술 TOP 18",
-  "searchedCandidates": 33,
+  "searchedCandidates": 39,
   "languageBalance": {
     "KR": 9,
     "GLOBAL": 9
@@ -27,6 +27,23 @@
       "rating": 4,
       "url": "https://hackaday.com/2026/10/21/every-type-of-current-sensor-explained/",
       "published": "2026-10-21T23:00:21+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "Mesh Network Telephony Over Bluetooth on Android Phones",
+      "originalTitle": "Mesh Network Telephony Over Bluetooth on Android Phones",
+      "source": "Hackaday",
+      "sourceType": "기술 블로그",
+      "languageGroup": "GLOBAL",
+      "summary": "Telephony is a bit of a mixed bag. On the one hand, being able to talk to people in far off places is kind of neat, at least in theory. On the other hand, you’re usually reliant on a centralized network, which isn’t ideal to the mindset of most hackers.[Gautam]’s deals with that last one, offering a decentralized mesh network solution based on Bluetooth for Android phones that can handle both voice and video. Rather than relying on dedicated hardware, this particular mesh piggybacks on your phone, and exists only as an Android application. Calls are end-to-end encrypted for both voice and video — though two-way video calling is still experimental.",
+      "keywords": [
+        "motor",
+        "communication",
+        "bluetooth"
+      ],
+      "rating": 3,
+      "url": "https://hackaday.com/2026/10/25/mesh-network-telephony-over-bluetooth-on-android-phones/",
+      "published": "2026-10-25T17:00:31+00:00"
     },
     {
       "category": "MOTOR",
@@ -97,7 +114,8 @@
       "keywords": [
         "가전",
         "인공지능",
-        "센서"
+        "센서",
+        "통신"
       ],
       "rating": 3,
       "url": "https://www.etnews.com/20261021000248",
@@ -155,22 +173,6 @@
       "rating": 3,
       "url": "https://www.e4ds.com/sub_view.asp?idx=23905",
       "published": "2026-10-19T03:38:00+00:00"
-    },
-    {
-      "category": "COMPONENTS",
-      "title": "Mesh Network Telephony Over Bluetooth on Android Phones",
-      "originalTitle": "Mesh Network Telephony Over Bluetooth on Android Phones",
-      "source": "Hackaday",
-      "sourceType": "기술 블로그",
-      "languageGroup": "GLOBAL",
-      "summary": "Telephony is a bit of a mixed bag. On the one hand, being able to talk to people in far off places is kind of neat, at least in theory. On the other hand, you’re usually reliant on a centralized network, which isn’t ideal to the mindset of most hackers.[Gautam]’s deals with that last one, offering a decentralized mesh network solution based on Bluetooth for Android phones that can handle both voice and video. Rather than relying on dedicated hardware, this particular mesh piggybacks on your phone, and exists only as an Android application. Calls are end-to-end encrypted for both voice and video — though two-way video calling is still experimental.",
-      "keywords": [
-        "motor",
-        "bluetooth"
-      ],
-      "rating": 2,
-      "url": "https://hackaday.com/2026/10/25/mesh-network-telephony-over-bluetooth-on-android-phones/",
-      "published": "2026-10-25T17:00:31+00:00"
     },
     {
       "category": "COMPONENTS",
