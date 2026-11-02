@@ -1,14 +1,52 @@
 {
-  "updated": "2026-11-02T00:01:18.891488+00:00",
-  "windowStart": "2026-10-26T00:01:18.891488+00:00",
-  "windowEnd": "2026-11-02T00:01:18.891488+00:00",
-  "issueTitle": "전장 기술 TOP 11",
-  "searchedCandidates": 12,
+  "updated": "2026-11-02T01:47:22.117446+00:00",
+  "windowStart": "2026-10-26T01:47:22.117446+00:00",
+  "windowEnd": "2026-11-02T01:47:22.117446+00:00",
+  "issueTitle": "전장 기술 TOP 13",
+  "searchedCandidates": 25,
   "languageBalance": {
-    "KR": 3,
+    "KR": 5,
     "GLOBAL": 8
   },
   "items": [
+    {
+      "category": "COMPONENTS",
+      "title": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
+      "originalTitle": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 한국기계연구원이 200℃ 이하 산업용 열공정을 위한 친환경 열공급 통합 솔루션을 개발했다. 기존 화석연료 기반 설비를 고효율 시스템으로 전환할 수 있는 설계 플랫폼으로, 식품·화학·제지·섬유 산업의 탄소중립 전환을 지원한다. 열원 선정부터 배관 설계, 운전 최적화까지 통합 지원하는 기술로 산업의 상당한 에너지 소비 부분을 차지하는 저온 열공정 분야의 탄소감축을 실현한다. 한국기계연구원이 공장·데이터센터의 40℃ 저온 폐열을 냉방 에너지로 전환하는 차세대 히트펌프 시스템을 개발했다.",
+      "keywords": [
+        "회로",
+        "반도체",
+        "토크",
+        "센서"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24021",
+      "published": "2026-11-02T00:41:00+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
+      "originalTitle": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. ST마이크로일렉트로닉스가 에어컨·히트펌프·산업용 드라이브용 소형 지능형 전력모듈 SLLIMM 컴팩트 시리즈를 출시했다. 600V 3상 IGBT 인버터 브리지를 단일 패키지에 집적하면서 기존 DBC 기반 제품 대비 크기를 30% 이상 줄였다. STGI15C60S는 18.8×32.8mm 풋프린트에 완전한 3상 인버터 구현했으며, 저·중전력 모터 드라이브 설계에 최적화됐다. ST마이크로일렉트로닉스가 고도 측정과 50m 이상 수심 모니터링을 하나의 패키지에 통합한 LPS27DEWO MEMS 센서를 출시했다.",
+      "keywords": [
+        "모터",
+        "회로",
+        "토크",
+        "igbt",
+        "전력모듈",
+        "센서"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24016",
+      "published": "2026-11-02T00:38:00+00:00"
+    },
     {
       "category": "FIRMWARE",
       "title": "A Game Engine For Microcontrollers",
@@ -123,6 +161,23 @@
       "published": "2026-10-28T07:34:00+00:00"
     },
     {
+      "category": "COMPONENTS",
+      "title": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
+      "originalTitle": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "[편집자주]아우토크립트 2026 강릉 ITS 세계총회에서 자율주행과 미래 모빌리티의 성공 조건으로 ‘사이버 보안’을 가장 중요하게 강조했다. 보안이 확보되지 않으면 차량 해킹뿐 아니라 오작동으로 인한 안전사고가 발생할 수 있기 때문이다. 아우토크립트는 V2X 통신 보안 인프라(PKI)와 침입탐지(IDS) 기술을 통해 차량 간·차량과 인프라 간 통신의 신뢰성을 확보하고 있으며, 자동차를 넘어 모빌리티와 피지컬 AI 전반의 보안 환경 구축을 목표로 하고 있다. 이에 본지는 2026 강릉 ITS 세계총회 현지에서 심상규 아우토크립트 CTO와 만나 자동차 보안의 미래에 대해 들어봤다. ■ ITS와 자율주행 기술이 빠르게 발전하고 있는데, 왜 지금 보안이 가장 중요한 이슈로 주목받고 있나 지금 자동차, 특히 자율주행차가 매우 중요한 분야로 떠오르고 있다.",
+      "keywords": [
+        "토크",
+        "센서",
+        "통신"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=23971",
+      "published": "2026-10-27T07:36:09+00:00"
+    },
+    {
       "category": "EMI",
       "title": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
       "originalTitle": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
@@ -143,7 +198,7 @@
       "published": "2026-10-26T12:00:13+00:00"
     },
     {
-      "category": "CIRCUIT",
+      "category": "COMPONENTS",
       "title": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
       "originalTitle": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
       "source": "Renesas",
@@ -159,22 +214,6 @@
       "rating": 2,
       "url": "https://www.renesas.com/en/blogs/why-16-bit-mcus-still-matter-smart-home-appliance-and-industrial-applications",
       "published": "2026-10-28T02:03:47+00:00"
-    },
-    {
-      "category": "CIRCUIT",
-      "title": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
-      "originalTitle": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "[편집자주]아우토크립트 2026 강릉 ITS 세계총회에서 자율주행과 미래 모빌리티의 성공 조건으로 ‘사이버 보안’을 가장 중요하게 강조했다. 보안이 확보되지 않으면 차량 해킹뿐 아니라 오작동으로 인한 안전사고가 발생할 수 있기 때문이다. 아우토크립트는 V2X 통신 보안 인프라(PKI)와 침입탐지(IDS) 기술을 통해 차량 간·차량과 인프라 간 통신의 신뢰성을 확보하고 있으며, 자동차를 넘어 모빌리티와 피지컬 AI 전반의 보안 환경 구축을 목표로 하고 있다. 이에 본지는 2026 강릉 ITS 세계총회 현지에서 심상규 아우토크립트 CTO와 만나 자동차 보안의 미래에 대해 들어봤다. ■ ITS와 자율주행 기술이 빠르게 발전하고 있는데, 왜 지금 보안이 가장 중요한 이슈로 주목받고 있나 지금 자동차, 특히 자율주행차가 매우 중요한 분야로 떠오르고 있다.",
-      "keywords": [
-        "토크",
-        "통신"
-      ],
-      "rating": 2,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=23971",
-      "published": "2026-10-27T07:36:09+00:00"
     },
     {
       "category": "COMPONENTS",
