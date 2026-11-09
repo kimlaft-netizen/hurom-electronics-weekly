@@ -1,250 +1,481 @@
 {
-  "updated": "2026-11-02T01:47:22.117446+00:00",
-  "windowStart": "2026-10-26T01:47:22.117446+00:00",
-  "windowEnd": "2026-11-02T01:47:22.117446+00:00",
-  "issueTitle": "전장 기술 TOP 13",
-  "searchedCandidates": 25,
+  "updated": "2026-11-09T01:57:09.345436+00:00",
+  "windowStart": "2026-11-02T01:57:09.345436+00:00",
+  "windowEnd": "2026-11-09T01:57:09.345436+00:00",
+  "issueTitle": "전장 기술 TOP 27",
+  "searchedCandidates": 36,
   "languageBalance": {
-    "KR": 5,
-    "GLOBAL": 8
+    "KR": 10,
+    "GLOBAL": 17
   },
   "items": [
     {
-      "category": "COMPONENTS",
-      "title": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
-      "originalTitle": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 한국기계연구원이 200℃ 이하 산업용 열공정을 위한 친환경 열공급 통합 솔루션을 개발했다. 기존 화석연료 기반 설비를 고효율 시스템으로 전환할 수 있는 설계 플랫폼으로, 식품·화학·제지·섬유 산업의 탄소중립 전환을 지원한다. 열원 선정부터 배관 설계, 운전 최적화까지 통합 지원하는 기술로 산업의 상당한 에너지 소비 부분을 차지하는 저온 열공정 분야의 탄소감축을 실현한다. 한국기계연구원이 공장·데이터센터의 40℃ 저온 폐열을 냉방 에너지로 전환하는 차세대 히트펌프 시스템을 개발했다.",
-      "keywords": [
-        "회로",
-        "반도체",
-        "토크",
-        "센서"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=24021",
-      "published": "2026-11-02T00:41:00+00:00"
-    },
-    {
-      "category": "COMPONENTS",
-      "title": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
-      "originalTitle": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. ST마이크로일렉트로닉스가 에어컨·히트펌프·산업용 드라이브용 소형 지능형 전력모듈 SLLIMM 컴팩트 시리즈를 출시했다. 600V 3상 IGBT 인버터 브리지를 단일 패키지에 집적하면서 기존 DBC 기반 제품 대비 크기를 30% 이상 줄였다. STGI15C60S는 18.8×32.8mm 풋프린트에 완전한 3상 인버터 구현했으며, 저·중전력 모터 드라이브 설계에 최적화됐다. ST마이크로일렉트로닉스가 고도 측정과 50m 이상 수심 모니터링을 하나의 패키지에 통합한 LPS27DEWO MEMS 센서를 출시했다.",
-      "keywords": [
-        "모터",
-        "회로",
-        "토크",
-        "igbt",
-        "전력모듈",
-        "센서"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=24016",
-      "published": "2026-11-02T00:38:00+00:00"
-    },
-    {
       "category": "FIRMWARE",
-      "title": "A Game Engine For Microcontrollers",
-      "originalTitle": "A Game Engine For Microcontrollers",
-      "source": "Hackaday",
-      "sourceType": "기술 블로그",
-      "languageGroup": "GLOBAL",
-      "summary": "If you wanted to make a game that ran on a commodity microcontroller, you could be forgiven for not knowing where to start. Never fear, for [Fedyfausto] has just the setup to help you in your quest. (Assisted by whatever LLM helped him write all that code, that is.) It’s called Jet Studio, and it’s an open-source game editor that looks and works like Godot. In reality, it’s a Godot app with a C++ GDExtension, and it’s for making games that run on an Arduino Nano ESP32 or an STM32F746. Specifically, it’s intended for use with the commonly-available ILI9341 SPI LCD display.",
-      "keywords": [
-        "microcontroller",
-        "spi",
-        "stm32",
-        "lcd",
-        "display"
-      ],
-      "rating": 3,
-      "url": "https://hackaday.com/2026/11/01/a-game-engine-for-microcontrollers/",
-      "published": "2026-11-01T21:00:00+00:00"
-    },
-    {
-      "category": "AI",
-      "title": "From Data to Action: How Edge AI Is Transforming Industrial Automation",
-      "originalTitle": "From Data to Action: How Edge AI Is Transforming Industrial Automation",
-      "source": "Bisinfotech",
+      "title": "STM32G5: 2x the performance, unprecedented peripherals - our new flagship mixed-signal MCU for digital power and motor control",
+      "originalTitle": "STM32G5: 2x the performance, unprecedented peripherals - our new flagship mixed-signal MCU for digital power and motor control",
+      "source": "STMicroelectronics",
       "sourceType": "뉴스/검색",
       "languageGroup": "GLOBAL",
-      "summary": "By navigating our site, you agree to allow us to use cookies, in accordance with our Industrial automation is entering a new phase in which intelligence, connectivity, motion, and real-time data processing are no longer separate engineering disciplines. They are becoming parts of a tightly integrated operational system. As factories, warehouses, construction equipment, robots, and autonomous industrial vehicles become more software-defined, competitive advantage increasingly depends on how effectively these systems can sense conditions, interpret data, make decisions, and act—often within milliseconds. The next generation of industrial productivity will be built on the synergy between Edge AI, robust IoT connectivity, data, precision motor control, and high-speed resilient embedded networks. At the center of this transformation is , evolving in two complementary directions.",
-      "keywords": [
-        "motor",
-        "torque",
-        "sensor",
-        "communication",
-        "edge ai"
-      ],
-      "rating": 3,
-      "url": "https://www.bisinfotech.com/from-data-to-action-how-edge-ai-is-transforming-industrial-automation/",
-      "published": "2026-10-30T09:02:05+00:00"
-    },
-    {
-      "category": "FIRMWARE",
-      "title": "Design World presents the 2026 LEAP Awards Winners: Embedded Computing",
-      "originalTitle": "Design World presents the 2026 LEAP Awards Winners: Embedded Computing",
-      "source": "www.eeworldonline.com",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "recognize the engineering innovations shaping the future of design and technology across a range of categories. Each year, the awards bring together leading OEM design engineers and academics to form an independent judging panel that evaluates the submissions and selects the most outstanding solutions. The program reflects the innovation and expertise driving progress across the engineering community. This year’s winners in the Embedded Computing category highlight advances in energy-efficient processing, intelligent wireless connectivity, and AI-enabled motor control, showcasing technologies that are pushing the boundaries of embedded system performance to meet the evolving demands of connected devices and intelligent applications. Congratulations to the LEAP Awards for Embedded Computing winners, who are profiled here: Efficient Computer’s Electron E1 is redefining embedded computing b",
-      "keywords": [
-        "motor",
-        "embedded c",
-        "sensor",
-        "communication",
-        "artificial intelligence"
-      ],
-      "rating": 3,
-      "url": "https://www.eeworldonline.com/design-world-presents-the-2026-leap-awards-winners-embedded-computing/",
-      "published": "2026-10-30T08:32:45+00:00"
-    },
-    {
-      "category": "FIRMWARE",
-      "title": "An Attempt At A Useful Desktop OS For Microcontrollers",
-      "originalTitle": "An Attempt At A Useful Desktop OS For Microcontrollers",
-      "source": "Hackaday",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "We’re living at an interesting time here in 2026, when microcontrollers are becoming powerful enough to surpass the capabilities of “real” computers from a time when those real computers were starting to become useful. We’ve seen plenty of microcontrollers emulating machines from the 1990s, but what if instead they were giving all their power to the OS? It’s a question [Thomas] is trying to answer with SylphideOS, a general purpose GUI operating system aimed at multiple microcontroller platforms On the surface it has a GUI that appears to owe a lot to the early Macintosh machines, but underneath it has the FreeRTOS kernel, something that has been around for quite a while. You can argue among yourselves as to whether this make it an OS in its own right or a FreeRTOS distro. Aside from driving a screen through a framebuffer it also has the hardware interfaces you’d expect, for keyboard and",
+      "summary": ", a new series of mixed-signal microcontrollers that features an unprecedented level of analog and digital peripherals, including a 12-channel timer with a high resolution of 111 picoseconds, a new position encoder, an integrated Programmable Logic Array with 16 logic elements, and an analog-to-digital converter supporting 5 Megasamples per second, up from 4 Megasamples previously, among other things. The STM32G5 is a new solution for engineers working on high-power digital applications for data centers, sophisticated motor control systems for robots championing Physical AI, photovoltaic inverters, EV chargers, battery management systems, and other industrial applications. The STM32G5 thus becomes our new flagship mixed-signal MCU series for real-time digital power and high‑end motor control in AI servers and physical AI systems, helping developers design faster, scale confidently, and m",
       "keywords": [
         "motor",
         "mcu",
         "microcontroller",
-        "bootloader",
-        "display",
-        "connector"
+        "firmware",
+        "stm32"
       ],
-      "rating": 3,
-      "url": "https://hackaday.com/2026/10/29/an-attempt-at-a-useful-desktop-os-for-microcontrollers/",
-      "published": "2026-10-29T20:00:00+00:00"
-    },
-    {
-      "category": "AI",
-      "title": "Industrial Sensor Data to Operational Intelligence with Archetype AI on AWS",
-      "originalTitle": "Industrial Sensor Data to Operational Intelligence with Archetype AI on AWS",
-      "source": "Amazon Web Services (AWS)",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "AWS is the world's most comprehensive cloud, enabling organizations to accelerate innovation, reduce costs, and scale more efficiently Migrate to modernize → Modernize to unlock data → unlock data to run AI Get started with one of these featured services or browse all From startups to enterprises, find AWS solutions scaled to your needs. Access tailored resources, pricing models, and support levels. Industrial environments generate vast amounts of sensor data, but most of it remains underutilized. Deployed on AWS, Archetype AI’s Newton physical world model brings Physical AI to manufacturing, turning raw signals into real-time operational intelligence. The next wave of AI is moving beyond the digital realm and into the physical world.",
-      "keywords": [
-        "sensor",
-        "machine learning",
-        "predictive maintenance"
-      ],
-      "rating": 3,
-      "url": "https://aws.amazon.com/blogs/physical-ai/industrial-sensor-data-to-operational-intelligence-with-archetype-ai-on-aws/",
-      "published": "2026-10-28T17:16:32+00:00"
-    },
-    {
-      "category": "AI",
-      "title": "[2026 강릉 ITS 세계총회④]정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수), “AI·데이터·통신 기술 활용해 자율주행 안전 문제 해결해야”",
-      "originalTitle": "[2026 강릉 ITS 세계총회④]정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수), “AI·데이터·통신 기술 활용해 자율주행 안전 문제 해결해야”",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "[편집자주]2026 강릉 ITS 세계총회에서 만난 정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수)은 ITS의 가장 중요한 변화로 AI의 본격 도입을 꼽으며, 핵심 과제로 자율주행 고도화와 교차로 안전 향상을 제시했다. AI와 통신, 데이터 분석을 활용해 자율주행의 엣지 케이스와 안전 문제를 해결하는 것이 중요하다고 강조했다. 또한 한국 모빌리티 산업은 더 많은 데이터 확보와 글로벌 시장 진출이 필요하며, 자율주행·SDV·ITS를 결합해 안전성과 수출 경쟁력을 높여야 한다고 밝혔다. 이에 본지는 정구민 회장과 인터뷰를 통해 이번 세계 ITS 총회에서 주목해야 할 기술 트렌드와 한국 모빌리티 산업 발전을 위한 조언을 들어봤다. ■ 이번 세계 ITS 총회에서 가장 주목해야 할 기술 트렌드는 무엇이라고 보는지 결국 AI 기술이 본격적으로 ITS에 들어왔다는 점이 상당히 중요하고, 크게 두 가지를 봤으면 좋겠다.",
-      "keywords": [
-        "모터",
-        "반도체",
-        "토크",
-        "센서",
-        "통신"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=23993",
-      "published": "2026-10-28T07:34:00+00:00"
-    },
-    {
-      "category": "COMPONENTS",
-      "title": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
-      "originalTitle": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
-      "source": "e4ds news",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "[편집자주]아우토크립트 2026 강릉 ITS 세계총회에서 자율주행과 미래 모빌리티의 성공 조건으로 ‘사이버 보안’을 가장 중요하게 강조했다. 보안이 확보되지 않으면 차량 해킹뿐 아니라 오작동으로 인한 안전사고가 발생할 수 있기 때문이다. 아우토크립트는 V2X 통신 보안 인프라(PKI)와 침입탐지(IDS) 기술을 통해 차량 간·차량과 인프라 간 통신의 신뢰성을 확보하고 있으며, 자동차를 넘어 모빌리티와 피지컬 AI 전반의 보안 환경 구축을 목표로 하고 있다. 이에 본지는 2026 강릉 ITS 세계총회 현지에서 심상규 아우토크립트 CTO와 만나 자동차 보안의 미래에 대해 들어봤다. ■ ITS와 자율주행 기술이 빠르게 발전하고 있는데, 왜 지금 보안이 가장 중요한 이슈로 주목받고 있나 지금 자동차, 특히 자율주행차가 매우 중요한 분야로 떠오르고 있다.",
-      "keywords": [
-        "토크",
-        "센서",
-        "통신"
-      ],
-      "rating": 3,
-      "url": "https://www.e4ds.com/sub_view.asp?idx=23971",
-      "published": "2026-10-27T07:36:09+00:00"
-    },
-    {
-      "category": "EMI",
-      "title": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
-      "originalTitle": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
-      "source": "ACHR News",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "Jason Gildea, senior manager and Luc Mosca, global product manager, share insight about how AI demands increase cooling needs. As computing and processing demands grow with the rise of artificial intelligence (AI), the cooling needs in and other high-density computing facilities increase as well. From hyperscale data centers to high-density AI clusters, the growing power density of these facilities is generating more heat. This makes reliable and efficient cooling critical to help optimize performance and avoid costly slowdowns or downtime. Liquid cooling offers benefits for efficiency and performance compared to air-cooled systems in many of these applications.",
-      "keywords": [
-        "motor",
-        "emi",
-        "emc",
-        "conducted emission",
-        "sensor",
-        "communication"
-      ],
-      "rating": 3,
-      "url": "https://www.achrnews.com/articles/166792-how-emi-filtering-helps-reduce-unplanned-data-center-downtime",
-      "published": "2026-10-26T12:00:13+00:00"
-    },
-    {
-      "category": "COMPONENTS",
-      "title": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
-      "originalTitle": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
-      "source": "Renesas",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "GLOBAL",
-      "summary": "As smart home appliances and industrial systems become increasingly connected and feature-rich, the systems that drive them require high power efficiency and reliable operation at optimized costs. This is where the highly sustainable Renesas 16-bit MCUs play a very important role in these design priorities. As smart home and industrial applications become more capable, functions such as sensor monitoring, environmental control, and user interface management demand reliable, responsive operation. Designers must also minimize power consumption, control system costs, and support long product lifecycles. These requirements make 16-bit MCUs a critical foundation for delivering the right balance of performance, efficiency, and value.",
-      "keywords": [
-        "mcu",
-        "renesas",
-        "sensor",
-        "temperature sensor"
-      ],
-      "rating": 2,
-      "url": "https://www.renesas.com/en/blogs/why-16-bit-mcus-still-matter-smart-home-appliance-and-industrial-applications",
-      "published": "2026-10-28T02:03:47+00:00"
-    },
-    {
-      "category": "COMPONENTS",
-      "title": "ST, 게이트 드라이버 통합형 전력 반도체 ‘MasterGaN7’ 출시… 전원공급장치 초소형·고효율화 선도",
-      "originalTitle": "ST, 게이트 드라이버 통합형 전력 반도체 ‘MasterGaN7’ 출시… 전원공급장치 초소형·고효율화 선도",
-      "source": "아이씨엔매거진",
-      "sourceType": "뉴스/검색",
-      "languageGroup": "KR",
-      "summary": "아이씨엔매거진",
-      "keywords": [
-        "전원",
-        "반도체"
-      ],
-      "rating": 2,
-      "url": "https://icnweb.kr/2026/81838/st-%EA%B2%8C%EC%9D%B4%ED%8A%B8-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%ED%86%B5%ED%95%A9%ED%98%95-%EC%A0%84%EB%A0%A5-%EB%B0%98%EB%8F%84%EC%B2%B4-mastergan7-%EC%B6%9C%EC%8B%9C/",
-      "published": "2026-10-26T03:38:10+00:00"
+      "rating": 5,
+      "url": "https://blog.st.com/stm32g5/",
+      "published": "2026-11-03T16:00:00+00:00"
     },
     {
       "category": "MOTOR",
-      "title": "Motor Monitoring Market to Reach US$6.1 Billion at 10.1% CAGR | Persistence Market Research",
-      "originalTitle": "Motor Monitoring Market to Reach US$6.1 Billion at 10.1% CAGR | Persistence Market Research",
-      "source": "openPR.com",
+      "title": "Renesas RZ/T2N MPU Combines Motor Control and Industrial Ethernet",
+      "originalTitle": "Renesas RZ/T2N MPU Combines Motor Control and Industrial Ethernet",
+      "source": "Electronics Media",
       "sourceType": "뉴스/검색",
       "languageGroup": "GLOBAL",
-      "summary": "openPR.com",
+      "summary": "Renesas Electronics Corporation (TSE:6723), a premier supplier of advanced semiconductor solutions, today introduced the RZ/T2N, a 64-bit microprocessor (MPU) that combines high-precision real-time motor control, industrial Ethernet and application processing on a single chip. With fewer components, engineers can save board space and BOM cost, simplify their designs and shorten development time for a broad range of industrial applications. Because the RZ/T2N can act as either a network controller or a device, engineers can develop articulated robots, multi-axis servos and programmable logic controllers (PLCs) on one platform and reuse their designs across products. The RZ/T2N has dual Arm® Cortex®-A55 cores (up to 1.2 GHz) for application processing and two Cortex-R52 cores (up to 800 MHz) for real-time processing. It supports major industrial Ethernet protocols, including EtherCAT®, PRO",
+      "keywords": [
+        "motor",
+        "firmware",
+        "renesas",
+        "switch",
+        "communication",
+        "edge ai"
+      ],
+      "rating": 4,
+      "url": "https://www.electronicsmedia.info/2026/11/06/renesas-rz-t2n-mpu/",
+      "published": "2026-11-06T04:14:27+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "ST, 새 MCU 제품군 ‘STM32A’로 자동차·안전 필수 시스템까지 확대",
+      "originalTitle": "ST, 새 MCU 제품군 ‘STM32A’로 자동차·안전 필수 시스템까지 확대",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "ST마이크로일렉트로닉스(STMicroelectronics)가 산업용과 자동차, 로보틱스 시장을 아우르는 통합 마이크로컨트롤러(MCU) 플랫폼 전략을 발표하며 피지컬 AI 시대에 대응한다. ST는 ‘STM32 Summit 2026’에서 산업·자동차·로보틱스 애플리케이션 전반에 걸쳐 아키텍처와 IP, 소프트웨어, 개발 툴을 공유할 수 있는 통합 STM32 플랫폼을 공개했다고 밝혔다. 회사는 이를 통해 소프트웨어 정의 시스템과 피지컬 AI 환경에서 개발 효율성을 높이고, 개발 기간 단축과 자산 재사용 확대를 지원한다는 계획이다. 최근 산업 자동화와 자동차 전장 시스템은 실시간 제어와 기능 안전, 보안, 커넥티비티, AI 처리 기능 등 공통 요구사항이 확대되고 있다. ST는 통합 STM32 플랫폼을 통해 MCU 제품군 간 소프트웨어와 설계 자산을 재사용할 수 있도록 지원한다.",
+      "keywords": [
+        "모터",
+        "mcu",
+        "stm32",
+        "회로",
+        "전원",
+        "토크"
+      ],
+      "rating": 4,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24058",
+      "published": "2026-11-06T00:57:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "파워넷, 가전 중심 사업구조 다변화…로봇 모터·구동모듈 시장 진출",
+      "originalTitle": "파워넷, 가전 중심 사업구조 다변화…로봇 모터·구동모듈 시장 진출",
+      "source": "톱데일리",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "코스닥 상장사 파워넷이 기존 가전사업에서 확보한 생산·기술 역량을 로봇 부품 분야로 확장한다. 중국 모터 전문기업 COSTR와 손잡고 가전제품에 사용되는 모터부터 사업화를 추진한 뒤 산업용 로봇 구동장치까지 제품군을 확대한다는 계획이다. 파워넷은 경기 고양시 킨텍스에서 진행 중인 '2026 로보월드'에 참가해 브러시리스 직류(BLDC) 모터와 액추에이터를 전시한다고 5일 밝혔다. 지난 4일 개막한 행사는 오는 7일까지 진행된다. 이번에 공개한 BLDC 모터는 기계식 브러시 대신 전자회로를 이용해 회전을 제어하는 방식이 적용됐다.",
+      "keywords": [
+        "bldc",
+        "모터",
+        "회로",
+        "전원",
+        "가전",
+        "감속기"
+      ],
+      "rating": 4,
+      "url": "https://www.topdaily.kr/articles/112717",
+      "published": "2026-11-05T01:01:00+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "Arm® Cortex®-M0+ MCU 설계 및 개발",
+      "originalTitle": "Arm® Cortex®-M0+ MCU 설계 및 개발",
+      "source": "Texas Instruments",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "프로그래밍 언어나 IDE 없이 몇 분 안에 애플리케이션 코드를 구성, 개발 및 플래싱할 수 있습니다. 이해하기 쉬운 기능 블록을 사용하여 애플리케이션 코드를 만드세요. 예제 코드, 드라이버, MSP 서브 시스템 및 문서가 포함된 한 곳에서 MSPM0 프로젝트를 시작하세요. StartHub를 이용하면 컴파일러나 IDE 종류와 관계없이 더 빠른 속도로 소프트웨어를 개발할 수 있습니다. 장치를 선택한 다음 최종 장치, 기술, 운영 체제 등을 기준으로 코드를 필터링하세요.",
+      "keywords": [
+        "모터",
+        "driver",
+        "mcu",
+        "microcontroller",
+        "펌웨어"
+      ],
+      "rating": 3,
+      "url": "https://www.ti.com/ko-kr/design-development/embedded-development/arm-cortex-m0-mcus",
+      "published": "2026-11-06T20:38:04+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "TI, 업계 최소형 멀티 프로토콜 통신 모듈로 산업용 이더넷·IO-Link 통합 지원",
+      "originalTitle": "TI, 업계 최소형 멀티 프로토콜 통신 모듈로 산업용 이더넷·IO-Link 통합 지원",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "텍사스 인스트루먼트(TI)가 공장 자동화와 산업용 사물인터넷(IIoT) 환경에서 다양한 산업용 통신 프로토콜을 손쉽게 구현할 수 있는 신규 솔루션 2종을 공개했다. TI는 6일 멀티 프로토콜 통신 SoM(System on Module)과 IO-Link 마스터 제품을 발표하며 산업용 통신 포트폴리오를 확대한다고 밝혔다. 새 제품은 산업용 이더넷과 현장 센서 네트워크를 하나의 플랫폼에서 통합할 수 있도록 설계됐으며, 커넥티드 팩토리 구현 과정에서 발생하는 설계 복잡성과 개발 비용을 줄이는 데 초점을 맞췄다. TI가 공개한 TICS100MOD는 AM2612 MCU와 DP83826AI PHY를 기반으로 개발된 멀티 프로토콜 산업용 통신 SoM이다. 이 제품은 단일 하드웨어에서 EtherCAT, EtherNet/IP, PROFINET 등 주요 실시간 산업용 이더넷 프로토콜을 지원한다.",
+      "keywords": [
+        "모터",
+        "mcu",
+        "펌웨어",
+        "전원",
+        "반도체",
+        "토크"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24061",
+      "published": "2026-11-06T02:59:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "욕실 환기가전 온풍 경쟁…설치 편의성, 원격제어 특화 기능으로 신규 시장 공략",
+      "originalTitle": "욕실 환기가전 온풍 경쟁…설치 편의성, 원격제어 특화 기능으로 신규 시장 공략",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "가전 업체가 기존 욕실 환풍기에 온풍 등 다양한 기능을 결합한 환기가전으로 시장 공략을 시작했다. 새로운 환기 가전은 설치 편의성과 가격 경쟁력, 스마트홈 원격제어 기능 등을 차별화 요소로 내세우고 있다. LG전자는 욕실 환기 시스템의 온풍 기능을 원격제어하기 위한 규제샌드박스 실증특례를 확보했다. 1월 출시한 욕실 환풍기 '퓨리케어 바스에어시스템'을 LG씽큐(ThinQ) 앱과 연동해 온풍 기능을 원격으로 제어하는 방식이다. 그동안 온풍 기능은 화재 방지 등의 이유로 리모컨을 통해서만 제어가 가능했다.",
+      "keywords": [
+        "bldc",
+        "모터",
+        "가전",
+        "인공지능"
+      ],
+      "rating": 3,
+      "url": "https://www.etnews.com/20261105000199",
+      "published": "2026-11-05T07:00:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "파워넷, 로봇 핵심 구동모듈 사업 본격화…모터·액추에이터 상용화 추진",
+      "originalTitle": "파워넷, 로봇 핵심 구동모듈 사업 본격화…모터·액추에이터 상용화 추진",
+      "source": "이투데이",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "전원공급장치 전문기업 파워넷이 로봇 구동모듈을 새로운 성장사업으로 육성한다. 기존 전력전자와 배터리 기술에 로봇 모션제어 전문기업의 모터·액추에이터 기술을 접목해 가전·산업용 제품부터 협동로봇과 휴머노이드까지 사업 영역을 단계적으로 확대할 계획이다. 파워넷은 경기도 고양시 킨텍스에서 열리는 '2026 로보월드'에 참가해 로봇 모션제어 전문기업 코스트알(COSTR)과 공동으로 추진하는 로봇 구동 솔루션을 선보였다고 5일 밝혔다. 4일부터 7일까지 진행되는 이번 전시회에서 파워넷은 브러시리스 직류(BLDC) 모터와 액추에이터 등 로봇의 움직임을 제어하는 핵심 부품을 소개했다. 이를 통해 관련 기술의 사업화 가능성을 알리고 신규 고객사 확보에 나선다는 방침이다.",
+      "keywords": [
+        "bldc",
+        "모터",
+        "회로",
+        "전원",
+        "가전",
+        "통신"
+      ],
+      "rating": 3,
+      "url": "https://www.etoday.co.kr/news/view/2644343",
+      "published": "2026-11-04T23:28:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "Using A Cheap DC Motor To Make A Go-Kart Go",
+      "originalTitle": "Using A Cheap DC Motor To Make A Go-Kart Go",
+      "source": "Hackaday",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Where Archimedes said that he could move the Earth given a large enough lever and a suitable fulcrum, [Current Concept] decided that he could give his own spin on this quote by swapping the lever and fulcrum for a tiny $1 DC brushed motor and a very large gearing ratio In addition to 3D printing a compound gearbox with the requisite 1,243:1 gear ratio, the video also covers the joys of getting a ‘Craigslist special’ go-kart for about the same price as the electric motor and having to undo many very special modifications. With that done, the newly printed gearbox was installed, along with the single DC motor to drive it all. This actually managed to propel the go-kart, at a pace that would impress even a snail, so for the next phase instead of a single motor a total of fourteen were used, all adding their tiny bit of torque into the gearbox. Although one has to keep in mind that the gearb",
+      "keywords": [
+        "bldc",
+        "motor",
+        "torque",
+        "gearbox",
+        "speed control"
+      ],
+      "rating": 3,
+      "url": "https://hackaday.com/2026/11/04/using-a-cheap-dc-motor-to-make-a-go-kart-go/",
+      "published": "2026-11-04T16:30:00+00:00"
+    },
+    {
+      "category": "AI",
+      "title": "ST, “STM32 통합 플랫폼 전략으로 피지컬 AI 시대 주도”",
+      "originalTitle": "ST, “STM32 통합 플랫폼 전략으로 피지컬 AI 시대 주도”",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "자동차와 산업 자동화, 로보틱스의 경계가 허물어지는 ‘기술 융합(Technology Convergence)’ 시대에 ST마이크로일렉트로닉스가 MCU(마이크로컨트롤러) 중심 전략을 플랫폼 중심 전략으로 전환한다. ST는 피지컬 AI(Physical AI) 확산에 대응해 산업·자동차·로보틱스 분야를 하나의 개발 환경으로 묶는 통합 STM32 플랫폼을 구축하고, 이를 통해 개발 기간 단축과 소프트웨어 재사용성 확대에 나선다는 청사진을 제시했다. ST마이크로일렉트로닉스는 3일 온라인 미디어 브리핑을 열고 ‘Enter the Convergence Era: Unlock Physical AI with STM32’를 주제로 향후 STM32 전략과 신제품, AI 개발 생태계 로드맵을 공개했다. 발표를 맡은 레미 엘 우아잔(Remi El-Ouazzane) ST 마이크로컨트롤러·디지털 IC·RF 제품 그룹 사장은 “자동차와 산업, 로보틱스 시스템은 AI와 보안, 안전성, 연결성, 센싱, 제어 등 공통 기술 요구사항을 공유하는 방향으로 진화하고 있다”며 “가치는 개별 MCU보다 이를 둘러싼 플랫폼으로 이동하고 있다”고 강조했다. 피지컬 AI는 단순히 데이터를 분석하는 AI를 넘어 실제 세계를 인지하고(perceive), 판단하며(decide), 물리적으로 행동(act)하는 시스템을 의미한다.",
+      "keywords": [
+        "bldc",
+        "pmsm",
+        "모터",
+        "mcu",
+        "펌웨어",
+        "stm32"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24034",
+      "published": "2026-11-03T22:14:41+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "STM32H7P: the 1st Cortex-M7 with ST's Neural-ART NPU and a Hardware Signal Processor, with no price increase",
+      "originalTitle": "STM32H7P: the 1st Cortex-M7 with ST's Neural-ART NPU and a Hardware Signal Processor, with no price increase",
+      "source": "STMicroelectronics",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "The STM32H7P is our first STM32 MCU to come with a hardware signal processor and a Neural-ART NPU, thus ensuring significant performance gains in intelligence and real-time control applications. It’s also our fastest STM32H7 with at least 1 MB of flash, since it runs at 520 MHz. It features up to 320 KB of Tightly-Coupled RAM, 192 KB of which is for instructions, ensuring deterministic execution of real-time code. Additionally, new timers open the door to digital power applications, while LQFP exposed pad packages help tailor systems for various industrial mission profiles. Despite all this, the STM32H7 has a similar unit price as the STM32H72x/3x series, thus seriously boosting the series’ price-per-performance ratio.",
+      "keywords": [
+        "motor",
+        "mcu",
+        "microcontroller",
+        "stm32",
+        "switch",
+        "edge ai"
+      ],
+      "rating": 3,
+      "url": "https://blog.st.com/stm32h7p/",
+      "published": "2026-11-03T16:00:00+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "TDK Introduces New Dual-die, Stray-field Robust Motor Position Sensor for ASIL D Fail Operational Applications",
+      "originalTitle": "TDK Introduces New Dual-die, Stray-field Robust Motor Position Sensor for ASIL D Fail Operational Applications",
+      "source": "NewswireToday",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "NewswireToday",
+      "keywords": [
+        "motor",
+        "sensor",
+        "position sensor"
+      ],
+      "rating": 3,
+      "url": "https://www.newswiretoday.com/news/187057/TDK-Introduces-New-Dual-die-Stray-field-Robust-Motor-Position-Sensor-for-ASIL-D-Fail-Operational-Applications/",
+      "published": "2026-11-03T02:31:47+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "모터센스, 이파피루스 사업부서 독립 법인으로 출범",
+      "originalTitle": "모터센스, 이파피루스 사업부서 독립 법인으로 출범",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 텍사스 인스트루먼트가 단일 하드웨어에서 복수의 산업용 이더넷 프로토콜을 지원하는 멀티 프로토콜 통신 SoM ‘TICS100MOD’와 듀얼 채널 IO-Link 마스터 ‘TIOM2212’를 출시했다. 펌웨어 업데이트만으로 EtherCAT, EtherNet/IP, PROFINET을 전환할 수 있어 하드웨어 재설계 없이 설계 기간과 비용을 단축할 수 있다. PRU-ICSS 기술을 기반으로 실시간 통신 처리를 전담하는 구조로 전체 시스템 성능을 향상시킨다. 한국재료연구원이 수출형 장갑차 구동계 핵심 부품의 국산화를 위해 클러스터형 소재 기술지원을 추진한다.",
+      "keywords": [
+        "모터",
+        "펌웨어",
+        "토크",
+        "머신러닝",
+        "통신"
+      ],
+      "rating": 3,
+      "url": "https://www.e4ds.com/sub_view.asp?idx=24025",
+      "published": "2026-11-02T06:43:00+00:00"
+    },
+    {
+      "category": "EMI",
+      "title": "emi filtering - Will it help stopping ~100MHz EMI from going to the cable?",
+      "originalTitle": "emi filtering - Will it help stopping ~100MHz EMI from going to the cable?",
+      "source": "Electrical Engineering Stack Exchange",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Electrical Engineering Stack Exchange",
+      "keywords": [
+        "emi",
+        "cable"
+      ],
+      "rating": 2,
+      "url": "https://electronics.stackexchange.com/questions/772993/will-it-help-stopping-100mhz-emi-from-going-to-the-cable",
+      "published": "2026-11-08T22:21:13+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "BLDC 모터 제어 디자인의 단순화",
+      "originalTitle": "BLDC 모터 제어 디자인의 단순화",
+      "source": "e4ds news",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "당 매체는 독자와 취재원 등 뉴스이용자의 권리 보장을 위해 반론이나 정정보도, 추후보도를 요청할 수 있는 창구를 열어두고 있음을 알려드립니다. 고충처리인 강정규 070-4699-5321 , news@e4ds.com (주)채널5코리아 | 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 | 사업자등록번호 : 113-86-36448 | 대표자 : 명세환 청소년보호책임자 : 장은성 | 발행인, 편집인 : 명세환 | 전화 : 02-866-9957 등록번호 : 서울특별시 아 01366 | 등록일 : 2010년 10월 40일 | 제보메일 : news@e4ds.com 본 콘텐츠의 저작권은 e4ds 뉴스 또는 제공처에 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다 (주)채널5코리아 · 서울 금천구 디지털로 178 가산퍼블릭 A동 1824호 청소년보호책임자 장은성 · 발행인, 편집인 명세환 · 전화 02-866-9957 등록번호 서울특별시 아 01366 · 등록일 2010년 10월 40일",
+      "keywords": [
+        "bldc",
+        "모터"
+      ],
+      "rating": 2,
+      "url": "https://www.e4ds.com/webinar_qna.asp?page=6&idx=121&sWrd=",
+      "published": "2026-11-06T08:01:48+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "How to Balance Advanced Robot Control and Compact Design",
+      "originalTitle": "How to Balance Advanced Robot Control and Compact Design",
+      "source": "Renesas",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "The widespread use of robots has led to increasing demand for smaller and lighter robot controllers and servo drives, making it a major challenge to achieve both high system performance and compact size. Collaborative robots (cobots) and small industrial robots that work alongside humans have become increasingly common, resulting in a growing demand for smaller and lighter robot controllers and servo drives. However, this presents major challenges in balancing high system performance with compact design. Industrial robots require not only high-speed and highly precise synchronized control of multiple axes, but also industrial Ethernet connectivity to higher-level controllers and compliance with functional safety standards. To meet these demands, conventional systems are typically configured to combine multiple devices, including a high-performance processor (MPU) for motion control, micr",
+      "keywords": [
+        "motor",
+        "microcontroller",
+        "pwm",
+        "renesas",
+        "torque",
+        "led"
+      ],
+      "rating": 2,
+      "url": "https://www.renesas.com/en/blogs/how-balance-advanced-robot-control-and-compact-design",
+      "published": "2026-11-05T00:05:15+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "스마트 eFuse 고압측 스위치",
+      "originalTitle": "스마트 eFuse 고압측 스위치",
+      "source": "Texas Instruments",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Texas Instruments",
+      "keywords": [
+        "스위치"
+      ],
+      "rating": 1,
+      "url": "https://www.ti.com/ko-kr/product-category/power-management/high-side-switches-controllers/smart-efuse/products",
+      "published": "2026-11-07T22:41:23+00:00"
+    },
+    {
+      "category": "SMPS",
+      "title": "AC/DC 스위칭 레귤레이터",
+      "originalTitle": "AC/DC 스위칭 레귤레이터",
+      "source": "Texas Instruments",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Texas Instruments",
+      "keywords": [
+        "ac/dc"
+      ],
+      "rating": 1,
+      "url": "https://www.ti.com/ko-kr/product-category/power-management/offline-isolated-dcdc-controllers-converters/isolated-dcdc-converters-modules/products",
+      "published": "2026-11-06T23:52:15+00:00"
+    },
+    {
+      "category": "FIRMWARE",
+      "title": "절연 ADC",
+      "originalTitle": "절연 ADC",
+      "source": "Texas Instruments",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Texas Instruments",
+      "keywords": [
+        "adc"
+      ],
+      "rating": 1,
+      "url": "https://www.ti.com/ko-kr/product-category/isolation/isolated-adcs/products",
+      "published": "2026-11-06T21:41:38+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "BLDC 드라이버",
+      "originalTitle": "BLDC 드라이버",
+      "source": "Texas Instruments",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Texas Instruments",
+      "keywords": [
+        "bldc"
+      ],
+      "rating": 1,
+      "url": "https://www.ti.com/ko-kr/product-category/motor-drivers/brushless-dc/bldc/products",
+      "published": "2026-11-06T21:41:37+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "circuit design - Schematic Review For A MAX7219 display with ESP32",
+      "originalTitle": "circuit design - Schematic Review For A MAX7219 display with ESP32",
+      "source": "Electrical Engineering Stack Exchange",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Electrical Engineering Stack Exchange",
+      "keywords": [
+        "display"
+      ],
+      "rating": 1,
+      "url": "https://electronics.stackexchange.com/questions/772963/schematic-review-for-a-max7219-display-with-esp32",
+      "published": "2026-11-06T13:47:16+00:00"
+    },
+    {
+      "category": "COMPONENTS",
+      "title": "Allegro, 자동차 12V·48V 전환용 반도체 제품군 출시",
+      "originalTitle": "Allegro, 자동차 12V·48V 전환용 반도체 제품군 출시",
+      "source": "Investing.com 한국어",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "Investing.com 한국어",
+      "keywords": [
+        "반도체"
+      ],
+      "rating": 1,
+      "url": "https://kr.investing.com/news/company-news/article-93CH-2162041",
+      "published": "2026-11-05T14:09:00+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "Intelligent Motor Management Systems: Schneider Electric Adds Predictive Diagnostics…",
+      "originalTitle": "Intelligent Motor Management Systems: Schneider Electric Adds Predictive Diagnostics…",
+      "source": "Trend Hunter",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Trend Hunter",
       "keywords": [
         "motor"
       ],
       "rating": 1,
-      "url": "https://www.openpr.com/news/4677066/motor-monitoring-market-to-reach-us-6-1-billion-at-10-1-cagr",
-      "published": "2026-10-30T05:02:13+00:00"
+      "url": "https://www.trendhunter.com/trends/intelligent-motor-management-systems",
+      "published": "2026-11-04T20:00:43+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "Newest 'pcb' Questions",
+      "originalTitle": "Newest 'pcb' Questions",
+      "source": "Electrical Engineering Stack Exchange",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Electrical Engineering Stack Exchange",
+      "keywords": [
+        "pcb"
+      ],
+      "rating": 1,
+      "url": "https://electronics.stackexchange.com/questions/tagged/pcb?tab=Newest",
+      "published": "2026-11-04T16:02:52+00:00"
+    },
+    {
+      "category": "AI",
+      "title": "Every Autonomous AI Chip Needs a Safety Control Unit",
+      "originalTitle": "Every Autonomous AI Chip Needs a Safety Control Unit",
+      "source": "Communications of the ACM",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Communications of the ACM",
+      "keywords": [
+        "communication"
+      ],
+      "rating": 1,
+      "url": "https://cacm.acm.org/blogcacm/every-autonomous-ai-chip-needs-a-safety-control-unit/",
+      "published": "2026-11-03T19:02:43+00:00"
+    },
+    {
+      "category": "MOTOR",
+      "title": "Tata Motors Completes Iveco Group Acquisition, Gains Controlling Stake in Italian Truck Maker- Expert View by Spherical Insights",
+      "originalTitle": "Tata Motors Completes Iveco Group Acquisition, Gains Controlling Stake in Italian Truck Maker- Expert View by Spherical Insights",
+      "source": "Spherical Insights",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "GLOBAL",
+      "summary": "Tata Motors' acquisition of Iveco Group strengthens its global commercial vehicle presence, expands access to European truck and bus technologies, and creates opportunities in electric mobility, advanced powertrains, manufacturing integration and international transportation markets. Tata Motors has strengthened its position in the global commercial vehicle industry following the completion of the initial settlement of its acquisition of Italian automotive manufacturer Iveco Group on October 30, 2026. Through its indirect wholly owned subsidiary, TML CV Holdings B.V., Tata Motors acquired 238.16 million shares, representing approximately 89.42% of Iveco Group's common share capital, at a cash offer price of US$16.56 per share (equivalent to €14.40). The transaction brought Iveco Group under Tata Motors' control and expanded its international commercial vehicle operations.",
+      "keywords": [
+        "motor"
+      ],
+      "rating": 1,
+      "url": "https://www.sphericalinsights.com/blogs/tata-motors-completes-iveco-group-acquisition-gains-controlling-stake-in-italian-truck-maker",
+      "published": "2026-11-03T08:00:00+00:00"
+    },
+    {
+      "category": "CIRCUIT",
+      "title": "한국의결권자문, 고종성·김성연·박종철 이사 후보 전원 찬성 권고",
+      "originalTitle": "한국의결권자문, 고종성·김성연·박종철 이사 후보 전원 찬성 권고",
+      "source": "전자신문",
+      "sourceType": "뉴스/검색",
+      "languageGroup": "KR",
+      "summary": "한국의결권자문이 오스코텍 최대주주의 이사회 합류가 제노스코 완전자회사화와 주주가치 제고의 계기가 될 것으로 전망했다. 한국의결권자문은 2일 의안분석보고서에서 지난 7월 최대주주가 창업주 고(故) 김정근 회장에서 김성연 씨 및 특별관계자(지분 12.45%)로 바뀌면서 오스코텍이 신약개발 기업으로 지속 성장할 지배구조 안정화의 기반이 마련됐다는 평가를 소개했다. 김성연 후보가 제노스코의 최대주주이기도 한 만큼 완전자회사화 추진에 기여하고, 이를 통해 오스코텍 일반주주의 주주가치도 높아질 것으로 내다봤다. 보고서는 IBK투자증권 분석을 근거로 제시했다. 제노스코가 완전자회사로 편입되면 레이저티닙 기술료 중 오스코텍 주주에게 돌아가는 실질 귀속률이 31.9%에서 40% 수준으로 오른다.",
+      "keywords": [
+        "전원"
+      ],
+      "rating": 1,
+      "url": "https://www.etnews.com/20261103000228",
+      "published": "2026-11-03T04:43:00+00:00"
     }
   ]
 }

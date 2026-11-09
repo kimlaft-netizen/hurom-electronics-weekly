@@ -1,6 +1,250 @@
 {
   "weeks": [
     {
+      "week": "2026-11-02",
+      "updated": "2026-11-02T01:47:22.117446+00:00",
+      "issueTitle": "전장 기술 TOP 13",
+      "items": [
+        {
+          "category": "COMPONENTS",
+          "title": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
+          "originalTitle": "기계연, 친환경 질소 냉매 반도체 극저온 칠러 개발",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. 한국기계연구원이 200℃ 이하 산업용 열공정을 위한 친환경 열공급 통합 솔루션을 개발했다. 기존 화석연료 기반 설비를 고효율 시스템으로 전환할 수 있는 설계 플랫폼으로, 식품·화학·제지·섬유 산업의 탄소중립 전환을 지원한다. 열원 선정부터 배관 설계, 운전 최적화까지 통합 지원하는 기술로 산업의 상당한 에너지 소비 부분을 차지하는 저온 열공정 분야의 탄소감축을 실현한다. 한국기계연구원이 공장·데이터센터의 40℃ 저온 폐열을 냉방 에너지로 전환하는 차세대 히트펌프 시스템을 개발했다.",
+          "keywords": [
+            "회로",
+            "반도체",
+            "토크",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=24021",
+          "published": "2026-11-02T00:41:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
+          "originalTitle": "ST, 매스마켓용 자동차 안전 통합 센서 4종 출시",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "이 기사와 관련해 알려주실 내용이 있으면 남겨 주세요. ST마이크로일렉트로닉스가 에어컨·히트펌프·산업용 드라이브용 소형 지능형 전력모듈 SLLIMM 컴팩트 시리즈를 출시했다. 600V 3상 IGBT 인버터 브리지를 단일 패키지에 집적하면서 기존 DBC 기반 제품 대비 크기를 30% 이상 줄였다. STGI15C60S는 18.8×32.8mm 풋프린트에 완전한 3상 인버터 구현했으며, 저·중전력 모터 드라이브 설계에 최적화됐다. ST마이크로일렉트로닉스가 고도 측정과 50m 이상 수심 모니터링을 하나의 패키지에 통합한 LPS27DEWO MEMS 센서를 출시했다.",
+          "keywords": [
+            "모터",
+            "회로",
+            "토크",
+            "igbt",
+            "전력모듈",
+            "센서"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=24016",
+          "published": "2026-11-02T00:38:00+00:00"
+        },
+        {
+          "category": "FIRMWARE",
+          "title": "A Game Engine For Microcontrollers",
+          "originalTitle": "A Game Engine For Microcontrollers",
+          "source": "Hackaday",
+          "sourceType": "기술 블로그",
+          "languageGroup": "GLOBAL",
+          "summary": "If you wanted to make a game that ran on a commodity microcontroller, you could be forgiven for not knowing where to start. Never fear, for [Fedyfausto] has just the setup to help you in your quest. (Assisted by whatever LLM helped him write all that code, that is.) It’s called Jet Studio, and it’s an open-source game editor that looks and works like Godot. In reality, it’s a Godot app with a C++ GDExtension, and it’s for making games that run on an Arduino Nano ESP32 or an STM32F746. Specifically, it’s intended for use with the commonly-available ILI9341 SPI LCD display.",
+          "keywords": [
+            "microcontroller",
+            "spi",
+            "stm32",
+            "lcd",
+            "display"
+          ],
+          "rating": 3,
+          "url": "https://hackaday.com/2026/11/01/a-game-engine-for-microcontrollers/",
+          "published": "2026-11-01T21:00:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "From Data to Action: How Edge AI Is Transforming Industrial Automation",
+          "originalTitle": "From Data to Action: How Edge AI Is Transforming Industrial Automation",
+          "source": "Bisinfotech",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "By navigating our site, you agree to allow us to use cookies, in accordance with our Industrial automation is entering a new phase in which intelligence, connectivity, motion, and real-time data processing are no longer separate engineering disciplines. They are becoming parts of a tightly integrated operational system. As factories, warehouses, construction equipment, robots, and autonomous industrial vehicles become more software-defined, competitive advantage increasingly depends on how effectively these systems can sense conditions, interpret data, make decisions, and act—often within milliseconds. The next generation of industrial productivity will be built on the synergy between Edge AI, robust IoT connectivity, data, precision motor control, and high-speed resilient embedded networks. At the center of this transformation is , evolving in two complementary directions.",
+          "keywords": [
+            "motor",
+            "torque",
+            "sensor",
+            "communication",
+            "edge ai"
+          ],
+          "rating": 3,
+          "url": "https://www.bisinfotech.com/from-data-to-action-how-edge-ai-is-transforming-industrial-automation/",
+          "published": "2026-10-30T09:02:05+00:00"
+        },
+        {
+          "category": "FIRMWARE",
+          "title": "Design World presents the 2026 LEAP Awards Winners: Embedded Computing",
+          "originalTitle": "Design World presents the 2026 LEAP Awards Winners: Embedded Computing",
+          "source": "www.eeworldonline.com",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "recognize the engineering innovations shaping the future of design and technology across a range of categories. Each year, the awards bring together leading OEM design engineers and academics to form an independent judging panel that evaluates the submissions and selects the most outstanding solutions. The program reflects the innovation and expertise driving progress across the engineering community. This year’s winners in the Embedded Computing category highlight advances in energy-efficient processing, intelligent wireless connectivity, and AI-enabled motor control, showcasing technologies that are pushing the boundaries of embedded system performance to meet the evolving demands of connected devices and intelligent applications. Congratulations to the LEAP Awards for Embedded Computing winners, who are profiled here: Efficient Computer’s Electron E1 is redefining embedded computing b",
+          "keywords": [
+            "motor",
+            "embedded c",
+            "sensor",
+            "communication",
+            "artificial intelligence"
+          ],
+          "rating": 3,
+          "url": "https://www.eeworldonline.com/design-world-presents-the-2026-leap-awards-winners-embedded-computing/",
+          "published": "2026-10-30T08:32:45+00:00"
+        },
+        {
+          "category": "FIRMWARE",
+          "title": "An Attempt At A Useful Desktop OS For Microcontrollers",
+          "originalTitle": "An Attempt At A Useful Desktop OS For Microcontrollers",
+          "source": "Hackaday",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "We’re living at an interesting time here in 2026, when microcontrollers are becoming powerful enough to surpass the capabilities of “real” computers from a time when those real computers were starting to become useful. We’ve seen plenty of microcontrollers emulating machines from the 1990s, but what if instead they were giving all their power to the OS? It’s a question [Thomas] is trying to answer with SylphideOS, a general purpose GUI operating system aimed at multiple microcontroller platforms On the surface it has a GUI that appears to owe a lot to the early Macintosh machines, but underneath it has the FreeRTOS kernel, something that has been around for quite a while. You can argue among yourselves as to whether this make it an OS in its own right or a FreeRTOS distro. Aside from driving a screen through a framebuffer it also has the hardware interfaces you’d expect, for keyboard and",
+          "keywords": [
+            "motor",
+            "mcu",
+            "microcontroller",
+            "bootloader",
+            "display",
+            "connector"
+          ],
+          "rating": 3,
+          "url": "https://hackaday.com/2026/10/29/an-attempt-at-a-useful-desktop-os-for-microcontrollers/",
+          "published": "2026-10-29T20:00:00+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "Industrial Sensor Data to Operational Intelligence with Archetype AI on AWS",
+          "originalTitle": "Industrial Sensor Data to Operational Intelligence with Archetype AI on AWS",
+          "source": "Amazon Web Services (AWS)",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "AWS is the world's most comprehensive cloud, enabling organizations to accelerate innovation, reduce costs, and scale more efficiently Migrate to modernize → Modernize to unlock data → unlock data to run AI Get started with one of these featured services or browse all From startups to enterprises, find AWS solutions scaled to your needs. Access tailored resources, pricing models, and support levels. Industrial environments generate vast amounts of sensor data, but most of it remains underutilized. Deployed on AWS, Archetype AI’s Newton physical world model brings Physical AI to manufacturing, turning raw signals into real-time operational intelligence. The next wave of AI is moving beyond the digital realm and into the physical world.",
+          "keywords": [
+            "sensor",
+            "machine learning",
+            "predictive maintenance"
+          ],
+          "rating": 3,
+          "url": "https://aws.amazon.com/blogs/physical-ai/industrial-sensor-data-to-operational-intelligence-with-archetype-ai-on-aws/",
+          "published": "2026-10-28T17:16:32+00:00"
+        },
+        {
+          "category": "AI",
+          "title": "[2026 강릉 ITS 세계총회④]정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수), “AI·데이터·통신 기술 활용해 자율주행 안전 문제 해결해야”",
+          "originalTitle": "[2026 강릉 ITS 세계총회④]정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수), “AI·데이터·통신 기술 활용해 자율주행 안전 문제 해결해야”",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "[편집자주]2026 강릉 ITS 세계총회에서 만난 정구민 한국모빌리티학회 회장(국민대학교 전자공학부 교수)은 ITS의 가장 중요한 변화로 AI의 본격 도입을 꼽으며, 핵심 과제로 자율주행 고도화와 교차로 안전 향상을 제시했다. AI와 통신, 데이터 분석을 활용해 자율주행의 엣지 케이스와 안전 문제를 해결하는 것이 중요하다고 강조했다. 또한 한국 모빌리티 산업은 더 많은 데이터 확보와 글로벌 시장 진출이 필요하며, 자율주행·SDV·ITS를 결합해 안전성과 수출 경쟁력을 높여야 한다고 밝혔다. 이에 본지는 정구민 회장과 인터뷰를 통해 이번 세계 ITS 총회에서 주목해야 할 기술 트렌드와 한국 모빌리티 산업 발전을 위한 조언을 들어봤다. ■ 이번 세계 ITS 총회에서 가장 주목해야 할 기술 트렌드는 무엇이라고 보는지 결국 AI 기술이 본격적으로 ITS에 들어왔다는 점이 상당히 중요하고, 크게 두 가지를 봤으면 좋겠다.",
+          "keywords": [
+            "모터",
+            "반도체",
+            "토크",
+            "센서",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23993",
+          "published": "2026-10-28T07:34:00+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
+          "originalTitle": "[2026 강릉 ITS 세계총회②]심상규 아우토크립트 부사장(CTO), “자율주행 미래 ‘보안’이 결정”",
+          "source": "e4ds news",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "[편집자주]아우토크립트 2026 강릉 ITS 세계총회에서 자율주행과 미래 모빌리티의 성공 조건으로 ‘사이버 보안’을 가장 중요하게 강조했다. 보안이 확보되지 않으면 차량 해킹뿐 아니라 오작동으로 인한 안전사고가 발생할 수 있기 때문이다. 아우토크립트는 V2X 통신 보안 인프라(PKI)와 침입탐지(IDS) 기술을 통해 차량 간·차량과 인프라 간 통신의 신뢰성을 확보하고 있으며, 자동차를 넘어 모빌리티와 피지컬 AI 전반의 보안 환경 구축을 목표로 하고 있다. 이에 본지는 2026 강릉 ITS 세계총회 현지에서 심상규 아우토크립트 CTO와 만나 자동차 보안의 미래에 대해 들어봤다. ■ ITS와 자율주행 기술이 빠르게 발전하고 있는데, 왜 지금 보안이 가장 중요한 이슈로 주목받고 있나 지금 자동차, 특히 자율주행차가 매우 중요한 분야로 떠오르고 있다.",
+          "keywords": [
+            "토크",
+            "센서",
+            "통신"
+          ],
+          "rating": 3,
+          "url": "https://www.e4ds.com/sub_view.asp?idx=23971",
+          "published": "2026-10-27T07:36:09+00:00"
+        },
+        {
+          "category": "EMI",
+          "title": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
+          "originalTitle": "How EMI Filtering Helps Reduce Unplanned Data Center Downtime",
+          "source": "ACHR News",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "Jason Gildea, senior manager and Luc Mosca, global product manager, share insight about how AI demands increase cooling needs. As computing and processing demands grow with the rise of artificial intelligence (AI), the cooling needs in and other high-density computing facilities increase as well. From hyperscale data centers to high-density AI clusters, the growing power density of these facilities is generating more heat. This makes reliable and efficient cooling critical to help optimize performance and avoid costly slowdowns or downtime. Liquid cooling offers benefits for efficiency and performance compared to air-cooled systems in many of these applications.",
+          "keywords": [
+            "motor",
+            "emi",
+            "emc",
+            "conducted emission",
+            "sensor",
+            "communication"
+          ],
+          "rating": 3,
+          "url": "https://www.achrnews.com/articles/166792-how-emi-filtering-helps-reduce-unplanned-data-center-downtime",
+          "published": "2026-10-26T12:00:13+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
+          "originalTitle": "Why 16-bit MCUs Still Matter for Smart Home Appliance and Industrial Applications",
+          "source": "Renesas",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "As smart home appliances and industrial systems become increasingly connected and feature-rich, the systems that drive them require high power efficiency and reliable operation at optimized costs. This is where the highly sustainable Renesas 16-bit MCUs play a very important role in these design priorities. As smart home and industrial applications become more capable, functions such as sensor monitoring, environmental control, and user interface management demand reliable, responsive operation. Designers must also minimize power consumption, control system costs, and support long product lifecycles. These requirements make 16-bit MCUs a critical foundation for delivering the right balance of performance, efficiency, and value.",
+          "keywords": [
+            "mcu",
+            "renesas",
+            "sensor",
+            "temperature sensor"
+          ],
+          "rating": 2,
+          "url": "https://www.renesas.com/en/blogs/why-16-bit-mcus-still-matter-smart-home-appliance-and-industrial-applications",
+          "published": "2026-10-28T02:03:47+00:00"
+        },
+        {
+          "category": "COMPONENTS",
+          "title": "ST, 게이트 드라이버 통합형 전력 반도체 ‘MasterGaN7’ 출시… 전원공급장치 초소형·고효율화 선도",
+          "originalTitle": "ST, 게이트 드라이버 통합형 전력 반도체 ‘MasterGaN7’ 출시… 전원공급장치 초소형·고효율화 선도",
+          "source": "아이씨엔매거진",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "KR",
+          "summary": "아이씨엔매거진",
+          "keywords": [
+            "전원",
+            "반도체"
+          ],
+          "rating": 2,
+          "url": "https://icnweb.kr/2026/81838/st-%EA%B2%8C%EC%9D%B4%ED%8A%B8-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%ED%86%B5%ED%95%A9%ED%98%95-%EC%A0%84%EB%A0%A5-%EB%B0%98%EB%8F%84%EC%B2%B4-mastergan7-%EC%B6%9C%EC%8B%9C/",
+          "published": "2026-10-26T03:38:10+00:00"
+        },
+        {
+          "category": "MOTOR",
+          "title": "Motor Monitoring Market to Reach US$6.1 Billion at 10.1% CAGR | Persistence Market Research",
+          "originalTitle": "Motor Monitoring Market to Reach US$6.1 Billion at 10.1% CAGR | Persistence Market Research",
+          "source": "openPR.com",
+          "sourceType": "뉴스/검색",
+          "languageGroup": "GLOBAL",
+          "summary": "openPR.com",
+          "keywords": [
+            "motor"
+          ],
+          "rating": 1,
+          "url": "https://www.openpr.com/news/4677066/motor-monitoring-market-to-reach-us-6-1-billion-at-10-1-cagr",
+          "published": "2026-10-30T05:02:13+00:00"
+        }
+      ]
+    },
+    {
       "week": "2026-10-26",
       "updated": "2026-10-26T00:51:10.129019+00:00",
       "issueTitle": "전장 기술 TOP 18",
